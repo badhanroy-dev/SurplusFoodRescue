@@ -1,0 +1,423 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #fffaf8;
+
+    color: #333;
+}
+
+
+/* =========================================
+   AUTH PAGE
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.auth-header {
+    height: 70px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+}
+
+
+.logo-icon {
+    width: 37px;
+
+    height: 37px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+.logo h2 {
+    color: #A33215;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #999;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+    text-decoration: none;
+
+    color: #A33215;
+
+    font-size: 11px;
+}
+
+
+.back-button i {
+    color: #E75C16;
+
+    margin-right: 6px;
+}
+
+
+.back-button:hover {
+    color: #E75C16;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.auth-main {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================================
+   AUTH CARD
+========================================= */
+
+.auth-card {
+    width: 410px;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px #eeeeee;
+
+    padding: 32px;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.auth-card-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.auth-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 13px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.auth-card-header h1 {
+    color: #A33215;
+
+    font-size: 23px;
+
+    margin-bottom: 7px;
+}
+
+
+.auth-card-header p {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   LABEL ROW
+========================================= */
+
+.label-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.label-row a {
+    color: #E75C16;
+
+    text-decoration: none;
+
+    font-size: 9px;
+}
+
+
+.label-row a:hover {
+    color: #A33215;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    height: 42px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 11px;
+
+    gap: 9px;
+}
+
+
+.input-box:focus-within {
+    border-color: #FA8145;
+}
+
+
+.input-box i {
+    color: #E75C16;
+
+    font-size: 13px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    color: #333;
+
+    font-size: 11px;
+}
+
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   AUTH BUTTON
+========================================= */
+
+.auth-button {
+    height: 42px;
+
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+}
+
+
+.auth-button i {
+    margin-left: 7px;
+}
+
+
+.auth-button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   AUTH FOOTER
+========================================= */
+
+.auth-footer {
+    text-align: center;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+}
+
+
+.auth-footer p {
+    color: #888;
+
+    font-size: 9px;
+}
+
+
+.auth-footer a {
+    color: #E75C16;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.auth-footer a:hover {
+    color: #A33215;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.auth-bottom {
+    text-align: center;
+
+    padding: 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    background-color: white;
+}
+
+
+.auth-bottom p {
+    color: #999;
+
+    font-size: 8px;
+}

@@ -1,0 +1,464 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #fffaf8;
+
+    color: #333;
+}
+
+
+/* =========================================
+   AUTH PAGE
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.auth-header {
+    height: 70px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+}
+
+
+.logo-icon {
+    width: 37px;
+
+    height: 37px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+.logo h2 {
+    color: #A33215;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #999;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+    text-decoration: none;
+
+    color: #A33215;
+
+    font-size: 11px;
+}
+
+
+.back-button i {
+    color: #E75C16;
+
+    margin-right: 6px;
+}
+
+
+.back-button:hover {
+    color: #E75C16;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.auth-main {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   AUTH CARD
+========================================= */
+
+.auth-card {
+    width: 650px;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px #eeeeee;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.auth-card-header {
+    text-align: center;
+
+    margin-bottom: 23px;
+}
+
+
+.auth-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.auth-card-header h1 {
+    color: #A33215;
+
+    font-size: 23px;
+
+    margin-bottom: 6px;
+}
+
+
+.auth-card-header p {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.form-group label {
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    height: 40px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10px;
+
+    gap: 8px;
+}
+
+
+.input-box:focus-within {
+    border-color: #FA8145;
+}
+
+
+.input-box i {
+    color: #E75C16;
+
+    font-size: 12px;
+}
+
+
+.input-box input,
+.input-box select {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+
+.input-box select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-top: 3px;
+}
+
+
+.terms input {
+    margin-top: 1px;
+
+    accent-color: #E75C16;
+}
+
+
+.terms p {
+    color: #888;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+
+.terms a {
+    color: #E75C16;
+
+    text-decoration: none;
+}
+
+
+.terms a:hover {
+    color: #A33215;
+}
+
+
+/* =========================================
+   AUTH BUTTON
+========================================= */
+
+.auth-button {
+    height: 42px;
+
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    margin-top: 4px;
+}
+
+
+.auth-button i {
+    margin-left: 7px;
+}
+
+
+.auth-button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   AUTH FOOTER
+========================================= */
+
+.auth-footer {
+    text-align: center;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 20px;
+
+    padding-top: 16px;
+}
+
+
+.auth-footer p {
+    color: #888;
+
+    font-size: 9px;
+}
+
+
+.auth-footer a {
+    color: #E75C16;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.auth-footer a:hover {
+    color: #A33215;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.auth-bottom {
+    text-align: center;
+
+    padding: 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    background-color: white;
+}
+
+
+.auth-bottom p {
+    color: #999;
+
+    font-size: 8px;
+}
