@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Claimed Food</title>
+
+    <link rel="stylesheet" href="claimed-food.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+
+                <p>Charity Portal</p>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    <span>
+                        <i class="fa-solid fa-table-columns"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="browse-food.html">
+
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+
+                    Browse Food
+
+                </a>
+
+
+                <a href="claimed-food.html" class="active">
+
+                    <span>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </span>
+
+                    Claimed Food
+
+                </a>
+
+
+                <a href="distribution-log.html">
+
+                    <span>
+                        <i class="fa-solid fa-box"></i>
+                    </span>
+
+                    Distribution Log
+
+                </a>
+
+
+                <a href="report-issue.html">
+
+                    <span>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>
+
+                    Report Issue
+
+                </a>
+
+
+                <a href="charity-chat.html">
+
+                    <span>
+                        <i class="fa-solid fa-comments"></i>
+                    </span>
+
+                    Chat
+
+                </a>
+
+            </nav>
+
+
+            <!-- BOTTOM MENU -->
+
+            <div class="bottom-menu">
+
+                <a href="#">
+
+                    <span>
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <a href="#">
+
+                    <span>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main">
+
+
+            <!-- =========================================
+                 TOP BAR
+            ========================================== -->
+
+            <header class="topbar">
+
+                <input
+                    type="search"
+                    placeholder="Search claimed items..."
+                >
+
+
+                <div class="top-icons">
+
+                    <span>
+                        <i class="fa-solid fa-bell"></i>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================================
+                 CONTENT
+            ========================================== -->
+
+            <section class="content">
+
+
+                <!-- =========================================
+                     PAGE HEADER
+                ========================================== -->
+
+                <div class="page-header">
+
+                    <div class="page-title">
+
+                        <h1>
+                            Claimed Food Items
+                        </h1>
+
+                        <p>
+                            Track and manage food items that have been claimed for pickup.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     STAT CARDS
+                ========================================== -->
+
+                <div class="stats">
+
+
+                    <!-- TOTAL ITEMS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>TOTAL ITEMS</p>
+
+                        <h2>24</h2>
+
+                        <span class="stat-description">
+                            Currently claimed
+                        </span>
+
+                    </div>
+
+
+                    <!-- IN TRANSIT -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon transit-icon">
+
+                                <i class="fa-solid fa-truck"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>IN TRANSIT</p>
+
+                        <h2>8</h2>
+
+                        <span class="stat-description">
+                            On the way
+                        </span>
+
+                    </div>
+
+
+                    <!-- AWAITING PICKUP -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon orange">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>AWAITING PICKUP</p>
+
+                        <h2>12</h2>
+
+                        <span class="stat-description">
+                            Pickup pending
+                        </span>
+
+                    </div>
+
+
+                    <!-- READY TO LOG -->
+
+                    <div class="stat-card ready-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon ready-icon">
+
+                                <i class="fa-solid fa-clipboard-check"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>READY TO LOG</p>
+
+                        <h2>4</h2>
+
+                        <span class="stat-description">
+                            Ready for distribution
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================================
+                     CLAIMED FOOD TABLE
+                ========================================== -->
+
+                <div class="claimed-section">
+
+
+                    <!-- SECTION HEADER -->
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Claimed Food Items
+                            </h2>
+
+                            <p>
+                                Manage your claimed food and pickup status
+                            </p>
+
+                        </div>
+
+
+                        <div class="section-actions">
+
+                            <button title="Filter">
+
+                                <i class="fa-solid fa-filter"></i>
+
+                            </button>
+
+
+                            <button title="Download">
+
+                                <i class="fa-solid fa-download"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         TABLE HEADER
+                    ========================================== -->
+
+                    <div class="table-header">
+
+                        <span>ITEM DETAILS</span>
+
+                        <span>DONOR</span>
+
+                        <span>QUANTITY / WEIGHT</span>
+
+                        <span>EXPIRY WINDOW</span>
+
+                        <span>STATUS</span>
+
+                        <span>OTP</span>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ROW 1
+                    ========================================== -->
+
+                    <div class="table-row">
+
+
+                        <!-- ITEM -->
+
+                        <div class="item-detail">
+
+                            <div class="food-icon">
+
+                                <i class="fa-solid fa-leaf"></i>
+
+                            </div>
+
+                            <div class="item-detail-info">
+
+                                <h3>
+                                    Organic Hass Avocado
+                                </h3>
+
+                                <p>
+                                    Claimed Oct 24, 10:15 AM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DONOR -->
+
+                        <div class="donor">
+
+                            <div class="donor-icon">
+
+                                <i class="fa-solid fa-store"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Whole Foods Market
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="quantity">
+
+                            <strong>
+                                45 kg
+                            </strong>
+
+                        </div>
+
+
+                        <!-- EXPIRY -->
+
+                        <div class="expiry urgent">
+
+                            <strong>
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                14 hrs
+
+                            </strong>
+
+                            <span>
+                                left
+                            </span>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div>
+
+                            <span class="status transit">
+
+                                <i class="fa-solid fa-truck"></i>
+
+                                In Transit
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OTP -->
+
+                        <div class="otp">
+                            —
+                        </div>
+
+
+                        <!-- MORE -->
+
+                        <div class="more">
+
+                            <button>
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ROW 2
+                    ========================================== -->
+
+                    <div class="table-row">
+
+
+                        <!-- ITEM -->
+
+                        <div class="item-detail">
+
+                            <div class="food-icon">
+
+                                <i class="fa-solid fa-bread-slice"></i>
+
+                            </div>
+
+                            <div class="item-detail-info">
+
+                                <h3>
+                                    Assorted Bakery Surplus
+                                </h3>
+
+                                <p>
+                                    Claimed Oct 24, 09:30 AM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DONOR -->
+
+                        <div class="donor">
+
+                            <div class="donor-icon">
+
+                                <i class="fa-solid fa-store"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Le Petit Boulanger
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="quantity">
+
+                            <strong>
+                                12 Units
+                            </strong>
+
+                        </div>
+
+
+                        <!-- EXPIRY -->
+
+                        <div class="expiry">
+
+                            <strong>
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                48 hrs
+
+                            </strong>
+
+                            <span>
+                                left
+                            </span>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div>
+
+                            <span class="status awaiting">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                Awaiting Pickup
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OTP -->
+
+                        <div class="otp">
+                            —
+                        </div>
+
+
+                        <!-- MORE -->
+
+                        <div class="more">
+
+                            <button>
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ROW 3
+                    ========================================== -->
+
+                    <div class="table-row">
+
+
+                        <!-- ITEM -->
+
+                        <div class="item-detail">
+
+                            <div class="food-icon">
+
+                                <i class="fa-solid fa-carrot"></i>
+
+                            </div>
+
+                            <div class="item-detail-info">
+
+                                <h3>
+                                    Assorted Salad Greens
+                                </h3>
+
+                                <p>
+                                    Claimed Oct 23, 04:00 PM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DONOR -->
+
+                        <div class="donor">
+
+                            <div class="donor-icon">
+
+                                <i class="fa-solid fa-store"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    City Fresh Market
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="quantity">
+
+                            <strong>
+                                18 kg
+                            </strong>
+
+                        </div>
+
+
+                        <!-- EXPIRY -->
+
+                        <div class="expiry urgent">
+
+                            <strong>
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                2 hrs
+
+                            </strong>
+
+                            <span>
+                                left
+                            </span>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div>
+
+                            <span class="status claimed">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Claimed
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OTP -->
+
+                        <div class="otp">
+                            —
+                        </div>
+
+
+                        <!-- MORE -->
+
+                        <div class="more">
+
+                            <button>
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ROW 4
+                    ========================================== -->
+
+                    <div class="table-row">
+
+
+                        <!-- ITEM -->
+
+                        <div class="item-detail">
+
+                            <div class="food-icon">
+
+                                <i class="fa-solid fa-cheese"></i>
+
+                            </div>
+
+                            <div class="item-detail-info">
+
+                                <h3>
+                                    Mixed Dairy Pack
+                                </h3>
+
+                                <p>
+                                    Claimed Oct 24, 11:20 AM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DONOR -->
+
+                        <div class="donor">
+
+                            <div class="donor-icon">
+
+                                <i class="fa-solid fa-store"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Sunshine Dairy
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="quantity">
+
+                            <strong>
+                                25 Liters
+                            </strong>
+
+                        </div>
+
+
+                        <!-- EXPIRY -->
+
+                        <div class="expiry">
+
+                            <strong>
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                72 hrs
+
+                            </strong>
+
+                            <span>
+                                left
+                            </span>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div>
+
+                            <span class="status claimed">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Claimed
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OTP -->
+
+                        <div class="otp">
+                            —
+                        </div>
+
+
+                        <!-- MORE -->
+
+                        <div class="more">
+
+                            <button>
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         TABLE FOOTER
+                    ========================================== -->
+
+                    <div class="table-footer">
+
+
+                        <p>
+                            Showing 4 of 24 claimed items
+                        </p>
+
+
+                        <div class="pagination">
+
+                            <button>
+
+                                <i class="fa-solid fa-chevron-left"></i>
+
+                            </button>
+
+                            <button class="page active-page">
+                                1
+                            </button>
+
+                            <button class="page">
+                                2
+                            </button>
+
+                            <button class="page">
+                                3
+                            </button>
+
+                            <button>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>

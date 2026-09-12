@@ -1,0 +1,980 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+
+    color: #333;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 210px;
+
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px 15px;
+    
+    /*fixing at top left */
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MENU ICON
+========================================= */
+
+.menu a span,
+.bottom-menu a span {
+    width: 18px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ACTIVE MENU
+========================================= */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+
+    min-height: 100vh;
+
+    margin-left: 210px;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+/* =========================================
+   TOP SEARCH
+========================================= */
+
+.topbar input {
+    width: 330px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 20px;
+
+    padding: 10px 16px;
+
+    color: #333;
+
+    font-size: 13px;
+}
+
+
+.topbar input:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+.topbar input::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   TOP ICONS
+========================================= */
+
+.top-icons {
+    display: flex;
+
+    gap: 20px;
+
+    color: #A33215;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 95px 30px 30px;
+    /* padding: 30px; */
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.page-title h1 {
+    color: #C54716;
+
+    font-size: 27px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-title p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ALL REPORTS BUTTON
+========================================= */
+
+.all-reports-button {
+    background-color: white;
+
+    color: #E75C16;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 5px;
+
+    padding: 10px 15px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.all-reports-button i {
+    margin-right: 6px;
+
+    color: #E75C16;
+}
+
+
+.all-reports-button:hover {
+    background-color: #fff3ed;
+}
+
+
+/* =========================================
+   REPORT FORM CARD
+========================================= */
+
+.report-form-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+
+    padding: 22px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding-bottom: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+.form-header h2 {
+    color: #A33215;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.form-header p {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+.form-header-icon {
+    width: 40px;
+
+    height: 40px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 17px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group.full-width {
+    grid-column: 1 / 3;
+}
+
+
+.form-group label {
+    color: #A33215;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    height: 40px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 11px;
+
+    gap: 8px;
+}
+
+
+.input-box i {
+    color: #E75C16;
+
+    font-size: 13px;
+}
+
+
+.input-box select {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #555;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.form-group textarea {
+    width: 100%;
+
+    height: 100px;
+
+    resize: none;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 12px;
+
+    outline: none;
+
+    color: #333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+.form-group textarea:focus {
+    border-color: #FA8145;
+}
+
+
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   UPLOAD BOX
+========================================= */
+
+.upload-box {
+    min-height: 65px;
+
+    background-color: #fff3ed;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+}
+
+
+.upload-box > i {
+    width: 34px;
+
+    height: 34px;
+
+    background-color: white;
+
+    color: #E75C16;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+
+.upload-box div {
+    flex: 1;
+}
+
+
+.upload-box strong {
+    color: #444;
+
+    font-size: 11px;
+}
+
+
+.upload-box p {
+    color: #999;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+.upload-box button {
+    background-color: white;
+
+    color: #E75C16;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 5px;
+
+    padding: 8px 12px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.upload-box button:hover {
+    background-color: #E75C16;
+
+    color: white;
+}
+
+
+/* =========================================
+   FORM FOOTER
+========================================= */
+
+.form-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 20px;
+
+    padding-top: 17px;
+}
+
+
+.form-footer p {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+.form-footer p i {
+    color: #E75C16;
+
+    margin-right: 4px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-button {
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 11px 17px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.submit-button i {
+    margin-left: 7px;
+
+    color: white;
+}
+
+
+.submit-button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   REPORTS SECTION
+========================================= */
+
+.reports-section {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   RESULTS HEADER
+========================================= */
+
+.results-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.results-header h2 {
+    color: #C54716;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.results-header p {
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.view-all-button {
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    color: #777;
+
+    border-radius: 5px;
+
+    padding: 9px 13px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.view-all-button i {
+    color: #E75C16;
+
+    margin-right: 5px;
+}
+
+
+.view-all-button:hover {
+    color: #E75C16;
+
+    border-color: #E75C16;
+}
+
+
+/* =========================================
+   REPORT CARD
+========================================= */
+
+.reports-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   REPORT TABLE HEADER
+========================================= */
+
+.report-table-header {
+    display: grid;
+
+    grid-template-columns: 0.8fr 2fr 1fr 1.1fr 2fr;
+
+    gap: 15px;
+
+    padding: 13px 17px;
+
+    background-color: #fff3ed;
+
+    border-bottom: 1px solid #f3d3c4;
+}
+
+
+.report-table-header span {
+    color: #A33215;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   REPORT ROW
+========================================= */
+
+.report-row {
+    display: grid;
+
+    grid-template-columns: 0.8fr 2fr 1fr 1.1fr 2fr;
+
+    gap: 15px;
+
+    align-items: center;
+
+    padding: 15px 17px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.report-row:last-child {
+    border-bottom: none;
+}
+
+
+.report-row:hover {
+    background-color: #fffaf8;
+}
+
+
+/* =========================================
+   REPORT ID
+========================================= */
+
+.report-id {
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ISSUE INFO
+========================================= */
+
+.issue-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.issue-icon {
+    width: 31px;
+
+    height: 31px;
+
+    flex-shrink: 0;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+.issue-info strong {
+    color: #444;
+
+    font-size: 10px;
+}
+
+
+.issue-info p {
+    color: #999;
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.report-date {
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border-radius: 10px;
+
+    padding: 5px 8px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* RESOLVED */
+
+.status.resolved {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* UNDER REVIEW */
+
+.status.reviewing {
+    background-color: #fff3ed;
+
+    color: #C54716;
+}
+
+
+/* CLOSED */
+
+.status.closed {
+    background-color: #f5f5f5;
+
+    color: #777;
+}
+
+
+/* =========================================
+   RESOLUTION
+========================================= */
+
+.resolution {
+    color: #555;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.resolution.pending {
+    color: #999;
+}

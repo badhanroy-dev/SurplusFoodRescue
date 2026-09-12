@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirm Food Claim</title>
+
+    <link rel="stylesheet" href="claimConfirmation.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>FoodRescue</h2>
+                <p>Charity Portal</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+                    <span><i class="fa-solid fa-table-columns"></i></span>
+                    Dashboard
+                </a>
+
+                <a href="browse-food.html">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    Browse Food
+                </a>
+
+                <a href="claimed-food.html">
+                    <span><i class="fa-solid fa-clipboard-list"></i></span>
+                    Claimed Food
+                </a>
+
+                <a href="distribution-log.html">
+                    <span><i class="fa-solid fa-box"></i></span>
+                    Distribution
+                </a>
+
+                <a href="report-issue.html">
+                    <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                    Report Issue
+                </a>
+
+                <a href="charity-chat.html">
+                    <span><i class="fa-solid fa-comments"></i></span>
+                    Chat
+                </a>
+
+            </nav>
+
+            <div class="bottom-menu">
+
+                <a href="#">
+                    <span><i class="fa-solid fa-gear"></i></span>
+                    Settings
+                </a>
+
+                <a href="#">
+                    <span><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <input type="search" placeholder="Search rescued listings...">
+
+                <div class="top-icons">
+                    <span><i class="fa-solid fa-bell"></i></span>
+                    <span><i class="fa-solid fa-circle-user"></i></span>
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <!-- BREADCRUMB -->
+                <div class="breadcrumb">
+
+                    <span>Browse Food</span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <strong>Confirm Claim</strong>
+
+                </div>
+
+
+                <!-- CLAIM CARD -->
+                <div class="claim-card">
+
+                    <!-- FOOD IMAGE -->
+                    <div class="food-banner">
+
+                        <img src="images/vegetables.jpg"
+                            alt="Organic Seasonal Vegetable Box">
+
+                    </div>
+
+
+                    <div class="claim-content">
+
+                        <h1>Confirm Your Claim</h1>
+
+                        <p class="subtitle">
+                            Please review the food details and pickup logistics before finalizing your claim.
+                        </p>
+
+
+                        <!-- FOOD INFORMATION -->
+                        <div class="info-row">
+
+                            <!-- SELECTED FOOD -->
+                            <div class="selected-food">
+
+                                <p class="small-title">
+                                    SELECTED FOOD
+                                </p>
+
+                                <h2>
+                                    Organic Seasonal Vegetable Box
+                                </h2>
+
+                                <p class="donor">
+                                    Donor: Whole Foods Market Central
+                                </p>
+
+                                <h3>
+                                    12 Large Crates
+                                </h3>
+
+                            </div>
+
+
+                            <!-- IMPACT -->
+                            <div class="impact">
+
+                                <div class="impact-icon">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+
+                                <div>
+
+                                    <p class="small-title">
+                                        ESTIMATED IMPACT
+                                    </p>
+
+                                    <h2>
+                                        ~ 40 People
+                                    </h2>
+
+                                    <p>
+                                        Will be served by this donation.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PICKUP DETAILS -->
+                        <div class="pickup-box">
+
+                            <h2>
+                                <i class="fa-regular fa-clock"></i>
+                                Pickup Details
+                            </h2>
+
+                            <div class="pickup-details">
+
+                                <div>
+                                    <p>DATE</p>
+                                    <h3>Oct 24, 2023</h3>
+                                </div>
+
+                                <div>
+                                    <p>TIME WINDOW</p>
+                                    <h3>09:00 AM - 11:30 AM</h3>
+                                </div>
+
+                                <div>
+                                    <p>LOCATION</p>
+                                    <h3>Warehouse Dock B</h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- COMPLIANCE -->
+                        <div class="compliance">
+
+                            <input type="checkbox">
+
+                            <div>
+
+                                <h3>
+                                    Compliance & Commitment
+                                </h3>
+
+                                <p>
+                                    I agree to the
+                                    <a href="#">food safety guidelines</a>
+                                    for temperature-sensitive transport and
+                                    confirm that my team will arrive for pickup
+                                    by the stated time.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTIONS -->
+                        <div class="actions">
+
+                            <a href="schedule-pickup.html">
+                                <button class="schedule">
+                                    Schedule Pickup
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </a>
+
+                            <a href="browse-food.html">
+                                <button class="cancel">
+                                    Cancel
+                                </button>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIP -->
+                <div class="tip">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <p>
+                        Tip: Make sure your vehicle has sufficient cooling storage
+                        for these perishables.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

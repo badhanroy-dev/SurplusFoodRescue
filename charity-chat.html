@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Chat</title>
+
+    <link rel="stylesheet" href="charity-chat.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+                <p>Charity Portal</p>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+                    <span>
+                        <i class="fa-solid fa-table-columns"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+
+                <a href="browse-food.html">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    Browse Food
+                </a>
+
+
+                <a href="claimed-food.html">
+                    <span>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </span>
+                    Claimed Food
+                </a>
+
+
+                <a href="distribution-log.html">
+                    <span>
+                        <i class="fa-solid fa-box"></i>
+                    </span>
+                    Distribution
+                </a>
+
+
+                <a href="report-issue.html">
+                    <span>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>
+                    Report Issue
+                </a>
+
+
+                <!-- CHAT - ACTIVE -->
+
+                <a href="charity-chat.html" class="active">
+                    <span>
+                        <i class="fa-solid fa-comments"></i>
+                    </span>
+                    Chat
+                </a>
+
+            </nav>
+
+
+            <div class="bottom-menu">
+
+                <a href="#">
+                    <span>
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                    Settings
+                </a>
+
+
+                <a href="#">
+                    <span>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <input
+                    type="search"
+                    placeholder="Search conversations..."
+                >
+
+
+                <div class="top-icons">
+
+                    <span>
+                        <i class="fa-solid fa-bell"></i>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- CHAT CONTENT -->
+
+            <section class="content">
+
+                <div class="chat-container">
+
+
+                    <!-- CHAT LIST -->
+
+                    <div class="chat-list">
+
+
+                        <!-- CHAT LIST HEADER -->
+
+                        <div class="chat-list-header">
+
+                            <h2>Messages</h2>
+
+
+                            <!-- TABS -->
+
+                            <div class="chat-tabs">
+
+                                <button class="active-tab">
+                                    All
+                                </button>
+
+                                <button>
+                                    Volunteers
+                                </button>
+
+                                <button>
+                                    Donors
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONVERSATION 1 -->
+
+                        <div class="conversation selected">
+
+                            <div class="conversation-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+
+                            <div class="conversation-info">
+
+                                <div class="conversation-top">
+
+                                    <h3>Volunteer John</h3>
+
+                                    <span>10:15 AM</span>
+
+                                </div>
+
+
+                                <p>
+                                    Hi, I've just picked up the supplies...
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONVERSATION 2 -->
+
+                        <div class="conversation">
+
+                            <div class="conversation-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+
+                            <div class="conversation-info">
+
+                                <div class="conversation-top">
+
+                                    <h3>Fresh Mart Support</h3>
+
+                                    <span>Yesterday</span>
+
+                                </div>
+
+
+                                <p>
+                                    Thank you for confirming the pickup.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONVERSATION 3 -->
+
+                        <div class="conversation">
+
+                            <div class="conversation-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+
+                            <div class="conversation-info">
+
+                                <div class="conversation-top">
+
+                                    <h3>Emma Wilson</h3>
+
+                                    <span>Yesterday</span>
+
+                                </div>
+
+
+                                <p>
+                                    Is the distribution center open?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONVERSATION 4 -->
+
+                        <div class="conversation">
+
+                            <div class="conversation-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+
+                            <div class="conversation-info">
+
+                                <div class="conversation-top">
+
+                                    <h3>City Food Bank</h3>
+
+                                    <span>Mon</span>
+
+                                </div>
+
+
+                                <p>
+                                    We received the food donation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- CHAT WINDOW -->
+
+                    <div class="chat-window">
+
+
+                        <!-- CHAT HEADER -->
+
+                        <div class="chat-header">
+
+                            <div class="chat-user">
+
+                                <div class="chat-avatar">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>Volunteer John</h3>
+
+                                    <p>
+                                        <span class="online-dot"></span>
+                                        Online
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- MESSAGES -->
+
+                        <div class="messages">
+
+
+                            <!-- RECEIVED MESSAGE -->
+
+                            <div class="message received">
+
+                                <div class="message-avatar">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="message-bubble">
+
+                                        Hi Sarah, I've just picked up the
+                                        supplies from Green Bakery.
+
+                                    </div>
+
+
+                                    <span class="message-time">
+                                        10:05 AM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- SENT MESSAGE -->
+
+                            <div class="message sent">
+
+                                <div>
+
+                                    <div class="message-bubble">
+
+                                        That's great, John! Are you heading
+                                        directly to the Downtown Distribution
+                                        Center?
+
+                                    </div>
+
+
+                                    <span class="message-time">
+                                        10:07 AM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- RECEIVED MESSAGE -->
+
+                            <div class="message received">
+
+                                <div class="message-avatar">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="message-bubble">
+
+                                        Yes, I'll be there in about 20 minutes.
+                                        The supplies are packed safely.
+
+                                    </div>
+
+
+                                    <span class="message-time">
+                                        10:10 AM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- SENT MESSAGE -->
+
+                            <div class="message sent">
+
+                                <div>
+
+                                    <div class="message-bubble">
+
+                                        Perfect. Let me know once you arrive
+                                        at the center.
+
+                                    </div>
+
+
+                                    <span class="message-time">
+                                        10:12 AM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TYPING -->
+
+                            <div class="typing">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <p>John is typing...</p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- MESSAGE INPUT -->
+
+                        <div class="message-input">
+
+                            <input
+                                type="text"
+                                placeholder="Type a message..."
+                            >
+
+
+                            <button>
+
+                                <i class="fa-solid fa-paper-plane"></i>
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

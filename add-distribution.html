@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Distribution Log</title>
+
+    <link rel="stylesheet" href="add-distribution.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard">
+
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar">
+
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+
+                <p>Charity Portal</p>
+
+            </div>
+
+
+
+
+
+            <!-- =========================================
+                 MENU
+            ========================================== -->
+
+            <nav class="menu">
+
+
+
+                <!-- DASHBOARD -->
+
+                <a href="dashboard.html">
+
+                    <span>
+                        <i class="fa-solid fa-table-columns"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+
+
+
+                <!-- BROWSE FOOD -->
+
+                <a href="browse-food.html">
+
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+
+                    Browse Food
+
+                </a>
+
+
+
+
+
+                <!-- CLAIMED FOOD -->
+
+                <a href="claimed-food.css">
+
+                    <span>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </span>
+
+                    Claimed Food
+
+                </a>
+
+
+
+
+
+                <!-- DISTRIBUTION LOG -->
+
+                <a href="distribution-log.html">
+
+                    <span>
+                        <i class="fa-solid fa-box"></i>
+                    </span>
+
+                    Distribution Log
+
+                </a>
+
+
+
+
+
+                <!-- REPORT ISSUE -->
+
+                <a href="report-issue.html">
+
+                    <span>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>
+
+                    Report Issue
+
+                </a>
+
+
+
+
+
+                <!-- CHAT -->
+
+                <a href="charity-chat.html">
+
+                    <span>
+                        <i class="fa-solid fa-comments"></i>
+                    </span>
+
+                    Chat
+
+                </a>
+
+
+
+            </nav>
+
+
+
+
+
+            <!-- =========================================
+                 BOTTOM MENU
+            ========================================== -->
+
+            <div class="bottom-menu">
+
+
+
+                <!-- SETTINGS -->
+
+                <a href="#">
+
+                    <span>
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+
+
+
+                <!-- LOGOUT -->
+
+                <a href="#">
+
+                    <span>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+
+                    Logout
+
+                </a>
+
+
+
+            </div>
+
+
+
+        </aside>
+
+
+
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main">
+
+
+
+            <!-- =========================================
+                 TOP BAR
+            ========================================== -->
+
+            <header class="topbar">
+
+
+
+                <!-- SEARCH -->
+
+                <!-- <input
+                    type="search"
+                    placeholder="Search records..."
+                > -->
+
+
+
+
+
+                <!-- TOP ICONS -->
+
+                <div class="top-icons">
+
+                    <span>
+                        <i class="fa-solid fa-bell"></i>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+
+                </div>
+
+
+
+            </header>
+
+
+
+
+
+            <!-- =========================================
+                 CONTENT
+            ========================================== -->
+
+            <section class="content">
+
+
+
+                <!-- =========================================
+                     DISTRIBUTION CONTAINER
+                ========================================== -->
+
+                <div class="distribution-container">
+
+
+
+                    <!-- =========================================
+                         DISTRIBUTION CARD
+                    ========================================== -->
+
+                    <div class="distribution-card">
+
+
+
+                        <!-- =========================================
+                             CARD HEADER
+                        ========================================== -->
+
+                        <div class="card-header">
+
+
+
+                            <div>
+
+                                <h1>
+                                    New Distribution Record
+                                </h1>
+
+                                <p>
+                                    Log the details of food distributed
+                                    to the community today.
+                                </p>
+
+                            </div>
+
+
+
+
+
+                            <!-- HEADER ICON -->
+
+                            <div class="header-icon">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <!-- =========================================
+                             FORM
+                        ========================================== -->
+
+                        <form>
+
+
+
+                            <!-- =========================================
+                                 FOOD ITEM
+                            ========================================== -->
+
+                            <div class="form-group">
+
+                                <label for="food-item">
+                                    Food Item
+                                </label>
+
+
+
+                                <div class="select-box">
+
+                                    <select id="food-item" name="food-item">
+
+                                        <option value="">
+                                            Select an available item...
+                                        </option>
+
+                                        <option value="bakery">
+                                            Assorted Bakery Goods
+                                        </option>
+
+                                        <option value="fruits">
+                                            Organic Fresh Fruits
+                                        </option>
+
+                                        <option value="dairy">
+                                            Dairy Essentials
+                                        </option>
+
+                                        <option value="pantry">
+                                            Dry Pantry Supplies
+                                        </option>
+
+                                    </select>
+
+
+
+                                    <i class="fa-solid fa-chevron-down"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <!-- =========================================
+                                 QUANTITY + QUALITY
+                            ========================================== -->
+
+                            <div class="two-column">
+
+
+
+                                <!-- QUANTITY DISTRIBUTED -->
+
+                                <div class="form-group">
+
+                                    <label for="quantity">
+                                        Quantity Distributed
+                                    </label>
+
+
+
+                                    <div class="input-with-text">
+
+                                        <input type="number" id="quantity" name="quantity" placeholder="e.g. 10">
+
+
+
+                                        <select id="quantity-unit" name="quantity-unit">
+
+                                            <option value="unit">
+                                                Unit
+                                            </option>
+
+                                            <option value="kg">
+                                                KG
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                                <!-- QUALITY -->
+
+                                <div class="form-group">
+
+                                    <label for="quality">
+                                        Quality
+                                    </label>
+
+
+
+                                    <div class="input-with-text">
+
+                                        <input type="text" id="quality" name="quality" placeholder="e.g. Good">
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+                            <!-- =========================================
+                                 PEOPLE SERVED
+                            ========================================== -->
+
+                            <div class="form-group">
+
+                                <label for="people">
+                                    People Served
+                                </label>
+
+
+
+                                <input type="number" id="people" name="people" placeholder="e.g. 45">
+
+                            </div>
+
+
+
+
+
+                            <!-- =========================================
+                                 REMARKS
+                            ========================================== -->
+
+                            <div class="form-group">
+
+                                <label for="remarks">
+                                    Remarks
+                                </label>
+
+
+
+                                <textarea id="remarks" name="remarks"
+                                    placeholder="Any specific observations, beneficiary feedback, or condition of items..."></textarea>
+
+                            </div>
+
+
+
+
+
+                            <!-- =========================================
+                                 DIVIDER
+                            ========================================== -->
+
+                            <div class="form-divider"></div>
+
+
+
+
+
+                            <!-- =========================================
+                                 BUTTONS
+                            ========================================== -->
+
+                            <div class="form-buttons">
+
+
+
+                                <!-- CANCEL -->
+
+                                <a href="distribution-log.html">
+                                    <button type="button" class="cancel-btn">
+
+                                        Cancel
+
+                                    </button>
+                                </a>
+
+
+
+
+
+                                <!-- SAVE -->
+
+                                <button type="submit" class="save-btn">
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Save Record
+
+                                </button>
+
+
+
+                            </div>
+
+
+
+                        </form>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </section>
+
+
+
+        </main>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

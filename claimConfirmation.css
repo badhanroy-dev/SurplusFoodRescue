@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* MAIN DASHBOARD */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+/* MENU ICON */
+
+.menu a span,
+.bottom-menu a span {
+    width: 18px;
+    text-align: center;
+}
+
+
+/* ACTIVE MENU */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* BOTTOM MENU */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* MAIN */
+
+.main {
+    flex: 1;
+    min-height: 100vh;
+    margin-left: 210px;
+    background-color: white;
+}
+
+
+/* TOP BAR */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+/* SEARCH */
+
+.topbar input {
+    width: 330px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 20px;
+
+    padding: 10px 16px;
+
+    color: #333;
+}
+
+.topbar input:focus {
+    border-color: #FA8145;
+    outline: none;
+}
+
+.topbar input::placeholder {
+    color: #999;
+}
+
+
+/* TOP ICONS */
+
+.top-icons {
+    display: flex;
+
+    gap: 20px;
+
+    color: #A33215;
+}
+
+
+/* CONTENT */
+
+.content {
+    padding: 95px 30px 30px;
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #999;
+
+    font-size: 10px;
+
+    margin-bottom: 15px;
+}
+
+.breadcrumb i {
+    font-size: 7px;
+
+    color: #999;
+}
+
+.breadcrumb strong {
+    color: #333;
+}
+
+
+/* CLAIM CARD */
+
+.claim-card {
+    width: 700px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* FOOD IMAGE */
+
+.food-banner {
+    width: 100%;
+
+    height: 175px;
+
+    overflow: hidden;
+}
+
+.food-banner img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* CLAIM CONTENT */
+
+.claim-content {
+    padding: 20px;
+}
+
+.claim-content h1 {
+    color: #C54716;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.subtitle {
+    color: #777;
+
+    font-size: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+/* FOOD INFORMATION */
+
+.info-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+/* SELECTED FOOD */
+
+.selected-food {
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 15px;
+
+    background-color: white;
+}
+
+.small-title {
+    color: #888;
+
+    font-size: 8px;
+
+    margin-bottom: 7px;
+}
+
+.selected-food h2 {
+    color: #C54716;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+
+    margin-bottom: 7px;
+}
+
+.selected-food .donor {
+    color: #888;
+
+    font-size: 9px;
+
+    margin-bottom: 9px;
+}
+
+.selected-food h3 {
+    color: #333;
+
+    font-size: 11px;
+}
+
+
+/* IMPACT */
+
+.impact {
+    background-color: #fff3ed;
+
+    border-radius: 7px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid #f3d3c4;
+}
+
+.impact-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background-color: #FA8145;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+.impact h2 {
+    color: #C54716;
+
+    font-size: 18px;
+
+    margin-bottom: 4px;
+}
+
+.impact p:last-child {
+    color: #777;
+
+    font-size: 8px;
+}
+
+
+/* PICKUP BOX */
+
+.pickup-box {
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    margin-bottom: 12px;
+}
+
+.pickup-box h2 {
+    color: #C54716;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.pickup-box h2 i {
+    color: #E75C16;
+
+    margin-right: 7px;
+}
+
+
+/* PICKUP DETAILS */
+
+.pickup-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr 1fr;
+
+    gap: 20px;
+}
+
+.pickup-details p {
+    color: #888;
+
+    font-size: 8px;
+
+    margin-bottom: 6px;
+}
+
+.pickup-details h3 {
+    color: #333;
+
+    font-size: 10px;
+}
+
+
+/* COMPLIANCE */
+
+.compliance {
+    background-color: #fff3ed;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 7px;
+
+    padding: 13px;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+
+/* CHECKBOX */
+
+.compliance input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #E75C16;
+
+    cursor: pointer;
+}
+
+
+/* COMPLIANCE TEXT */
+
+.compliance h3 {
+    color: #A33215;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.compliance p {
+    color: #777;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+.compliance a {
+    color: #E75C16;
+
+    text-decoration: underline;
+}
+
+
+/* ACTIONS */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* SCHEDULE BUTTON */
+
+.schedule {
+    flex: 1;
+
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 10px 15px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.schedule i {
+    margin-left: 6px;
+}
+
+
+/* CANCEL */
+
+.cancel {
+    background: none;
+
+    border: none;
+
+    color: #E75C16;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON HOVER */
+
+.schedule:hover {
+    background-color: #69200F;
+}
+
+.cancel:hover {
+    color: #69200F;
+}
+
+
+/* TIP */
+
+.tip {
+    width: 700px;
+
+    margin: 15px auto 0;
+
+    background-color: #fff3ed;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 7px;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.tip i {
+    color: #E75C16;
+
+    font-size: 14px;
+}
+
+.tip p {
+    color: #777;
+
+    font-size: 8px;
+}

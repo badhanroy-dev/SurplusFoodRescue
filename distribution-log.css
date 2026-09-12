@@ -1,0 +1,821 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+
+    color: #333;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 210px;
+
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MENU ICON
+========================================= */
+
+.menu a span,
+.bottom-menu a span {
+    width: 18px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ACTIVE MENU
+========================================= */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+
+    min-height: 100vh;
+
+    margin-left: 210px;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.topbar input {
+    width: 330px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 20px;
+
+    padding: 10px 16px;
+
+    color: #333;
+
+    font-size: 12px;
+}
+
+
+.topbar input:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+.topbar input::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   TOP ICONS
+========================================= */
+
+.top-icons {
+    display: flex;
+
+    gap: 20px;
+
+    color: #A33215;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 95px 30px 30px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.page-title h1 {
+    color: #C54716;
+
+    font-size: 26px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-title p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-button {
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 11px 16px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.add-button i {
+    margin-right: 6px;
+
+    color: white;
+}
+
+
+.add-button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.stat-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 17px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   STAT ICON
+========================================= */
+
+.stat-top {
+    margin-bottom: 11px;
+}
+
+
+.stat-icon {
+    width: 32px;
+
+    height: 32px;
+
+    background-color: #fff3ed;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #E75C16;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   STAT TEXT
+========================================= */
+
+.stat-card > p {
+    color: #888;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card h2 {
+    color: #C54716;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+
+.stat-description {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+.stat-description i {
+    color: #E75C16;
+
+    margin-right: 3px;
+}
+
+
+/* =========================================
+   DISTRIBUTION SECTION
+========================================= */
+
+.distribution-section {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.section-header h2 {
+    color: #C54716;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-header p {
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   SECTION ACTIONS
+========================================= */
+
+.section-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.section-actions button {
+    width: 30px;
+
+    height: 30px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.section-actions button:hover {
+    color: #E75C16;
+
+    border-color: #E75C16;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.table-header {
+    display: grid;
+
+    grid-template-columns:
+        2.3fr
+        0.8fr
+        0.8fr
+        0.8fr
+        1fr
+        0.8fr
+        1.2fr
+        0.2fr;
+
+    align-items: center;
+
+    padding: 13px 15px;
+
+    background-color: #fff3ed;
+
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TABLE ROW
+========================================= */
+
+.table-row {
+    display: grid;
+
+    grid-template-columns:
+        2.3fr
+        0.8fr
+        0.8fr
+        0.8fr
+        1fr
+        0.8fr
+        1.2fr
+        0.2fr;
+
+    align-items: center;
+
+    min-height: 76px;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 11px;
+}
+
+
+.table-row:last-of-type {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   FOOD ITEM
+========================================= */
+
+.food-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.food-icon {
+    width: 34px;
+
+    height: 34px;
+
+    min-width: 34px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 14px;
+}
+
+
+.food-item h3 {
+    color: #333;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+
+.food-item p {
+    color: #999;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+
+.food-item span {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.date strong {
+    color: #333;
+
+    font-size: 10px;
+}
+
+
+.date span {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.number {
+    color: #333;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.number span {
+    display: block;
+
+    color: #999;
+
+    font-size: 9px;
+
+    font-weight: normal;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   QUALITY
+========================================= */
+
+.quality {
+    color: #333;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.quality span {
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   REMARK
+========================================= */
+
+.remark-tag {
+    display: inline-block;
+
+    color: #A33215;
+
+    background-color: #fff3ed;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 10px;
+
+    padding: 5px 8px;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   MORE BUTTON
+========================================= */
+
+.more {
+    text-align: right;
+}
+
+
+.more button {
+    background: none;
+
+    border: none;
+
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+.more button:hover {
+    color: #E75C16;
+}
+
+
+/* =========================================
+   TABLE FOOTER
+========================================= */
+
+.table-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 15px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.table-footer p {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.pagination button {
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    color: #777;
+
+    border-radius: 4px;
+
+    padding: 6px 10px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.pagination button:hover {
+    border-color: #E75C16;
+
+    color: #E75C16;
+}
+
+
+.pagination .next {
+    background-color: #E75C16;
+
+    border-color: #E75C16;
+
+    color: white;
+}
+
+
+.pagination .next:hover {
+    background-color: #69200F;
+
+    border-color: #69200F;
+}
