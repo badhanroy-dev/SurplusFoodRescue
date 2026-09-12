@@ -1,0 +1,852 @@
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --light-orange: #FA8145;
+    --orange: #E75C16;
+    --burnt-orange: #C54716;
+    --dark-brown: #A33215;
+    --deep-brown: #69200F;
+
+    --background: #ffffff;
+    --card: #ffffff;
+    --text: #333333;
+    --light-text: #777777;
+    --border: #eeeeee;
+}
+
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: var(--dark-brown);
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    padding: 25px 25px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo-area h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.logo-area p {
+    font-size: 12px;
+    color: #f5c4b2;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+.menu a span {
+    width: 20px;
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+    background: var(--deep-brown);
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background: var(--orange);
+    font-weight: bold;
+}
+
+
+/* BOTTOM MENU */
+
+.bottom-menu {
+    margin-top: auto;
+
+    padding: 20px 15px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.bottom-menu a:hover {
+    background: var(--deep-brown);
+}
+
+.bottom-menu .logout {
+    color: #ffd0bd;
+}
+
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main-area {
+    flex: 1;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.top-navbar {
+    height: 75px;
+
+    background: var(--burnt-orange);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+
+/* TITLE */
+
+.page-title h1 {
+    font-size: 20px;
+}
+
+
+/* RIGHT SIDE */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification,
+.help {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.notification:hover,
+.help:hover {
+    color: var(--light-orange);
+}
+
+
+/* RIDER */
+
+.rider-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 20px;
+
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    background: var(--light-orange);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.rider-info strong {
+    display: block;
+    font-size: 13px;
+}
+
+.rider-info small {
+    font-size: 9px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   CHAT CONTAINER
+========================= */
+
+.chat-container {
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: 330px 1fr;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    margin: 25px;
+
+    min-height: 650px;
+}
+
+
+/* =========================
+   MESSAGE LIST
+========================= */
+
+.message-list {
+    border-right: 1px solid #ddd;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MESSAGE HEADING */
+
+.message-heading {
+    padding: 22px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.message-heading h2 {
+    font-size: 18px;
+
+    margin-bottom: 15px;
+
+    color: var(--burnt-orange);
+}
+
+
+/* FILTER BUTTONS */
+
+.filters {
+    display: flex;
+    gap: 7px;
+}
+
+.filters button {
+    border: none;
+
+    background: #f3f3f3;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: var(--light-orange);
+    color: white;
+}
+
+.filters .selected {
+    background: var(--orange);
+    color: white;
+}
+
+
+/* MESSAGE */
+
+.message {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    cursor: pointer;
+}
+
+.message:hover {
+    background: #fff4ef;
+}
+
+
+/* ACTIVE MESSAGE */
+
+.active-message {
+    background: #fff0e9;
+
+    border-left: 4px solid var(--orange);
+}
+
+
+/* MESSAGE IMAGE */
+
+.message-image {
+    width: 42px;
+    height: 42px;
+
+    background: var(--light-orange);
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* MESSAGE INFO */
+
+.message-info {
+    flex: 1;
+}
+
+.message-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 5px;
+}
+
+.message-top strong {
+    font-size: 13px;
+}
+
+.message-top span {
+    font-size: 9px;
+
+    color: var(--light-text);
+}
+
+.message-info p {
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    color: var(--light-text);
+}
+
+
+/* =========================
+   CHAT WINDOW
+========================= */
+
+.chat-window {
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+}
+
+
+/* =========================
+   CHAT HEADER
+========================= */
+
+.chat-header {
+    height: 75px;
+
+    padding: 15px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.chat-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--light-orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-person h3 {
+    font-size: 14px;
+}
+
+.chat-person p {
+    font-size: 10px;
+
+    color: var(--orange);
+
+    margin-top: 3px;
+}
+
+.chat-option {
+    font-size: 20px;
+
+    color: var(--burnt-orange);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CHAT MESSAGES
+========================= */
+
+.chat-messages {
+    flex: 1;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* TODAY */
+
+.today {
+    align-self: center;
+
+    background: #eeeeee;
+
+    padding: 6px 12px;
+
+    border-radius: 15px;
+
+    font-size: 9px;
+
+    color: #666;
+}
+
+
+/* RECEIVED */
+
+.received {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 70%;
+}
+
+.small-avatar {
+    width: 28px;
+    height: 28px;
+
+    background: var(--light-orange);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 12px;
+}
+
+.bubble {
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.received-bubble {
+    background: #f2f2f2;
+}
+
+.received small,
+.sent small {
+    display: block;
+
+    font-size: 8px;
+
+    color: #888;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   SENT MESSAGE
+========================= */
+
+.sent {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    max-width: 75%;
+
+    align-self: flex-end;
+}
+
+.sent-bubble {
+    background: var(--orange);
+
+    color: white;
+}
+
+
+/* =========================
+   PICKUP CARD
+========================= */
+
+.pickup-card {
+    width: 75%;
+
+    margin: 5px auto;
+
+    padding: 18px;
+
+    border: 1px solid var(--light-orange);
+
+    border-radius: 10px;
+
+    background: #fff8f5;
+}
+
+
+/* PICKUP TITLE */
+
+.pickup-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.pickup-title strong {
+    font-size: 12px;
+
+    color: var(--burnt-orange);
+}
+
+.pickup-title span {
+    font-size: 8px;
+
+    background: var(--light-orange);
+
+    color: white;
+
+    padding: 5px 7px;
+
+    border-radius: 5px;
+}
+
+
+/* STEPS */
+
+.step {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.step-dot {
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid var(--orange);
+
+    border-radius: 50%;
+
+    margin-top: 2px;
+}
+
+.step.completed .step-dot {
+    background: var(--orange);
+}
+
+.step strong {
+    font-size: 11px;
+}
+
+.step p {
+    font-size: 9px;
+
+    color: #888;
+
+    margin-top: 3px;
+}
+
+
+/* PICKUP BUTTON */
+
+.pickup-card button {
+    width: 100%;
+
+    border: none;
+
+    background: var(--orange);
+
+    color: white;
+
+    padding: 11px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.pickup-card button:hover {
+    background: var(--deep-brown);
+}
+
+
+/* =========================
+   SECOND MESSAGE
+========================= */
+
+.second-message {
+    margin-top: 5px;
+}
+
+
+/* TYPING */
+
+.typing {
+    font-size: 10px;
+
+    color: #999;
+
+    margin-left: 40px;
+}
+
+
+/* =========================
+   MESSAGE INPUT
+========================= */
+
+.message-input {
+    min-height: 65px;
+
+    border-top: 1px solid var(--border);
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* INPUT ICON */
+
+.input-icon {
+    border: none;
+
+    background: white;
+
+    font-size: 20px;
+
+    color: var(--burnt-orange);
+
+    cursor: pointer;
+}
+
+.input-icon:hover {
+    color: var(--deep-brown);
+}
+
+
+/* INPUT */
+
+.message-input input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+.message-input input::placeholder {
+    color: #aaa;
+}
+
+
+/* MIC */
+
+.mic {
+    color: var(--burnt-orange);
+
+    font-size: 16px;
+}
+
+
+/* SEND */
+
+.send {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.send:hover {
+    background: var(--deep-brown);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .chat-container {
+        grid-template-columns: 250px 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .chat-container {
+        grid-template-columns: 1fr;
+    }
+
+    .message-list {
+        display: none;
+    }
+
+}

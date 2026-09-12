@@ -1,0 +1,553 @@
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --light-orange: #FA8145;
+    --orange: #E75C16;
+    --burnt-orange: #C54716;
+    --dark-brown: #A33215;
+    --deep-brown: #69200F;
+
+    --background: #ffffff;
+    --card: #ffffff;
+    --text: #333333;
+    --light-text: #777777;
+    --border: #dddddd;
+}
+
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+
+    background: var(--dark-brown);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 25px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+    font-size: 21px;
+    color: var(white);
+}
+
+.logo p {
+    font-size: 11px;
+    color: #f5c4b2;
+    margin-top: 5px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 20px 12px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.menu a span {
+    width: 20px;
+    font-size: 16px;
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+    background: var(--deep-brown);
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background: var(--orange);
+}
+
+
+/* =========================
+   BOTTOM MENU
+========================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    padding: 15px 12px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.bottom-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 14px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.bottom-menu a:hover {
+    background: var(--deep-brown);
+}
+
+.logout {
+    color: #ffd0bd !important;
+}
+
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main-area {
+    flex: 1;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.top-navbar {
+    height: 75px;
+
+    background: var(--burnt-orange);
+
+    color: white;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* TITLE */
+
+.header-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.header-title h1 {
+    font-size: 20px;
+}
+
+
+/* ACTIVE COUNT */
+
+.task-count {
+    background: var(--light-orange);
+
+    padding: 5px 8px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+}
+
+
+/* HEADER RIGHT */
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.header-right > span {
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.header-right > span:hover {
+    color: var(--light-orange);
+}
+
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--light-orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.profile strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.profile small {
+    font-size: 8px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    flex: 1;
+
+    padding: 35px;
+
+    background: white;
+}
+
+
+/* =========================
+   TASK HEADER
+========================= */
+
+.task-header {
+    max-width: 850px;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.task-header h2 {
+    font-size: 13px;
+
+    color: var(--burnt-orange);
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+
+    gap: 8px;
+}
+
+.filters button {
+    border: 1px solid var(--border);
+
+    background: white;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: var(--light-orange);
+
+    color: white;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+    max-width: 850px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+    min-height: 75px;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr 180px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.task-card:hover {
+    border-color: var(--light-orange);
+
+    box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+}
+
+
+/* =========================
+   TASK INFO
+========================= */
+
+.task-info h3 {
+    font-size: 13px;
+
+    color: var(--burnt-orange);
+
+    margin-bottom: 7px;
+}
+
+.location {
+    font-size: 9px;
+
+    color: var(--light-text);
+}
+
+
+/* =========================
+   DESTINATION
+========================= */
+
+.destination {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.destination span {
+    color: var(--orange);
+
+    font-size: 15px;
+}
+
+.destination p {
+    font-size: 9px;
+
+    color: var(--light-text);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.task-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+.task-buttons button {
+    height: 40px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+/* DETAILS */
+
+.details {
+    width: 70px;
+
+    background: white;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+
+.details:hover {
+    background: var(--light-orange);
+
+    color: white;
+}
+
+
+/* PICKUP */
+
+.pickup {
+    width: 80px;
+
+    background: var(--orange);
+
+    color: white;
+
+    border: none;
+}
+
+.pickup:hover {
+    background: var(--deep-brown);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .task-card {
+        grid-template-columns: 1fr;
+    }
+
+    .task-buttons {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .task-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}

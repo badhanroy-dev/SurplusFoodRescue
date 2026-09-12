@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Chat</title>
+
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <h2>Rider Portal</h2>
+                <p>Mission-Driven Service</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="#">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    <span>▤</span>
+                    Available Tasks
+                </a>
+
+                <a href="#">
+                    <span>▣</span>
+                    Assigned Tasks
+                </a>
+
+                <a href="#">
+                    <span>◉</span>
+                    OTP Verification
+                </a>
+
+                <a href="#">
+                    <span>▱</span>
+                    Update Delivery Status
+                </a>
+
+                <a href="#">
+                    <span>◔</span>
+                    Report Delay
+                </a>
+
+                <a href="#" class="active">
+                    <span>▣</span>
+                    Chat
+                </a>
+
+            </nav>
+
+            <div class="bottom-menu">
+
+                <a href="#">
+                    ⚙ Settings
+                </a>
+
+                <a href="#" class="logout">
+                    ↪ Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN AREA -->
+        <main class="main-area">
+
+            <!-- TOP NAVBAR -->
+            <header class="top-navbar">
+
+                <div class="page-title">
+                    <h1>Volunteer Chat</h1>
+                </div>
+
+                <div class="header-right">
+
+                    <span class="notification">♧</span>
+                    <span class="help">?</span>
+
+                    <div class="rider-info">
+                        <div class="profile-circle">A</div>
+
+                        <div>
+                            <strong>Alex Rider</strong>
+                            <small>VOLUNTEER</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+            <section class="chat-container">
+
+                <!-- MESSAGE LIST -->
+                <div class="message-list">
+
+                    <div class="message-heading">
+                        <h2>Messages</h2>
+
+                        <div class="filters">
+                            <button class="selected">All</button>
+                            <button>Donors</button>
+                            <button>Charities</button>
+                        </div>
+                    </div>
+
+
+                    <!-- MESSAGE 1 -->
+                    <div class="message active-message">
+
+                        <div class="message-image">🍱</div>
+
+                        <div class="message-info">
+                            <div class="message-top">
+                                <strong>The Green Bistro</strong>
+                                <span>12:45 PM</span>
+                            </div>
+
+                            <p>Pick-up code: #4592 is ready...</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE 2 -->
+                    <div class="message">
+
+                        <div class="message-image">🏠</div>
+
+                        <div class="message-info">
+                            <div class="message-top">
+                                <strong>Urban Shelter HQ</strong>
+                                <span>Yesterday</span>
+                            </div>
+
+                            <p>Thanks for the food delivery!</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE 3 -->
+                    <div class="message">
+
+                        <div class="message-image">🚚</div>
+
+                        <div class="message-info">
+                            <div class="message-top">
+                                <strong>Dispatcher Dispatch</strong>
+                                <span>Tuesday</span>
+                            </div>
+
+                            <p>Road closure reported on 5th Ave.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHAT WINDOW -->
+                <div class="chat-window">
+
+                    <!-- CHAT HEADER -->
+                    <div class="chat-header">
+
+                        <div class="chat-person">
+
+                            <div class="chat-avatar">
+                                🍃
+                            </div>
+
+                            <div>
+                                <h3>The Green Bistro</h3>
+                                <p>Online · Restaurant Support</p>
+                            </div>
+
+                        </div>
+
+                        <div class="chat-option">
+                            ⓘ
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHAT MESSAGES -->
+                    <div class="chat-messages">
+
+                        <div class="today">
+                            TODAY
+                        </div>
+
+
+                        <!-- RECEIVED MESSAGE -->
+                        <div class="received">
+
+                            <div class="small-avatar">
+                                🍃
+                            </div>
+
+                            <div>
+                                <div class="bubble received-bubble">
+                                    Hello Alex! Your order for Urban Shelter HQ
+                                    (#4592) is now ready at the counter.
+                                    Please confirm pick-up when you're arrive.
+                                </div>
+
+                                <small>12:45 PM</small>
+                            </div>
+
+                        </div>
+
+
+                        <!-- SENT MESSAGE -->
+                        <div class="sent">
+
+                            <div>
+                                <div class="bubble sent-bubble">
+                                    Copy that. I'm 2 minutes away, just parking
+                                    the bike now. I'll be in shortly for the
+                                    remaining bags.
+                                </div>
+
+                                <small>12:46 PM ✓✓</small>
+                            </div>
+
+                            <div class="small-avatar green-avatar">
+                                AR
+                            </div>
+
+                        </div>
+
+
+                        <!-- PICKUP CARD -->
+                        <div class="pickup-card">
+
+                            <div class="pickup-title">
+                                <strong>▣ Pick-up Verification</strong>
+                                <span>AWAITING ACTION</span>
+                            </div>
+
+                            <div class="step completed">
+                                <div class="step-dot"></div>
+
+                                <div>
+                                    <strong>Arrive at The Green Bistro</strong>
+                                    <p>Completed 12:47 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-dot"></div>
+
+                                <div>
+                                    <strong>Verify Items & OTP</strong>
+                                    <p>Next Step</p>
+                                </div>
+                            </div>
+
+                            <button>
+                                ENTER PICK-UP CODE
+                            </button>
+
+                        </div>
+
+
+                        <!-- RECEIVED MESSAGE -->
+                        <div class="received second-message">
+
+                            <div class="small-avatar">
+                                🍃
+                            </div>
+
+                            <div>
+
+                                <div class="bubble received-bubble">
+                                    Perfect. The bags are marked with
+                                    URBAN SHELTER. See you in a second.
+                                </div>
+
+                                <small>12:47 PM</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="typing">
+                            ••• Dispatcher is typing...
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE INPUT -->
+                    <div class="message-input">
+
+                        <button class="input-icon">⊕</button>
+
+                        <button class="input-icon">▧</button>
+
+                        <input
+                            type="text"
+                            placeholder="Type a message..."
+                        >
+
+                        <span class="mic">♩</span>
+
+                        <button class="send">
+                            ➤
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

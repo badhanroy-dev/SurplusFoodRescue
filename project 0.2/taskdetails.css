@@ -1,0 +1,732 @@
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --light-orange: #FA8145;
+    --orange: #E75C16;
+    --burnt-orange: #C54716;
+    --dark-brown: #A33215;
+    --deep-brown: #69200F;
+
+    --background: #ffffff;
+    --card: #ffffff;
+
+    --text: #333333;
+    --gray: #777777;
+    --border: #dddddd;
+}
+
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+
+    background: var(--dark-brown);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 25px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+    color: var(white);
+
+    font-size: 21px;
+}
+
+.logo p {
+    color: #f8c4b2;
+
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+
+/* MENU */
+
+.menu {
+    padding: 20px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 14px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.menu a span {
+    width: 20px;
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+    background: var(--deep-brown);
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background: var(--orange);
+}
+
+
+/* =========================
+   BOTTOM MENU
+========================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    padding: 15px 12px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.bottom-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 14px;
+
+    font-size: 13px;
+
+    border-radius: 5px;
+}
+
+.bottom-menu a:hover {
+    background: var(--deep-brown);
+}
+
+.logout {
+    color: #ffd0bd !important;
+}
+
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main-area {
+    flex: 1;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.top-navbar {
+    height: 70px;
+
+    padding: 0 30px;
+
+    background: var(--burnt-orange);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* TITLE */
+
+.back-title {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.back {
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.back-title h1 {
+    font-size: 17px;
+}
+
+
+/* RIGHT SIDE */
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.header-right span {
+    font-size: 18px;
+}
+
+.header-right span:hover {
+    color: var(--light-orange);
+}
+
+
+/* PROFILE */
+
+.profile-circle {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: var(--light-orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: 100%;
+
+    max-width: 900px;
+
+    padding: 25px 30px;
+
+    margin: 0 auto;
+
+    background: white;
+}
+
+
+/* =========================
+   FOOD SECTION
+========================= */
+
+.food-section {
+    height: 270px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+}
+
+
+/* IMAGE */
+
+.food-picture {
+    width: 100%;
+    height: 100%;
+
+    background: #fff0e7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+}
+
+
+/* IMAGE OVERLAY */
+
+.food-overlay {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(105,32,15,0.9)
+    );
+
+    color: white;
+}
+
+.food-overlay h2 {
+    font-size: 23px;
+
+    margin-top: 8px;
+}
+
+.food-overlay p {
+    font-size: 11px;
+
+    margin-top: 6px;
+}
+
+.food-overlay strong {
+    position: absolute;
+
+    right: 25px;
+    bottom: 25px;
+
+    color: var(--light-orange);
+
+    font-size: 16px;
+}
+
+
+/* STATUS */
+
+.status {
+    background: var(--orange);
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   EXPIRY
+========================= */
+
+.expiry-box {
+    text-align: center;
+
+    padding: 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.expiry-icon {
+    font-size: 22px;
+
+    color: var(--orange);
+}
+
+.expiry-box p {
+    font-size: 8px;
+
+    color: var(--gray);
+
+    margin-top: 5px;
+}
+
+.expiry-box h2 {
+    color: var(--burnt-orange);
+
+    font-size: 22px;
+
+    margin-top: 3px;
+}
+
+.expiry-box small {
+    color: #999;
+
+    font-size: 8px;
+}
+
+
+/* =========================
+   SECTION BOX
+========================= */
+
+.section-box {
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: white;
+}
+
+.section-box h3 {
+    color: var(--burnt-orange);
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ORDER ROW */
+
+.order-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 10px;
+}
+
+.order-row:last-child {
+    border-bottom: none;
+}
+
+.order-row span {
+    color: var(--gray);
+}
+
+.order-row strong {
+    color: var(--text);
+}
+
+
+/* =========================
+   INFO GRID
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.info-card {
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: white;
+}
+
+.info-card:hover {
+    border-color: var(--light-orange);
+}
+
+
+/* ICON */
+
+.info-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 6px;
+
+    background: #fff0e8;
+
+    color: var(--orange);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.info-icon.charity {
+    background: #fff3ec;
+
+    color: var(--burnt-orange);
+}
+
+
+/* INFO TEXT */
+
+.info-card small {
+    color: var(--gray);
+
+    font-size: 7px;
+}
+
+.info-card h3 {
+    color: var(--text);
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+.info-card p {
+    color: var(--gray);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   ROUTE
+========================= */
+
+.route-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+
+    background: var(--orange);
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.dot.second {
+    background: var(--light-orange);
+}
+
+.route-item small {
+    color: var(--burnt-orange);
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.route-item p {
+    color: var(--gray);
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* LINE */
+
+.route-line {
+    width: 2px;
+
+    height: 25px;
+
+    background: var(--light-orange);
+
+    margin-left: 5px;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instruction-box {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: 1px solid #f0cfc2;
+
+    border-radius: 7px;
+
+    background: #fff8f4;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+/* ICON */
+
+.instruction-icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 5px;
+
+    background: var(--light-orange);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* TEXT */
+
+.instruction-box h3 {
+    color: var(--burnt-orange);
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+}
+
+.instruction-box p {
+    color: var(--gray);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ACCEPT BUTTON
+========================= */
+
+.accept-task {
+    margin-top: 15px;
+
+    width: 160px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.accept-task:hover {
+    background: var(--deep-brown);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .food-section {
+        height: 230px;
+    }
+
+    .food-overlay h2 {
+        font-size: 18px;
+    }
+
+}

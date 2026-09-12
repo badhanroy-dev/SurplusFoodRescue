@@ -1,0 +1,669 @@
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --light-orange: #FA8145;
+    --orange: #E75C16;
+    --burnt-orange: #C54716;
+    --dark-brown: #A33215;
+    --deep-brown: #69200F;
+
+    --background: #ffffff;
+    --card: #ffffff;
+
+    --text: #333333;
+    --light-text: #777777;
+    --border: #dddddd;
+}
+
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+
+    background: var(--dark-brown);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 25px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+    font-size: 21px;
+    color: var(white);
+}
+
+.logo p {
+    font-size: 11px;
+    color: #f5c4b2;
+    margin-top: 5px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 20px 12px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.menu a span {
+    width: 20px;
+    font-size: 16px;
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+    background: var(--deep-brown);
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background: var(--orange);
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    padding: 15px 12px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.bottom-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 14px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.bottom-menu a:hover {
+    background: var(--deep-brown);
+}
+
+.logout {
+    color: #ffd0bd !important;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-area {
+    flex: 1;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.top-navbar {
+    height: 75px;
+
+    padding: 0 30px;
+
+    background: var(--burnt-orange);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* HEADER TITLE */
+
+.header-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.header-title h1 {
+    font-size: 20px;
+}
+
+
+/* SEARCH */
+
+.search {
+    width: 230px;
+
+    height: 34px;
+
+    border: 1px solid white;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+}
+
+.search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 11px;
+}
+
+.search input::placeholder {
+    color: #fff;
+}
+
+
+/* HEADER RIGHT */
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.header-right > span {
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.header-right > span:hover {
+    color: var(--light-orange);
+}
+
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--light-orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.profile strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.profile small {
+    font-size: 8px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    padding: 25px 30px;
+
+    background: white;
+
+    flex: 1;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.filter-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.filter-box label {
+    font-size: 8px;
+
+    font-weight: bold;
+
+    color: var(--light-text);
+}
+
+.filter-box select {
+    width: 150px;
+
+    height: 35px;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    background: white;
+
+    color: var(--text);
+
+    font-size: 10px;
+}
+
+
+/* FILTER BUTTON */
+
+.filter-button {
+    height: 35px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background: var(--deep-brown);
+}
+
+
+/* NEARBY */
+
+.nearby {
+    margin-left: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+.nearby small {
+    font-size: 8px;
+
+    color: var(--light-text);
+}
+
+.nearby strong {
+    font-size: 24px;
+
+    color: var(--burnt-orange);
+}
+
+
+/* =========================
+   TASK GRID
+========================= */
+
+.task-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 950px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.task-card:hover {
+    border-color: var(--light-orange);
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image {
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+    background: #fff2eb;
+}
+
+
+/* Different backgrounds */
+
+.bakery {
+    background: #fff0e5;
+}
+
+.catering {
+    background: #fff4df;
+}
+
+.produce {
+    background: #eef8e9;
+}
+
+.frozen {
+    background: #eaf5f8;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+    padding: 12px;
+}
+
+.card-content h2 {
+    font-size: 14px;
+
+    color: var(--burnt-orange);
+
+    margin-bottom: 4px;
+}
+
+.green-text {
+    color: var(--orange);
+
+    font-size: 9px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   DETAILS GRID
+========================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.details-grid small {
+    display: block;
+
+    color: var(--light-text);
+
+    font-size: 7px;
+
+    margin-bottom: 4px;
+}
+
+.details-grid p {
+    font-size: 9px;
+
+    color: var(--text);
+}
+
+
+/* TIME */
+
+.time {
+    color: var(--orange) !important;
+
+    font-weight: bold;
+}
+
+
+/* EXPIRY */
+
+.expiry {
+    color: var(--orange) !important;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.card-buttons {
+    display: flex;
+
+    width: 100%;
+}
+
+.card-buttons button {
+    height: 35px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+}
+
+
+/* VIEW */
+
+.view-button {
+    width: 50%;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+}
+
+.view-button:hover {
+    background: var(--light-orange);
+
+    color: white;
+}
+
+
+/* ACCEPT */
+
+.accept-button {
+    width: 50%;
+
+    background: var(--orange);
+
+    color: white;
+
+    border: none;
+}
+
+.accept-button:hover {
+    background: var(--deep-brown);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .task-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .header-title {
+        gap: 10px;
+    }
+
+    .search {
+        width: 160px;
+    }
+
+}

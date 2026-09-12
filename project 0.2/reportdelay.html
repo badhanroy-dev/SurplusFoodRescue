@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Delay</title>
+
+    <link rel="stylesheet" href="reportdelay.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Rider Portal</h2>
+                <p>Mission-Driven Service</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="#">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    <span>▤</span>
+                    Available Tasks
+                </a>
+
+                <a href="#">
+                    <span>▣</span>
+                    Assigned Tasks
+                </a>
+
+                <a href="#">
+                    <span>◉</span>
+                    OTP Verification
+                </a>
+
+                <a href="#">
+                    <span>▱</span>
+                    Update Delivery Status
+                </a>
+
+                <!-- ACTIVE -->
+                <a href="#" class="active">
+                    <span>◔</span>
+                    Report Delay
+                </a>
+
+                <a href="#">
+                    <span>▣</span>
+                    Chat
+                </a>
+
+            </nav>
+
+            <div class="bottom-menu">
+
+                <a href="#">⚙ Settings</a>
+
+                <a href="#" class="logout">↪ Logout</a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP NAVBAR -->
+            <header class="top-navbar">
+
+                <div class="header-left">
+                    <h1>Report Delay</h1>
+                </div>
+
+                <div class="header-right">
+
+                    <span class="notification">♧</span>
+
+                    <span class="help">?</span>
+
+                    <div class="profile">
+                        <div class="profile-circle">A</div>
+
+                        <div class="profile-text">
+                            <strong>Alex Rider</strong>
+                            <small>VOLUNTEER</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+            <section class="content">
+
+                <div class="intro">
+
+                    <h2>Report Service Delay</h2>
+
+                    <p>
+                        Transparency is vital for our coordination team.
+                        Please provide accurate details regarding your current
+                        delay to help us re-route resources if necessary.
+                    </p>
+
+                </div>
+
+
+                <!-- GRID AREA -->
+                <div class="delay-layout">
+
+                    <!-- DELAY FORM -->
+                    <div class="delay-card">
+
+                        <form>
+
+                            <!-- DELAY REASON -->
+                            <div class="form-group">
+
+                                <label>DELAY REASON</label>
+
+                                <select>
+                                    <option>Select primary cause...</option>
+                                    <option>Traffic</option>
+                                    <option>Vehicle Problem</option>
+                                    <option>Road Block</option>
+                                    <option>Weather</option>
+                                    <option>Other</option>
+                                </select>
+
+                            </div>
+
+
+                            <!-- DELAY TIME -->
+                            <div class="form-group">
+
+                                <label>ESTIMATED DELAY TIME</label>
+
+                                <div class="time-options">
+
+                                    <button type="button">15m</button>
+
+                                    <button type="button">30m</button>
+
+                                    <button type="button">45m</button>
+
+                                    <button type="button">60m+</button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- COMMENTS -->
+                            <div class="form-group">
+
+                                <label>ADDITIONAL COMMENTS</label>
+
+                                <textarea
+                                    placeholder="Provide specific details (e.g., exact street name, nature of mechanical failure)..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- SUBMIT -->
+                            <button class="submit-btn" type="submit">
+                                ▷ Submit
+                            </button>
+
+                            <p class="note">
+                                Information will be transmitted to central
+                                dispatch immediately.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ORDER INFO CARD -->
+                    <div class="order-card">
+
+                        <div class="info-item">
+
+                            <span>Order ID</span>
+
+                            <strong>#RL-99283-VOL</strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>Destination</span>
+
+                            <strong>Banani</strong>
+
+                        </div>
+
+
+                        <div class="pickup-time">
+
+                            <span>◉</span>
+
+                            <strong>02:30 PM</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
