@@ -597,21 +597,9 @@ body {
 }
 
 
-.upload-box button {
-    background-color: white;
 
-    color: #E75C16;
 
-    border: 1px solid #f3d3c4;
 
-    border-radius: 5px;
-
-    padding: 8px 12px;
-
-    font-size: 10px;
-
-    cursor: pointer;
-}
 
 
 .upload-box button:hover {
@@ -975,6 +963,3 @@ body {
 }
 
 
-.resolution.pending {
-    color: #999;
-}
