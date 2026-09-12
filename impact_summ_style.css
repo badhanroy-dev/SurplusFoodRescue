@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f8fa;
+    color: #26344b;
+    font-size: 13px;
+}
+
+header {
+    height: 54px;
+    background: #69200F;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    position: relative;
+}
+
+.logo {
+    width: 210px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FA8145;
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    background: #50190e;
+    border: 1px solid #87351e;
+    border-radius: 20px;
+    padding: 9px 16px;
+    color: #d9aaa0;
+}
+
+.user {
+    margin-left: auto;
+    font-size: 10px;
+    color: #f3c7b8;
+}
+
+.layout {
+    display: flex;
+}
+
+aside {
+    width: 210px;
+    height: calc(100vh - 54px);
+    position: fixed;
+    background: #A33215;
+    padding: 14px 11px;
+    color: white;
+}
+
+aside a {
+    display: block;
+    color: #f7d5ca;
+    text-decoration: none;
+    padding: 11px 10px;
+    border-radius: 7px;
+}
+
+aside a:hover,
+aside .active {
+    background: #69200F;
+}
+
+aside .donate {
+    background: #E75C16;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.invite {
+    position: absolute;
+    bottom: 65px;
+    left: 11px;
+    right: 11px;
+    padding: 15px 10px;
+    background: #8f2e14;
+    border: 1px solid #b64a28;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.invite p {
+    font-size: 10px;
+    color: #edc4b8;
+}
+
+.invite button {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    background: #E75C16;
+    color: white;
+    padding: 11px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #69200F;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 28px 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #C54716;
+    margin: 0 0 5px;
+}
+
+.title p {
+    margin: 0;
+    color: #6d7b91;
+}
+
+.date {
+    background: white;
+    color: #617087;
+    border: 1px solid #e0e6ec;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.stat {
+    position: relative;
+    background: white;
+    border: 1px solid #e2e8ee;
+    border-radius: 12px;
+    padding: 15px;
+    color: #FA8145;
+}
+
+.stat small {
+    display: block;
+    color: #69788e;
+    font-size: 9px;
+    margin: 7px 0;
+}
+
+.stat b {
+    color: #C54716;
+    font-size: 20px;
+}
+
+.stat em {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-style: normal;
+    color: #0c9b65;
+    background: #e9fff6;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 9px;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.card h2 {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.chart {
+    height: 235px;
+}
+
+.chart > small {
+    color: #8995a5;
+    font-size: 9px;
+}
+
+.bars {
+    height: 145px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.bars i {
+    width: 28px;
+    background: linear-gradient(#FA8145, #E75C16);
+    border-radius: 6px 6px 0 0;
+}
+
+.months {
+    font-size: 9px;
+    text-align: center;
+    color: #66758b;
+    margin-top: 8px;
+}
+
+
+.circle {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 18px solid #E75C16;
+    outline: 15px solid #fff0e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+}
+
+.card p {
+    font-size: 9px;
+    border-top: 1px solid #eee;
+    padding: 6px;
+}
+
+.card p span {
+    float: right;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.trend {
+    height: 195px;
+}
+
+.curve {
+    font-size: 50px;
+    color: #FA8145;
+    height: 90px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.trend b {
+    font-size: 9px;
+}
+
+.trend span {
+    color: #E75C16;
+}
+
+.card h2 a {
+    float: right;
+    color: #E75C16;
+    font-size: 9px;
+}
+
+.activity {
+    border-top: 1px solid #eee;
+    padding: 12px 0;
+    font-size: 11px;
+}
+
+.activity small {
+    display: block;
+    margin-left: 25px;
+    color: #8390a1;
+    font-size: 9px;
+}
+
+.activity em {
+    float: right;
+    color: #09a06a;
+    font-style: normal;
+    font-size: 9px;
+}

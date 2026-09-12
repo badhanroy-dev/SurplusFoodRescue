@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f8fa;
+    color: #26344b;
+    font-size: 13px;
+}
+
+header {
+    height: 54px;
+    background: #69200F;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    position: relative;
+}
+
+.logo {
+    width: 210px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FA8145;
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    background: #50190e;
+    border: 1px solid #87351e;
+    border-radius: 20px;
+    padding: 9px 16px;
+    color: #d9aaa0;
+}
+
+.user {
+    margin-left: auto;
+    font-size: 10px;
+    color: #f3c7b8;
+}
+
+.layout {
+    display: flex;
+}
+
+aside {
+    width: 210px;
+    height: calc(100vh - 54px);
+    position: fixed;
+    background: #A33215;
+    padding: 14px 11px;
+    color: white;
+}
+
+aside a {
+    display: block;
+    color: #f7d5ca;
+    text-decoration: none;
+    padding: 11px 10px;
+    border-radius: 7px;
+}
+
+aside a:hover,
+aside .active {
+    background: #69200F;
+}
+
+aside .donate {
+    background: #E75C16;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.invite {
+    position: absolute;
+    bottom: 65px;
+    left: 11px;
+    right: 11px;
+    padding: 15px 10px;
+    background: #8f2e14;
+    border: 1px solid #b64a28;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.invite p {
+    font-size: 10px;
+    color: #edc4b8;
+}
+
+.invite button {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    background: #E75C16;
+    color: white;
+    padding: 11px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #69200F;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 30px;
+}
+
+h1 {
+    color: #C54716;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6d7b91;
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 15px;
+    border-bottom: 1px solid #edf0f3;
+    padding-bottom: 14px;
+    margin-top: 0;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+label {
+    display: block;
+    font-size: 9px;
+    font-weight: bold;
+    color: #53637a;
+    margin: 13px 0 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #dce3eb;
+    border-radius: 9px;
+    padding: 10px;
+    background: #fbfcfd;
+    font-family: Arial;
+    color: #33415a;
+}
+
+textarea {
+    height: 105px;
+    resize: none;
+}
+
+.upload {
+    height: 140px;
+    border: 1px dashed #FA8145;
+    border-radius: 12px;
+    background: #fffaf7;
+    text-align: center;
+    padding: 22px;
+    color: #FA8145;
+}
+
+.upload b,
+.upload small {
+    display: block;
+    color: #44536a;
+    margin: 7px;
+}
+
+.upload small {
+    font-size: 9px;
+    color: #8b95a4;
+}
+
+.upload button {
+    background: white;
+    color: #42516a;
+    border: 1px solid #d9e0e7;
+    padding: 7px;
+}
+
+.status {
+    border: 1px solid #dfe5eb;
+    border-radius: 9px;
+    padding: 12px;
+    margin: 9px 0;
+}
+
+.status b {
+    float: right;
+    color: #0ab279;
+}
+
+.status.active {
+    border-color: #FA8145;
+    background: #fffaf7;
+}
+
+.publish,
+.save {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.save {
+    background: white;
+    color: #33415a;
+    border: 1px solid #dce3ea;
+}

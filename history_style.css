@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    color: #263244;
+}
+
+
+.top {
+    height: 59px;
+    background: #7d230f;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 24px;
+    position: relative;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff793f;
+}
+
+.menu {
+    font-size: 22px;
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 32px;
+    background: #55190d;
+    border: 1px solid #8e331d;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.topright {
+    margin-left: auto;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.meals {
+    background: #55190d;
+    padding: 7px 16px;
+    border-radius: 7px;
+}
+
+small {
+    color: #8491a4;
+    display: block;
+}
+
+
+.page {
+    display: flex;
+    min-height: calc(100vh - 59px);
+}
+
+.side {
+    width: 168px;
+    background: #ad3517;
+    color: white;
+    padding: 12px;
+}
+
+.donate {
+    background: #ee5d17;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.item {
+    padding: 10px 8px;
+    font-size: 11px;
+}
+
+.item.active {
+    background: #ee5d17;
+    border-radius: 8px;
+}
+
+.ad {
+    background: #8f2913;
+    padding: 10px;
+    border-radius: 9px;
+    margin-top: 110px;
+    font-size: 10px;
+}
+
+.ad p {
+    font-size: 9px;
+}
+
+.logout {
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+.main {
+    flex: 1;
+    padding: 25px 22px;
+    position: relative;
+}
+
+h1 {
+    color: #cf4a18;
+    margin: 0;
+    font-size: 23px;
+}
+
+.sub {
+    color: #78879b;
+    font-size: 11px;
+    width: 500px;
+}
+
+.export {
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    background: white;
+    border: 1px solid #ff6f3d;
+    color: #d9521c;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.cards {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    color: #ce4c18;
+}
+
+.card {
+    flex: 1;
+    border: 1px solid #e2e7ed;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card h2 {
+    margin: 8px 0;
+}
+
+.card span {
+    float: right;
+    font-size: 9px;
+}
+
+.orangeText {
+    color: #ce4c18;
+}
+
+.filter {
+    border: 1px solid #e2e7ed;
+    padding: 10px;
+    margin: 14px 0;
+    border-radius: 10px;
+}
+
+.filter button {
+    background: white;
+    border: 1px solid #d8e0e8;
+    padding: 7px 12px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.filter small {
+    float: right;
+    margin-top: 8px;
+}
+
+.table {
+    border: 1px solid #e2e7ed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1.3fr .6fr 1.5fr .8fr .8fr .3fr;
+    padding: 14px;
+    border-top: 1px solid #edf0f3;
+    font-size: 10px;
+    align-items: center;
+}
+
+.heading {
+    border: 0;
+    color: #8291a5;
+    font-size: 9px;
+}
+
+.complete {
+    color: #12a775;
+    background: #e5faf2;
+    border: 1px solid #b8ecd8;
+    border-radius: 10px;
+    padding: 4px 8px;
+    width: max-content;
+    font-size: 8px;
+}
+
+.pages {
+    padding: 13px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.pages b {
+    background: #ff7744;
+    color: white;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.pages strong {
+    float: right;
+    color: #ed5b20;
+}
