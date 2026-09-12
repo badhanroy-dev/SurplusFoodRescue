@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.webpage{
+    display:flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3efef;
+}
+main{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+    gap:30px;
+
+}
+.admin-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.admin-profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+input{
+    padding:10px 15px;
+    width:400px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    font-family:'Poppins', sans-serif;
+}
+.active{
+    background:#FA8145;
+    border-radius:8px;
+}
+aside{
+    min-height:100vh;
+    width:250px;
+    background-color: #A33215;
+    padding:20px;
+}
+aside h2{
+    margin-bottom:40px;
+    color:#ffba98; 
+}
+aside ul{
+    list-style: none;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+aside li{
+    padding:12px;
+    margin:10px 0;
+    color:white;
+    border-radius:8px;
+    transition:0.3s;
+}
+aside li:hover{
+    background:#FA8145;
+    color:white;
+}
+.header-left p{
+   color:#69200F;
+}
+.header-left h1{
+    color: #E71C16;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px;
+}
+
+.card{
+    height:220px;
+    text-align: center;
+    background-color:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.card img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+.card h3{
+    color: #E71C16;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.card h2{
+    font-size:34px;
+    color:#290c05;
+    margin:10px 0;
+}
+.card p{
+    font-size: 12px;
+    color: #0beb61;
+}
+.monthly-report{
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.monthly-report select{
+    margin-top:20px;
+    padding:10px;
+    width:220px;
+    color:white;
+    background-color:#FA8145;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+.report-select{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.report-box{
+    background:#fffbf8;
+    padding:20px;
+    border-radius:11px;
+}
+.report-box h3{
+    color:#E71C16;
+}
+.recent-activity{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.recent-activity h2{
+    color:#A33215;
+    margin-bottom:20px;
+}

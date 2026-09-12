@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Rescue Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/volunteer_verify.css">
+</head>
+<body>
+    <div class="webpage">
+    <aside>
+        <h2>Food Rescue</h2>
+        <ul>
+<li><a href="index.html">Dashboard</a></li> 
+<li><a href="donoracc.html">Donor Accounts</a></li> 
+<li class="active">Volunteer Verification</li> 
+<li><a href="foodcategories.html">Food Categories</a></li> 
+<li><a href="analytics.html">Analytics</a></li> 
+<li><a href="broadcasts.html">Broadcasts</a></li>
+<li>Logout</li>
+        </ul>
+    </aside>
+        <main>
+            <section class="header">
+    <div class="header-left">
+        <h1>Volunteer Verification</h1>
+        <p>Manage volunteers</p>
+    </div>
+    <div class="header-right">
+        <div class="admin-profile">
+    <img src="images/profile.png" alt="Admin Profile">
+            <div>
+                <h4>Admin</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stat-cards">
+        <div class="card">
+    <p>Pending Requests</p>
+    <h2>6</h2>
+</div>
+<div class="card">
+    <p>Verified Volunteers</p>
+    <h2>12</h2>
+</div>
+<div class="card">
+    <p>Rejected Applications</p>
+    <h2>5</h2>
+</div>
+<div class="card">
+    <p>Total Volunteers</p>
+    <h2>50</h2>
+</div>
+
+</section>
+
+<section class="volunteer-verify">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>NID Number</th>
+                <th>NID Image</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+<tr>
+    <td>Rahim Ahmed</td>
+    <td>017XXXXXXXX</td>
+    <td>1998XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+    <td>
+   <span class="status-verified">
+   Verified
+    </span>
+    </td>
+    <td>
+    <button disabled>Verified</button>
+</td>
+</tr>
+
+<tr>
+    <td>Karim Hasan</td>
+    <td>019XXXXXXXX</td>
+    <td>2001XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+     <td>
+   <span class="status-pending">
+    Pending
+    </span>
+    </td>
+   <td><button class="verify-button">Verify</button><button class="reject-button">Reject</button></td>
+</tr>
+
+<tr>
+    <td>Tasnim Ahmed</td>
+    <td>013XXXXXXXX</td>
+    <td>2003XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+     <td>
+   <span class="status-pending">
+    Pending
+    </span>
+    </td>
+   <td><button class="verify-button">Verify</button><button class="reject-button">Reject</button></td>
+</tr>
+
+<tr>
+    <td>Jarin Hasan</td>
+    <td>012XXXXXXXX</td>
+    <td>2002XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+     <td>
+   <span class="status-pending">
+    Pending
+    </span>
+    </td>
+   <td><button class="verify-button">Verify</button><button class="reject-button">Reject</button></td>
+</tr>
+
+<tr>
+    <td>Md. Ayman</td>
+    <td>014XXXXXXXX</td>
+    <td>1999XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+     <td>
+   <span class="status-verified">
+   Verified
+    </span>
+    </td>
+    <td>
+    <button disabled>Verified</button>
+</td>
+</tr>
+
+<tr>
+    <td>Arif Rahman</td>
+    <td>016XXXXXXXX</td>
+    <td>2004XXXXXXXXX</td>
+    <td>
+       <a href="images/profile.png" target="_blank">View NID Image</a>
+    </td>
+     <td>
+   <span class="status-pending">
+    Pending
+    </span>
+    </td>
+   <td><button class="verify-button">Verify</button><button class="reject-button">Reject</button></td>
+</tr>
+
+
+</tbody>
+    </table>
+</section>
+    
+    
+    </main>
+    </div>
+</body>
+</html>

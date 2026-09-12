@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Broadcast Alert Campaign</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/broadcasts.css">
+</head>
+
+<body>
+    <div class="webpage">
+    <aside>
+        <h2>Food Rescue</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="donoracc.html">Donor Accounts</a></li>
+            <li><a href="volunteer_verify.html">Volunteer Verification</a></li>
+            <li><a href="foodcategories.html">Food Categories</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li class="active">Broadcasts</li>
+            <li>Logout</li>
+        </ul>
+
+    </aside>
+
+    <main>
+         <section class="header">
+    <div class="header-left">
+        <h1>Analytics</h1>
+        <p>Overview of food donations,distributions and impacts</p>
+    </div>
+    <div class="header-right">
+        <div class="admin-profile">
+    <img src="images/profile.png" alt="Admin Profile">
+            <div>
+                <h4>Admin</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <nav class="tabs">
+            <a href="broadcasts.html" class="tab active-tab">
+                Urgent Alert
+            </a>
+            <a href="campaign.html" class="tab">
+                Awareness Campaign
+            </a>
+        </nav>
+        <section class="broadcast-container">
+            <div class="broadcast-form">
+                <h2>Create Broadcast</h2>
+                <label>Title</label>
+                <input type="text" placeholder="Enter broadcast title">
+                <label>Message</label>
+                <textarea maxlength="500" placeholder="Write your alert or announcement here..."></textarea>
+                <div class="character-count">
+                    0 / 500
+                </div>
+
+                <label>Send To</label>
+                <select>
+                    <option>All Users</option>
+                    <option>Donors Only</option>
+                    <option>Volunteers Only</option>
+                </select>
+                <label>Schedule (Optional)</label>
+                <div class="schedule-row">
+                    <input type="date">
+                    <input type="time">
+                </div>
+
+                <div class="button-row">
+                    <button class="send-btn">
+                        Send Alert Now
+                    </button>
+                    <button class="draft-btn">
+                        Save as Draft
+                    </button>
+                </div>
+            </div>
+            <div class="recent-broadcasts">
+                <div class="recent-header">
+                    <h2>Recent Broadcasts</h2>
+                </div>
+                <div class="broadcast-card urgent">
+                    <div class="broadcast-info">
+                        <h3>
+                            Urgent: Food Items Expiring Soon
+                        </h3>
+                        <p>
+                            Sent to All Users
+                        </p>
+                        <span>
+                            25 July 2026
+                        </span>
+                    </div>
+                </div>
+
+                <div class="broadcast-card awareness">
+                    <div class="broadcast-info">
+                        <h3>
+                            World Food Day Campaign
+                        </h3>
+                        <p>
+                            Sent to All Users
+                        </p>
+                        <span>
+                            20 July 2026
+                        </span>
+                    </div>
+                </div>
+                <div class="broadcast-card warning">
+                    <div class="broadcast-info">
+                        <h3>
+                            Weather Alert: Heavy Rain
+                        </h3>
+                        <p>
+                            Sent to Volunteers
+                        </p>
+                        <span>
+                            22 July 2026
+                        </span>
+                    </div>
+                </div>
+                <a href="#" class="view-all">
+                    View All Broadcasts
+                </a>
+            </div>
+        </section>
+    </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.webpage{
+    display:flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3efef;
+}
+main{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+    gap:30px;
+
+}
+.admin-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.admin-profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.active{
+    background:#FA8145;
+    border-radius:8px;
+}
+aside{
+    min-height:100vh;
+    width:250px;
+    background-color: #A33215;
+    padding:20px;
+}
+aside h2{
+    margin-bottom:40px;
+    color:#ffba98; 
+}
+aside ul{
+    list-style: none;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+aside li{
+    padding:12px;
+    margin:10px 0;
+    color:white;
+    border-radius:8px;
+    transition:0.3s;
+}
+aside li:hover{
+    background:#FA8145;
+    color:white;
+}
+p{
+    color:#69200F;
+}
+h1{
+    color: #E71C16;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-cards{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px;
+}
+.card{
+    text-align: center;
+    background-color:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.card p{
+    color: #fc6c67;
+    font-size:16px;
+    margin-bottom: 10px;
+}
+.card h2{
+    font-size:34px;
+    color:#aa2200;
+    margin:10px 0;
+}
+
+button{
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+}
+
+.verify-button{
+    padding: 5px;
+    margin: 3px;
+    background-color: rgb(29, 208, 70);
+}
+.reject-button{
+    padding: 5px;
+    margin: 3px;
+    background-color: red;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+th{
+    background:#ff684d;
+    color:white;
+    border: 2px solid #E71C16;
+    padding:15px;
+    text-align:left;
+}
+td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.volunteer-verify{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+.status-verified{
+    display:inline-block;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin:5px;
+    background-color: rgb(148, 249, 156);
+    color:rgb(9, 58, 39);
+    font-size:14px;
+    font-weight:500;
+}
+.status-pending{
+    display:inline-block;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin:5px;
+    background-color: rgb(249, 232, 148);
+    color:rgb(98, 59, 5);
+    font-size:14px;
+    font-weight:500;
+}
