@@ -5,7 +5,6 @@
 }
 .webpage{
     display: flex;
-    font-family: 'Poppins', sans-serif;
     background-color: #f3efef;
     min-height: 100vh;
 }

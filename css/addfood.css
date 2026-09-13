@@ -2,18 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body{
-    background: #fff8f3;
-    color: #333;
 }
 
 .page{
-    max-width: 950px;
+     max-width: 950px;
     margin: 35px auto;
     padding: 0 20px;
+    background: #fff8f3;
+    color: #333;
 }
 
 .header{
@@ -24,7 +20,7 @@ body{
 }
 
 .header h1{
-    color: #C54716;
+    color: #E71C16;
     font-size: 28px;
     margin-bottom: 5px;
 }
@@ -81,8 +77,9 @@ textarea{
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #C54716;
+   border-color:#FA8145;
 }
+
 textarea{
     resize: vertical;
 }
@@ -104,7 +101,7 @@ button{
     color: #555;
 }
 .add-btn{
-    background: #e87524;
+    background: #E71C16;
     border: none;
     color: white;
 }

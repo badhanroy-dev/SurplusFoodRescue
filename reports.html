@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+
+<body>
+    <div class="webpage">
+    <aside>
+        <h2>Food Rescue</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="donoracc.html">Donor Accounts</a></li>
+            <li><a href="volunteer_verify.html">Volunteer Verification</a></li>
+            <li><a href="foodcategories.html">Food Categories</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li class="active">Broadcasts</li>
+            <li>Logout</li>
+        </ul>
+    </aside>
+    <main>
+        <section class="header">
+            <div class="header-left">
+                <h1>Reports</h1>
+                <p>View reports submitted by donors and volunteers</p>
+            </div>
+            <div class="header-right">
+                <div class="admin-profile">
+                    <img src="images/profile.png" alt="Admin Profile">
+                    <div>
+                        <h4>Admin</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="tabs">
+            <a href="broadcasts.html" class="tab">
+                Urgent Alert
+            </a>
+            <a href="campaign.html" class="tab">
+                Awareness Campaign
+            </a>
+            <a href="reports.html" class="tab active-tab">
+                Reports
+            </a>
+        </nav>
+        <section class="reports-container">
+            <div class="reports-header">
+                <h2>Submitted Reports</h2>
+                <p>Reports received from donors and volunteers</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Submitted By</th>
+                        <th>Role</th>
+                        <th>Report Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rahim Ahmed</td>
+                        <td>Volunteer</td>
+                        <td>Delivery Issue</td>
+                        <td>14 Sep 2026</td>
+                        <td>
+                            <span class="status-new">New</span>
+                        </td>
+                        <td>
+                            <button class="view-button">View</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>UIU Khan's Kitchen</td>
+                        <td>Donor</td>
+                        <td>Donation Issue</td>
+                        <td>12 Sep 2026</td>
+                        <td>
+                            <span class="status-reviewed">Reviewed</span>
+                        </td>
+                        <td>
+                            <button class="view-button">View</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Tasnim Ahmed</td>
+                        <td>Volunteer</td>
+                        <td>Food Quality</td>
+                        <td>10 Sep 2026</td>
+                        <td>
+                            <span class="status-new">New</span>
+                        </td>
+                        <td>
+                            <button class="view-button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Olympia Cafe</td>
+                        <td>Donor</td>
+                        <td>Pickup Problem</td>
+                        <td>9 Sep 2026</td>
+                        <td>
+                            <span class="status-reviewed">Reviewed</span>
+                        </td>
+                        <td>
+                            <button class="view-button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Arif Rahman</td>
+                        <td>Volunteer</td>
+                        <td>Recipient Issue</td>
+                        <td>8 Sep 2026</td>
+                        <td>
+                            <span class="status-new">New</span>
+                        </td>
+                        <td>
+                            <button class="view-button">View</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    </div>
+</body>
+</html>

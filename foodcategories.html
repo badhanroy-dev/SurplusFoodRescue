@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Rescue Admin Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/foodcategories.css">
 </head>
 <body>
@@ -48,7 +44,6 @@
     <h2>156</h2>
     <p>All food items</p>
     </div>
-
 <div class="card B">
     <img src="images/lettuce.png" alt="Fresh Food">
     <h4>Fresh Food</h4>
@@ -56,14 +51,12 @@
     <p>Safe and Fresh</p>
     
 </div>
-
 <div class="card C">
      <img src="images/clock.png" alt="Expiring Soon">
     <h4>Expiring Soon</h4>
     <h2>18</h2>
     <p>Within 2 days</p>
 </div>
-
 
 <div class="card D">
     <img src="images/danger.png" alt="Expired Food">
@@ -74,7 +67,6 @@
 
 
 </section>
-
 <section class="food-status">
     <div class="food-inv">
         <h3>Food Inventory</h3>
@@ -94,34 +86,37 @@
         <thead>
         <tr>
         <th>Food Name</th>
-        <th>Category</th>
+         <th>Category</th>
         <th>Donor</th>
         <th>Quantity</th>
         <th>Expiry Date</th>
         <th>Safety Status</th>
-        <th>Action</th>
+       <th>Safety Guidelines</th>
+       <th>Action</th>
             </tr>
         </thead>
         <tbody>
 
        <tr>
-        <td>Cooked Rice</td>
-        <td>Cooked Food</td>
-        <td>Khan's Kitchen</td>
-        <td>25 Kg</td>
-        <td>Aug 8, 2026</td>
-        <td><span class="safe">Safe</span></td>
-        <td><a href="images/cooked-rice.jpg" target="_blank" class="view">View</a></td>
-       </tr>
+    <td>Cooked Rice</td>
+    <td>Cooked Food</td>
+    <td>Khan's Kitchen</td>
+    <td>25 Kg</td>
+    <td>Aug 8, 2026</td>
+    <td><span class="safe">Safe</span></td>
+    <td>Keep refrigerated. Consume within 20 hours.</td>
+    <td><a href="images/cooked-rice.jpg" class="view">View</a></td>
+</tr>
 
-       <tr>
+      <tr>
     <td>Bread</td>
     <td>Bakery</td>
     <td>Star Cafe</td>
     <td>40 pcs</td>
     <td>Aug 5, 2026</td>
     <td><span class="safe">Safe</span></td>
-    <td><a href="images/bread.jpg" target="_blank" class="view">View</a></td>
+    <td>Keep in a clean, dry and sealed container.</td>
+    <td><a href="images/bread.jpg" class="view">View</a></td>
 </tr>
 
 <tr>
@@ -131,7 +126,8 @@
     <td>12 Kg</td>
     <td>Aug 7, 2026</td>
     <td><span class="expiring">Expiring Soon</span></td>
-    <td><a href="images/biriyani.jpg" target="_blank" class="view">View</a></td>
+    <td>Keep refrigerated. Consume fast before it expires!</td>
+    <td><a href="images/biriyani.jpg" class="view">View</a></td>
 </tr>
 
 <tr>
@@ -141,6 +137,7 @@
     <td>25 pcs</td>
     <td>Aug 3, 2026</td>
     <td><span class="expired">Expired</span></td>
+    <td>Keep refrigerated. Do not consume after expiry.</td>
     <td><button class="remove">Remove</button></td>
 </tr>
 
@@ -151,7 +148,8 @@
     <td>20 kg</td>
     <td>Aug 9, 2026</td>
     <td><span class="safe">Safe</span></td>
-    <td> <a href="images/fruits.jpg" target="_blank" class="view">View</a></td>
+    <td>Wash thoroughly before consuming.</td>
+    <td><a href="images/fruits.jpg" class="view">View</a></td>
 </tr>
 
 </tbody>
