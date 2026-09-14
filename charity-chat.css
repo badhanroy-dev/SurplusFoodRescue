@@ -42,13 +42,13 @@ body {
 
 .logo h2 {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
 .logo p {
     color: #f5c2ad;
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 3px;
 }
 
@@ -76,17 +76,11 @@ body {
 
     gap: 10px;
 
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
-/* MENU ICON */
 
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-    text-align: center;
-}
 
 
 /* ACTIVE MENU */
@@ -622,38 +616,10 @@ body {
 }
 
 
-/* TYPING */
-
-.typing {
-    display: flex;
-
-    align-items: center;
-
-    gap: 3px;
-
-    margin-left: 32px;
-
-    margin-top: 2px;
-}
 
 
-.typing span {
-    width: 4px;
-    height: 4px;
-
-    background-color: #aaa;
-
-    border-radius: 50%;
-}
 
 
-.typing p {
-    color: #aaa;
-
-    font-size: 9px;
-
-    margin-left: 4px;
-}
 
 
 /* MESSAGE INPUT */

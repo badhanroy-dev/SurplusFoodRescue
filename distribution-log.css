@@ -108,16 +108,7 @@ body {
 }
 
 
-/* =========================================
-   MENU ICON
-========================================= */
 
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-
-    text-align: center;
-}
 
 
 /* =========================================
@@ -189,7 +180,7 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: right;
 
     align-items: center;
 
@@ -318,98 +309,9 @@ body {
 }
 
 
-/* =========================================
-   STAT CARDS
-========================================= */
-
-.stats {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 14px;
-
-    margin-bottom: 22px;
-}
 
 
-.stat-card {
-    background-color: white;
 
-    border: 1px solid #eeeeee;
-
-    border-radius: 7px;
-
-    padding: 17px;
-
-    box-shadow: 0 2px 6px #eeeeee;
-}
-
-
-/* =========================================
-   STAT ICON
-========================================= */
-
-.stat-top {
-    margin-bottom: 11px;
-}
-
-
-.stat-icon {
-    width: 32px;
-
-    height: 32px;
-
-    background-color: #fff3ed;
-
-    border-radius: 5px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    color: #E75C16;
-
-    font-size: 15px;
-}
-
-
-/* =========================================
-   STAT TEXT
-========================================= */
-
-.stat-card > p {
-    color: #888;
-
-    font-size: 11px;
-
-    margin-bottom: 5px;
-}
-
-
-.stat-card h2 {
-    color: #C54716;
-
-    font-size: 24px;
-
-    margin-bottom: 6px;
-}
-
-
-.stat-description {
-    color: #999;
-
-    font-size: 9px;
-}
-
-
-.stat-description i {
-    color: #E75C16;
-
-    margin-right: 3px;
-}
 
 
 /* =========================================
@@ -568,13 +470,7 @@ body {
    FOOD ITEM
 ========================================= */
 
-.food-item {
-    display: flex;
 
-    align-items: center;
-
-    gap: 11px;
-}
 
 
 .food-icon {

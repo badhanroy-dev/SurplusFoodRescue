@@ -91,13 +91,7 @@ body {
 }
 
 
-/* MENU ICON */
 
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-    text-align: center;
-}
 
 
 /* ACTIVE */
@@ -153,39 +147,13 @@ body {
     border-bottom: 1px solid #eeeeee;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 
     padding: 0 25px;
 }
 
 
-/* SEARCH */
-
-.topbar input {
-    width: 330px;
-
-    background-color: #f8f8f8;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 20px;
-
-    padding: 10px 16px;
-
-    color: #333;
-
-    font-size: 12px;
-}
-
-.topbar input:focus {
-    border-color: #FA8145;
-    outline: none;
-}
-
-.topbar input::placeholder {
-    color: #999;
-}
 
 
 /* TOP ICONS */

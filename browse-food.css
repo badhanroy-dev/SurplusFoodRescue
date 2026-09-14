@@ -108,16 +108,7 @@ body {
 }
 
 
-/* =========================================
-   MENU ICON
-========================================= */
 
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-
-    text-align: center;
-}
 
 
 /* =========================================
@@ -189,7 +180,7 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: right;
 
     align-items: center;
 
@@ -717,25 +708,7 @@ body {
 }
 
 
-.donor-info > i {
-    width: 30px;
 
-    height: 30px;
-
-    background-color: #fff3ed;
-
-    color: #E75C16;
-
-    border-radius: 5px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 13px;
-}
 
 
 .donor-info div {
@@ -879,57 +852,6 @@ body {
     color: #999;
 
     font-size: 10px;
-}
-
-
-/* =========================================
-   PAGINATION
-========================================= */
-
-.pagination {
-    display: flex;
-
-    gap: 6px;
-}
-
-
-.pagination button {
-    background-color: white;
-
-    border: 1px solid #dddddd;
-
-    color: #777;
-
-    border-radius: 4px;
-
-    padding: 7px 11px;
-
-    font-size: 10px;
-
-    cursor: pointer;
-}
-
-
-.pagination button:hover {
-    border-color: #E75C16;
-
-    color: #E75C16;
-}
-
-
-.pagination .next {
-    background-color: #E75C16;
-
-    border-color: #E75C16;
-
-    color: white;
-}
-
-
-.pagination .next:hover {
-    background-color: #69200F;
-
-    border-color: #69200F;
 }
 
 .x{

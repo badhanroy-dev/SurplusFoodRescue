@@ -62,14 +62,14 @@ body {
 .logo h2 {
     color: white;
 
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
 .logo p {
     color: #f5c2ad;
 
-    font-size: 13px;
+    font-size: 11px;
 
     margin-top: 3px;
 }
@@ -94,7 +94,7 @@ body {
 
     color: white;
 
-    padding: 12px 10px;
+    padding: 11px 10px;
 
     border-radius: 5px;
 
@@ -104,20 +104,11 @@ body {
 
     gap: 10px;
 
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
-/* =========================================
-   MENU ICON
-========================================= */
 
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-
-    text-align: center;
-}
 
 
 /* =========================================
@@ -190,37 +181,6 @@ body {
 }
 
 
-/* =========================================
-   SEARCH
-========================================= */
-
-.topbar input {
-    width: 330px;
-
-    background-color: #f8f8f8;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 20px;
-
-    padding: 10px 16px;
-
-    color: #333;
-
-    font-size: 12px;
-}
-
-
-.topbar input:focus {
-    border-color: #FA8145;
-
-    outline: none;
-}
-
-
-.topbar input::placeholder {
-    color: #999;
-}
 
 
 /* =========================================

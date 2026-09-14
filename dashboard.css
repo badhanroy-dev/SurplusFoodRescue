@@ -76,13 +76,6 @@ body {
 }
 
 
-/* MENU ICON */
-
-.menu a span,
-.bottom-menu a span {
-    width: 18px;
-    text-align: center;
-}
 
 
 /* ACTIVE MENU */
@@ -334,23 +327,6 @@ body {
 }
 
 
-/* FOOD IMAGE */
-
-.food-image {
-    width: 32px;
-    height: 32px;
-
-    background-color: #fff3ed;
-
-    border-radius: 5px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-}
 
 
 /* FOOD TEXT */
