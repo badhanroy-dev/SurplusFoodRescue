@@ -9,18 +9,28 @@
 
 <body>
     <div class="webpage">
-    <aside>
+   <aside>
+    <div class="sidebar-top">
         <h2>Food Rescue</h2>
+        <p>Admin Portal</p>
+
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="donoracc.html">Donor Accounts</a></li>
             <li><a href="volunteer_verify.html">Volunteer Verification</a></li>
             <li><a href="foodcategories.html">Food Categories</a></li>
             <li><a href="analytics.html">Analytics</a></li>
-            <li class="active">Broadcasts</li>
-            <li>Logout</li>
+            <li class="active"><a href="broadcasts.html">Broadcasts</a></li>
         </ul>
-    </aside>
+    </div>
+
+    <div class="sidebar-bottom">
+        <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+</aside>
     <main>
         <section class="header">
             <div class="header-left">
@@ -28,13 +38,14 @@
                 <p>View reports submitted by donors and volunteers</p>
             </div>
             <div class="header-right">
-                <div class="admin-profile">
-                    <img src="images/profile.png" alt="Admin Profile">
-                    <div>
-                        <h4>Admin</h4>
-                    </div>
-                </div>
-            </div>
+    <div class="admin-profile">
+        <img src="images/notifications.png" class="notification-icon">
+        <img src="images/profile.png" class="profile-icon">
+        <div>
+            <h4>Admin</h4>
+        </div>
+    </div>
+</div>
         </section>
         <nav class="tabs">
             <a href="broadcasts.html" class="tab">

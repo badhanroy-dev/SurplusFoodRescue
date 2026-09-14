@@ -18,39 +18,60 @@ main{
 .admin-profile{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:10px;
 }
-.admin-profile img{
-    width:50px;
-    height:50px;
+
+.notification-icon{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+.profile-icon{
+    width:35px;
+    height:35px;
     border-radius:50%;
 }
-.active{
-    background:#FA8145;
-    border-radius:8px;
+
+.admin-profile h4{
+    font-size:14px;
 }
 aside{
     min-height:100vh;
     width:250px;
-    background-color: #A33215;
+    background-color:#A33215;
     padding:20px;
-}
-aside h2{
-    margin-bottom:40px;
-    color:#ffba98; 
-}
-aside ul{
-    list-style: none;
-}
-aside ul li a {
-    color: white;
-    text-decoration: none;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
-aside ul li a:hover {
-    color: white;
-    text-decoration: none;
+.sidebar-top{
+    display:flex;
+    flex-direction:column;
 }
+
+aside h2{
+    margin-bottom:5px;
+    color:white;
+}
+
+.sidebar-top p{
+    margin-bottom:35px;
+    color:#ffba98;
+    font-size:14px;
+}
+
+.sidebar-bottom{
+    margin-top:auto;
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+aside ul{
+    list-style:none;
+}
+
 aside li{
     padding:12px;
     margin:10px 0;
@@ -58,9 +79,20 @@ aside li{
     border-radius:8px;
     transition:0.3s;
 }
+
+aside li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
 aside li:hover{
     background:#FA8145;
-    color:white;
+}
+
+aside li.active{
+    background:#FA8145;
+    border-radius:8px;
 }
 p{
     color:#69200F;

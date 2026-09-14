@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    background-color: #fff8f3;
+}
+.page-header{
+    background: #a33215;
+    color: #fff0e9;
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.page-header h1{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.page-header p{
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.section{
+    margin-bottom: 30px;
+}
+
+.section h2,
+.agreement h2{
+    color: #a33215;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card{
+    background: white;
+    padding: 23px;
+    border-radius: 10px;
+    border-top: 4px solid #fa8145;
+}
+
+.card h3{
+    color: #a33215;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card p{
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.card ul{
+    padding-left: 18px;
+}
+
+.card li{
+    color: #555;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.guideline-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.guideline{
+    display: flex;
+    gap: 16px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.guideline > span{
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0e9;
+    color: #a33215;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guideline h3{
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.guideline p{
+    color: #666;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.agreement{
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border-top: 4px solid #fa8145;
+    margin-top: 5px;
+}
+
+.agreement > p{
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer p{
+    color: #888;
+    font-size: 11px;
+}
+
