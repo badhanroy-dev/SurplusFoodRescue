@@ -5,6 +5,7 @@
 }
 
 .webpage{
+    font-family: Arial,sans-serif;
     display: flex;
     background-color: #f3efef;
     min-height: 100vh;
@@ -18,6 +19,7 @@ aside{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    position: fixed;
 }
 
 .sidebar-top{
@@ -61,7 +63,7 @@ aside li a{
 }
 
 aside li:hover{
-    background:#FA8145;
+    background:#69200f;
 }
 
 aside li.active{
@@ -69,6 +71,7 @@ aside li.active{
     border-radius:8px;
 }
 main{
+    margin-left: 250px;
     flex: 1;
     display: flex;
     flex-direction: column;

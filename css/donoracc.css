@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 .webpage{
+    font-family: Arial,sans-serif;
     display:flex;
     background-color: #f3efef;
 }
@@ -13,6 +14,7 @@ main{
     flex-direction: column;
     padding:30px;
     gap:30px;
+     margin-left:250px;
 
 }
 .admin-profile{
@@ -44,6 +46,7 @@ aside{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    position:fixed;
 }
 
 .sidebar-top{
@@ -87,7 +90,7 @@ aside li a{
 }
 
 aside li:hover{
-    background:#FA8145;
+    background:#69200f;
 }
 
 aside li.active{
@@ -128,9 +131,8 @@ table{
     border-collapse: collapse;
 }
 th{
-    background:#ff684d;
-    color:white;
-    border: 2px solid #E71C16;
+     background:#fff3ed;
+    color:#a33215;
     padding:15px;
     text-align:left;
 }

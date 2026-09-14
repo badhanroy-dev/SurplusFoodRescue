@@ -5,6 +5,7 @@
 }
 
 .webpage{
+    font-family: Arial,sans-serif;
     display: flex;
     background-color: #f3efef;
     min-height: 100vh;
@@ -18,6 +19,7 @@ aside{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    position: fixed;
 }
 
 .sidebar-top{
@@ -61,7 +63,7 @@ aside li a{
 }
 
 aside li:hover{
-    background:#FA8145;
+    background:#69200f;
 }
 
 aside li.active{
@@ -70,6 +72,7 @@ aside li.active{
 }
 
 main{
+    margin-left: 250px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -163,9 +166,8 @@ table{
 }
 
 th{
-    background: #ff684d;
-    color: white;
-    border: 2px solid #E71C16;
+    background: #fff3ed;
+    color: #a33215;
     padding: 15px;
     text-align: left;
 }
