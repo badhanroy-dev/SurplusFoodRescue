@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3efef;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 250px;
+  background-color: #A33215;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar-title h1 {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.sidebar-title p {
+  color: #ffd9c7;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu-item {
+  margin: 10px 0;
+}
+
+.menu-item a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.menu-item a:hover {
+  background-color: #69200F
+}
+
+.menu-item.active a {
+  background-color: #FA8145;
+}
+
+.bottom-menu {
+  margin-top: auto;
+}
+
+/* ===== MAIN AREA ===== */
+.main {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-heading {
+  color: #E71C16;
+  font-size: 32px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+.search-icon {
+  font-size: 18px;
+  color: #A33215;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #E75C16;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== CHAT LAYOUT ===== */
+.chat-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.content-box {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  height: 100%;
+}
+
+/* ===== CHAT LIST ===== */
+.chat-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.chat-tab {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f3efef;
+  color: #69200F;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-tab.active {
+  background-color: #FA8145;
+  color: white;
+}
+
+.chat-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.chat-preview.active {
+  background-color: #f3efef;
+}
+
+.chat-preview:hover {
+  background-color: #f3efef;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #FA8145;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+
+.chat-preview-text {
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-preview-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chat-preview-msg {
+  font-size: 12px;
+  color: #69200F;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.chat-time {
+  font-size: 11px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* ===== CHAT WINDOW ===== */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.chat-window-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chat-window-status {
+  font-size: 12px;
+  color: #69200F;
+  margin-top: 2px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.chat-date {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.message.received {
+  background-color: #f3efef;
+  color: #333;
+}
+
+.message.sent {
+  background-color: #FA8145;
+  color: white;
+  margin-left: auto;
+}
+
+.msg-time {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+/* ===== PICKUP CARD (inside chat) ===== */
+.pickup-card {
+  background-color: #f3efef;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  max-width: 70%;
+}
+
+.pickup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badge-progress {
+  background-color: #FFF3E0;
+  color: #EF6C00;
+}
+
+.pickup-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pickup-step.done .step-dot {
+  background-color: #2E7D32;
+}
+
+.step-sub {
+  font-size: 11px;
+  color: #999;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.typing-indicator {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+/* ===== CHAT INPUT BAR ===== */
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #FA8145;
+}
+
+.send-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #FA8145;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.send-btn:hover {
+  background-color: #E9652F;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 7px 15px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #FA8145;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #E9652F;
+}

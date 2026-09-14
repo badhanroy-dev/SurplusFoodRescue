@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rider Portal - Dashboard</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Rider Portal</h1>
+      <p>Mission-Driven Service</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-item active"><a href="dashboard.html">Dashboard</a></li>
+      <li class="menu-item"><a href="available-tasks.html">Available Tasks</a></li>
+      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
+      <li class="menu-item"><a href="otp-verification.html">OTP Verification</a></li>
+      <li class="menu-item"><a href="update-delivery-status.html">Update Delivery Status</a></li>
+      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
+      <li class="menu-item"><a href="volunteer-chat.html">Chat</a></li>
+    </ul>
+
+    <ul class="menu bottom-menu">
+      <li class="menu-item"><a href="#">Settings</a></li>
+      <li class="menu-item"><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="page-header">
+      <div>
+        <h2 class="page-heading">Volunteer Dashboard</h2>
+        <p class="page-subtitle">Welcome back, Rider.</p>
+      </div>
+      <div class="profile-section">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">12</div>
+        <div class="stat-label">AVAILABLE TASKS</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">03</div>
+        <div class="stat-label">ASSIGNED TASKS</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">08</div>
+        <div class="stat-label">COMPLETED DELIVERIES</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">01</div>
+        <div class="stat-label">PENDING DELIVERIES</div>
+      </div>
+    </div>
+
+    <!-- New Available Tasks -->
+    <div class="content-box">
+      <div class="box-header">
+        <h3>New Available Tasks</h3>
+        <a href="available-tasks.html" class="view-link">View all available</a>
+      </div>
+
+      <div class="task-row">
+        <div class="task-info">
+          <div>
+            <p class="task-name">PizzaHut</p>
+            <p class="task-meta">XYZ &nbsp; 5.8 km &nbsp; 12.0 kg</p>
+          </div>
+        </div>
+        <a href="task-details.html" class="btn btn-secondary">Accept Task</a>
+      </div>
+
+      <div class="task-row">
+        <div class="task-info">
+          <div>
+            <p class="task-name">PizzaHut</p>
+            <p class="task-meta">XYZ &nbsp; 5.8 km &nbsp; 12.0 kg</p>
+          </div>
+        </div>
+        <a href="task-details.html" class="btn btn-secondary">Accept Task</a>
+      </div>
+
+      <div class="task-row">
+        <div class="task-info">
+          <div>
+            <p class="task-name">PizzaHut</p>
+            <p class="task-meta">XYZ &nbsp; 5.8 km &nbsp; 12.0 kg</p>
+          </div>
+        </div>
+        <a href="task-details.html" class="btn btn-secondary">Accept Task</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

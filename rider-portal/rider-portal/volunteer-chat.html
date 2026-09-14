@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rider Portal - Chat</title>
+<link rel="stylesheet" href="volunteer-chat.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Rider Portal</h1>
+      <p>Mission-Driven Service</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="menu-item"><a href="available-tasks.html">Available Tasks</a></li>
+      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
+      <li class="menu-item"><a href="otp-verification.html">OTP Verification</a></li>
+      <li class="menu-item"><a href="update-delivery-status.html">Update Delivery Status</a></li>
+      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
+      <li class="menu-item active"><a href="volunteer-chat.html">Chat</a></li>
+    </ul>
+
+    <ul class="menu bottom-menu">
+      <li class="menu-item"><a href="#">Settings</a></li>
+      <li class="menu-item"><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="page-header">
+      <h2 class="page-heading">Volunteer Chat</h2>
+      <div class="profile-section">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+      </div>
+    </div>
+
+    <div class="chat-layout">
+
+      <!-- Message List -->
+      <div class="chat-list content-box">
+        <div class="chat-tabs">
+          <button class="chat-tab active">All</button>
+          <button class="chat-tab">Donors</button>
+          <button class="chat-tab">Charities</button>
+        </div>
+
+        <div class="chat-preview active">
+          <div class="chat-avatar">GB</div>
+          <div class="chat-preview-text">
+            <p class="chat-preview-name">The Green Bistro</p>
+            <p class="chat-preview-msg">Pick-up code: #4592 is ready...</p>
+          </div>
+          <span class="chat-time">12:45 PM</span>
+        </div>
+
+        <div class="chat-preview">
+          <div class="chat-avatar">US</div>
+          <div class="chat-preview-text">
+            <p class="chat-preview-name">Urban Shelter HQ</p>
+            <p class="chat-preview-msg">Thank you for the fast delivery! The family is grateful.</p>
+          </div>
+          <span class="chat-time">Yesterday</span>
+        </div>
+
+        <div class="chat-preview">
+          <div class="chat-avatar">DD</div>
+          <div class="chat-preview-text">
+            <p class="chat-preview-name">Dispatcher Dispatch</p>
+            <p class="chat-preview-msg">Road closure reported on 5th Ave. Plan detour.</p>
+          </div>
+          <span class="chat-time">Tuesday</span>
+        </div>
+      </div>
+
+      <!-- Chat Window -->
+      <div class="chat-window content-box">
+
+        <div class="chat-window-header">
+          <div>
+            <p class="chat-window-name">The Green Bistro</p>
+            <p class="chat-window-status">Online • Restaurant Support</p>
+          </div>
+        </div>
+
+        <div class="chat-messages">
+
+          <p class="chat-date">TODAY</p>
+
+          <div class="message received">
+            <p>Hello Alex! Your order for Urban Shelter HQ (#4592) is now ready at the counter. Please confirm pick-up when you arrive.</p>
+            <span class="msg-time">12:45 PM</span>
+          </div>
+
+          <div class="message sent">
+            <p>Copy that. I'm 2 minutes away, just parking the bike now. I'll be in shortly for the thermal bags.</p>
+            <span class="msg-time">12:46 PM</span>
+          </div>
+              <div>
+                <span class="step-sub">Completed 12:47 PM</span>
+              </div>
+            </div>
+    
+            </div>
+
+        </div>
+
+        <div class="chat-input-bar">
+          <input type="text" class="chat-input" placeholder="Type a message...">
+          <button class="send-btn">Send</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
