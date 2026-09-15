@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    color: #26344b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #A33215;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.logo span {
+    color: #FA8145;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 11px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   DONATE BUTTON
+========================================= */
+
+.menu .donate {
+    background-color: #FA8145;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.menu .donate:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+    border-top: 1px solid #c76b50;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+    min-height: 100vh;
+    margin-left: 210px;
+    background-color: #f6f8fa;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid #dfdcdc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1000;
+}
+
+
+/* =========================================
+   TOP INFORMATION
+========================================= */
+
+.top-info {
+    color: #26344b;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 95px 30px 30px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1 {
+    color: #E71C16;
+    margin: 0;
+    font-size: 27px;
+}
+
+.title p {
+    color: #6d7b91;
+    margin-top: 7px;
+}
+
+
+/* =========================================
+   SECOND SEARCH
+========================================= */
+
+.search2 {
+    width: 210px;
+    background-color: white;
+    border: 1px solid #dce3eb;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #8995a5;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 250px;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    background-color: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.card h2 {
+    font-size: 15px;
+    border-bottom: 1px solid #edf0f3;
+    padding-bottom: 14px;
+    margin-top: 0;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.card > label {
+    display: block;
+    font-size: 9px;
+    font-weight: bold;
+    color: #53637a;
+    margin: 13px 0 7px;
+}
+
+
+/* =========================================
+   INPUT & TEXTAREA
+========================================= */
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #dce3eb;
+    border-radius: 9px;
+    padding: 10px;
+    background-color: #fbfcfd;
+    color: #33415a;
+    font-family: Arial;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TIME INPUT
+========================================= */
+
+.time-input {
+    width: 100%;
+    height: 42px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.time-input:focus {
+    border-color: #FA8145;
+    outline: none;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.notice {
+    margin-top: 22px;
+    padding: 12px;
+    background-color: #fff9e7;
+    border: 1px solid #ffe1a3;
+    color: #b95a22;
+    border-radius: 9px;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.summary h2 em {
+    float: right;
+    font-size: 9px;
+    background-color: #ffe9df;
+    color: #FA8145;
+    padding: 5px;
+    border-radius: 5px;
+    font-style: normal;
+}
+
+.summary strong,
+.summary small,
+.summary span {
+    display: block;
+}
+
+.summary strong {
+    font-size: 11px;
+}
+
+.summary small {
+    color: #8490a0;
+    margin-top: 5px;
+    font-size: 9px;
+}
+
+.summary span {
+    color: #FA8145;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #edf0f3;
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   CONFIRM BUTTON
+========================================= */
+
+.summary button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #FA8145;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 11px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.summary button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   GENERAL BUTTON
+========================================= */
+
+button {
+    cursor: pointer;
+}
+
+.donorportaltext {
+    color: rgb(253, 190, 190);
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.menu a.active {
+    background-color: #FA8145;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRescue - Donate Food</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+```
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <div class="logo">
+        <h2>FoodRescue</h2>
+        <p>Donor Portal</p>
+    </div>
+
+    <nav class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="post.html" class="active">Post Food</a>
+            <a href="shedule.html">Pickup Requests</a>
+            <a href="impact_summary.html">Impact Summary</a>
+            <a href="mulreceipt.html">Receipts</a>
+            <a href="message.html">Messages</a>
+            <a href="history.html">Donation History</a>
+            <a href="multracking.html">Pickup Status</a>
+    </nav>
+
+    <div class="bottom-menu">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="top-icons">
+                <span>🔔 &nbsp; 👤</span>
+            </div>
+
+        </header>
+
+
+    <!-- POST FOOD -->
+    <div class="post-page">
+
+        <h1>Donate Food</h1>
+
+        <p class="subtitle">
+            Share surplus food and make a meaningful impact in your community.
+        </p>
+
+
+        <div class="grid">
+
+            <!-- LEFT -->
+            <div>
+
+                <!-- FOOD DETAILS -->
+                <div class="card">
+
+                    <h2>Food Details</h2>
+
+                    <div class="fields">
+
+                        <div>
+                            <label>FOOD NAME</label>
+                            <input placeholder="e.g. Fresh Garden Vegetables">
+                        </div>
+
+                        <div>
+                            <label>CATEGORY</label>
+                            <input value="Vegetables">
+                        </div>
+
+                        <!-- QUANTITY -->
+                        <div>
+                            <label>QUANTITY</label>
+                            <input value="15">
+                        </div>
+
+                        <!-- AVAILABLE -->
+                        <div>
+                            <label>AVAILABLE</label>
+
+                            <div class="available-box">
+
+                                <div class="available-choice">
+                                    <label class="radio-option">
+                                        <input type="radio" name="availableType" value="box">
+                                        <span>Box</span>
+                                    </label>
+
+                                    <label class="radio-option">
+                                        <input type="radio" name="availableType" value="unit">
+                                        <span>Unit</span>
+                                    </label>
+                                </div>
+
+                                <input
+                                    type="number"
+                                    class="available-input"
+                                    placeholder="How many?"
+                                    min="1"
+                                >
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>EXPIRY WINDOW</label>
+                            <input placeholder="mm/dd/yyyy">
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION + FOOD SAFETY -->
+                    <div class="description-row">
+
+                        <div>
+                            <label>DESCRIPTION</label>
+
+                            <textarea
+                                placeholder="Briefly describe the food items, storage requirements, or any allergen information..."
+                            ></textarea>
+                        </div>
+
+
+                        <div>
+                            <label>FOOD SAFETY INFO</label>
+
+                            <textarea
+                                placeholder="Describe food safety information, preparation date, storage condition, allergens, etc..."
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PICKUP SCHEDULE -->
+                <div class="card">
+
+                    <h2>Pickup Schedule</h2>
+
+                    <div class="fields">
+
+                        <div>
+                            <label>PICKUP DATE</label>
+                            <input placeholder="mm/dd/yyyy">
+                        </div>
+
+                        <div>
+                            <label>PREFERRED TIME</label>
+                            <input placeholder="--:-- --">
+                        </div>
+
+                    </div>
+
+                    <label>PICKUP ADDRESS</label>
+
+                    <input value="⌖ House 23, Road 5, Dhanmondi, Dhaka">
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div>
+
+                <!-- UPLOAD PHOTOS -->
+                <div class="card">
+
+                    <h2>Upload Photos</h2>
+
+                    <div class="upload">
+
+                        <div class="upload-icon">♧</div>
+
+                        <b>Drag and drop images</b>
+
+                        <small>
+                            PNG, JPG, or JPEG (MAX 10MB)
+                        </small>
+
+                        <button>BROWSE FILES</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+```
+
+</div>
+
+</body>
+</html>

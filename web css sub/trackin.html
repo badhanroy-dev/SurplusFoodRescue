@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRescue - Pickup Tracking</title>
+    <link rel="stylesheet" href="tracking.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>FoodRescue</h2>
+            <p>Donor Portal</p>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="post.html">Post Food</a>
+            <a href="shedule.html">Pickup Requests</a>
+            <a href="impact_summary.html">Impact Summary</a>
+            <a href="mulreceipt.html">Receipts</a>
+            <a href="message.html">Messages</a>
+            <a href="history.html">Donation History</a>
+            <a href="multracking.html" class="active">Pickup Status</a>
+        </nav>
+
+        <div class="bottom-menu">
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div class="top-icons">
+                <span>🔔 &nbsp; 👤</span>
+            </div>
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+        <div class="tracking-page">
+
+            <!-- PAGE TITLE -->
+            <div class="page-header">
+
+                <a href="shedule.html" class="back-link">
+                    Pickup Requests &gt;
+                </a>
+
+                <h1>Delivery Progress</h1>
+
+            </div>
+
+
+            <!-- TRACKING ROADMAP -->
+            <div class="content-box">
+
+                <h3 class="section-title">
+                    Tracking Roadmap
+                </h3>
+
+
+                <div class="roadmap">
+
+
+                    <!-- =====================
+                         STEP 1
+                    ====================== -->
+
+                    <div class="roadmap-step done">
+
+                        <div class="step-icon">
+                            1
+                        </div>
+
+                        <div class="blank-box"></div>
+
+                        <div class="step-text">
+
+                            <p class="step-title">
+                                Order Accepted
+                            </p>
+
+                            <p class="step-sub">
+                                Oct 24, 09:15 AM
+                            </p>
+
+                            <span class="badge badge-active">
+                                COMPLETED
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================
+                         STEP 2
+                    ====================== -->
+
+                    <div class="roadmap-step current">
+
+                        <div class="step-icon">
+                            2
+                        </div>
+
+                        <div class="blank-box"></div>
+
+                        <div class="step-text">
+
+                            <p class="step-title">
+                                Picked Up
+                            </p>
+
+                            <p class="step-sub">
+                                Awaiting collection at Community Hub A
+                            </p>
+
+                            <span class="badge badge-progress">
+                                IN PROGRESS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================
+                         STEP 3
+                    ====================== -->
+
+                    <div class="roadmap-step pending">
+
+                        <div class="step-icon">
+                            3
+                        </div>
+
+                        <div class="blank-box"></div>
+
+                        <div class="step-text">
+
+                            <p class="step-title">
+                                In Transit
+                            </p>
+
+                            <p class="step-sub">
+                                Pending previous step
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================
+                         STEP 4
+                    ====================== -->
+
+                    <div class="roadmap-step pending">
+
+                        <div class="step-icon">
+                            4
+                        </div>
+
+                        <div class="step-text">
+
+                            <p class="step-title">
+                                Delivered
+                            </p>
+
+                            <p class="step-sub">
+                                Banani
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTION BUTTONS -->
+
+                <div class="action-buttons">
+
+                    <button class="btn btn-primary">
+                        Mark Picked Up
+                    </button>
+
+                    <button class="btn btn-outline">
+                        Mark In Transit
+                    </button>
+
+                    <a href="otp-verification.html"
+                       class="btn btn-outline">
+                        Mark Delivered
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

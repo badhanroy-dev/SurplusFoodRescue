@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRescue - Impact Summary</title>
+    <link rel="stylesheet" href="impact_summary.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>FoodRescue</h2>
+            <p>Donor Portal</p>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="post.html">Post Food</a>
+            <a href="shedule.html">Pickup Requests</a>
+            <a href="impact_summary.html" class="active">Impact Summary</a>
+            <a href="mulreceipt.html">Receipts</a>
+            <a href="message.html">Messages</a>
+            <a href="history.html">Donation History</a>
+            <a href="multracking.html">Pickup Status</a>
+        </nav>
+
+        <div class="bottom-menu">
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="top-icons">
+                <span>🔔 &nbsp; 👤</span>
+            </div>
+
+        </header>
+
+
+        <div class="impact-page">
+
+            <!-- TITLE -->
+            <div class="title">
+
+                <div>
+                    <h1>Impact Summary</h1>
+
+                    <p>
+                        Track and analyze your cumulative food donation footprint.
+                    </p>
+                </div>
+
+                <button class="date">
+                    ▣ Year to Date (2026)
+                </button>
+
+            </div>
+
+
+            <!-- TOP 4 STATS -->
+            <div class="stats">
+
+                <div class="stat">
+                    <small>MEALS RESCUED</small>
+                    <b>12,482</b>
+                </div>
+
+                <div class="stat">
+                    <small>DONATED (KG)</small>
+                    <b>10,520</b>
+                </div>
+
+                <div class="stat">
+                    <small>PICKUPS COMPLETED</small>
+                    <b>984</b>
+                </div>
+
+                <div class="stat">
+                    <small>PERSON HELPED</small>
+                    <b>892</b>
+                </div>
+
+            </div>
+
+
+            <!-- DATA SECTION -->
+            <div class="data-section">
+
+                <!-- DONATIONS OVER TIME -->
+                <div class="card monthly">
+
+                    <h2>Donations Over Time</h2>
+
+                    <small>
+                        Monthly donation summary
+                    </small>
+
+                    <div class="data-row header-row">
+                        <b>Month</b>
+                        <b>Donations</b>
+                        <b>Quantity</b>
+                    </div>
+
+                    <div class="data-row">
+                        <span>January</span>
+                        <span>24</span>
+                        <span>820 kg</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>February</span>
+                        <span>18</span>
+                        <span>560 kg</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>March</span>
+                        <span>27</span>
+                        <span>740 kg</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>April</span>
+                        <span>15</span>
+                        <span>430 kg</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>May</span>
+                        <span>21</span>
+                        <span>620 kg</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span>June</span>
+                        <span>25</span>
+                        <span>690 kg</span>
+                    </div>
+
+                </div>
+
+
+                <!-- FOOD CATEGORIES -->
+                <div class="card categories">
+
+                    <h2>Food Categories</h2>
+
+                    <small>
+                        Donated food by category
+                    </small>
+
+                    <div class="category-row">
+                        <span>Vegetables</span>
+                        <b>45%</b>
+                    </div>
+
+                    <div class="category-row">
+                        <span>Rice & Grains</span>
+                        <b>28%</b>
+                    </div>
+
+                    <div class="category-row">
+                        <span>Curry & Sides</span>
+                        <b>15%</b>
+                    </div>
+
+                    <div class="category-row">
+                        <span>Fruits</span>
+                        <b>12%</b>
+                    </div>
+
+                    <div class="category-total">
+                        <span>Total Food Donations</span>
+                        <b>582</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+            <div class="bottom">
+
+                <!-- WEEKLY TREND -->
+                <div class="card trend">
+
+                    <h2>Weekly Trend</h2>
+
+                    <small>
+                        Weekly pickup and donation information
+                    </small>
+
+                    <div class="week-row">
+                        <span>Monday</span>
+                        <b>8 donations</b>
+                    </div>
+
+                    <div class="week-row">
+                        <span>Tuesday</span>
+                        <b>11 donations</b>
+                    </div>
+
+                    <div class="week-row">
+                        <span>Wednesday</span>
+                        <b>16 donations</b>
+                    </div>
+
+                    <div class="week-row">
+                        <span>Thursday</span>
+                        <b>9 donations</b>
+                    </div>
+
+                    <div class="week-row">
+                        <span>Friday</span>
+                        <b>7 donations</b>
+                    </div>
+
+                    <p class="peak">
+                        Peak donation day:
+                        <strong>Wednesday</strong>
+                    </p>
+
+                </div>
+
+
+                <!-- TOTAL DONORS -->
+                <div class="card donors">
+
+                    <h2>Total Donors This Month</h2>
+
+                    <small>
+                        Donors who contributed food this month
+                    </small>
+
+                    <div class="donor-number">
+                        128
+                    </div>
+
+                    <div class="donor-info">
+                        <span>New Donors</span>
+                        <b>34</b>
+                    </div>
+
+                    <div class="donor-info">
+                        <span>Returning Donors</span>
+                        <b>94</b>
+                    </div>
+
+                    <div class="donor-info">
+                        <span>Total Donations</span>
+                        <b>156</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

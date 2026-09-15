@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   HTML & BODY
+============================== */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* ==============================
+   DASHBOARD
+============================== */
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    display: block;
+}
+
+
+/* ACTIVE MENU */
+
+.menu a.active {
+    background-color: #FA8145;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #C54716;
+}
+
+
+/* BOTTOM MENU */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.main {
+    flex: 1;
+
+    height: 100vh;
+
+    margin-left: 210px;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   TOP BAR
+============================== */
+
+.topbar {
+    height: 65px;
+
+    position: fixed;
+
+    top: 0;
+    left: 210px;
+    right: 0;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    z-index: 10;
+
+    border-bottom: 1px solid #e0dddc;
+}
+
+/* USER ICONS */
+
+.top-icons {
+    margin-left: auto;
+
+    display: flex;
+    gap: 20px;
+
+    color: rgb(171, 165, 165);
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   TRACKING PAGE
+============================== */
+
+.tracking-page {
+    width: 100%;
+
+    height: calc(100vh - 65px);
+
+    margin-top: 65px;
+
+    padding: 30px 42px;
+
+    overflow-y: auto;
+
+    background-color: #fafaf9;
+}
+
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: block;
+
+    color: #69200F;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    margin-bottom: 8px;
+}
+
+.back-link:hover {
+    color: #E75C16;
+}
+
+.page-header h1 {
+    color: #E71C16;
+
+    font-size: 23px;
+}
+
+
+/* ==============================
+   CONTENT BOX
+============================== */
+
+.content-box {
+    background-color: white;
+
+    padding: 25px;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 12px;
+
+    max-width: 900px;
+}
+
+.section-title {
+    color: #333;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   ROADMAP
+============================== */
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* EACH STEP */
+
+.roadmap-step {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    min-height: 112px;
+}
+
+
+/* ==============================
+   NUMBER CIRCLE
+============================== */
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background-color: #ddd;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* COMPLETED */
+
+.roadmap-step.done .step-icon {
+    background-color: #2E7D32;
+}
+
+
+/* CURRENT */
+
+.roadmap-step.current .step-icon {
+    background-color: #FA8145;
+}
+
+
+/* PENDING */
+
+.roadmap-step.pending .step-icon {
+    background-color: #ddd;
+}
+
+
+/* ==============================
+   GREY BLANK BOX
+============================== */
+
+.blank-box {
+    width: 290px;
+    height: 100px;
+
+    background-color: #ddd;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   STEP INFORMATION
+============================== */
+
+.step-text {
+    flex: 1;
+
+    padding-top: 0;
+}
+
+.step-title {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 5px;
+}
+
+.step-sub {
+    font-size: 13px;
+
+    color: #69200F;
+
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+   BADGES
+============================== */
+
+.badge {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    display: inline-block;
+}
+
+
+/* COMPLETED BADGE */
+
+.badge-active {
+    background-color: #E8F5E9;
+
+    color: #2E7D32;
+}
+
+
+/* IN PROGRESS BADGE */
+
+.badge-progress {
+    background-color: #FFF3E0;
+
+    color: #EF6C00;
+}
+
+
+/* ==============================
+   ACTION BUTTONS
+============================== */
+
+.action-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    text-align: center;
+}
+
+
+/* ORANGE BUTTON */
+
+.btn-primary {
+    background-color: #FA8145;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #E9652F;
+}
+
+
+/* OUTLINE BUTTON */
+
+.btn-outline {
+    background-color: #f3efef;
+
+    color: #69200F;
+
+    border: 1px solid #ddd;
+}
+
+.btn-outline:hover {
+    background-color: #e8e2e2;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .blank-box {
+        width: 220px;
+    }
+
+    .content-box {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .main {
+        margin-left: 180px;
+    }
+
+    .topbar {
+        left: 180px;
+    }
+
+    .tracking-page {
+        padding: 25px;
+    }
+
+    .blank-box {
+        width: 180px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}

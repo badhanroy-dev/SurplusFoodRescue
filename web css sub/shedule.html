@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodRescue - Schedule Pickup</title>
+    <link rel="stylesheet" href="shedule.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>FoodRescue</h2>
+            <p class="donorportaltext">Donor Portal</p>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="post.html">Post Food</a>
+            <a href="shedule.html" class="active">Pickup Requests</a>
+            <a href="impact_summary.html">Impact Summary</a>
+            <a href="mulreceipt.html">Receipts</a>
+            <a href="message.html">Messages</a>
+            <a href="history.html">Donation History</a>
+            <a href="multracking.html">Pickup Status</a>
+        </nav>
+
+        <div class="bottom-menu">
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div class="top-info">
+                🔔 &nbsp; 👤
+            </div>
+        </header>
+
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <div class="title">
+
+                <div>
+                    <h1>Schedule Pickup</h1>
+                    <p>
+                        Configure your donation details and logistics preferences
+                    </p>
+                </div>
+
+                <div class="search2">
+                    Search orders...
+                </div>
+
+            </div>
+
+
+            <div class="grid">
+
+                <!-- ADDRESS DETAILS -->
+                <div class="card">
+
+                    <h2>Address Details</h2>
+
+                    <label>BUILDING / FLOOR / SUITE</label>
+
+                    <input value="Unit 402, 4th Floor">
+
+                    <label>SPECIAL INSTRUCTIONS</label>
+
+                    <textarea>Call upon arrival at front loading dock.
+
+Gate access code is #4021.
+
+Please ask Steve at logistics desk.</textarea>
+
+                    <div class="notice">
+                        Address recognized in volunteer logistics dispatch area.
+                    </div>
+
+                </div>
+
+
+                <!-- SCHEDULE TIME -->
+                <div class="card">
+
+                    <h2>Schedule Time</h2>
+
+                    <label>SELECT PICKUP TIME</label>
+
+                    <input type="time" class="time-input">
+
+                </div>
+
+
+                <!-- PICKUP SUMMARY -->
+                <div class="card summary">
+
+                    <h2>
+                        Pickup Summary
+                        <em>Draft Booking</em>
+                    </h2>
+
+                    <label>LOCATION</label>
+
+                    <strong>
+                        823 W Congress Pkwy,<br>
+                        Chicago, IL
+                    </strong>
+
+                    <small>
+                        Unit 402 (Logistics Bay)
+                    </small>
+
+                    <hr>
+
+                    <label>VOLUME</label>
+
+                    <strong>
+                        20 kg (2 Boxes)
+                    </strong>
+
+                    <small>
+                        Perishable & Packaged Goods
+                    </small>
+
+                    <button>
+                        Confirm Pickup
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

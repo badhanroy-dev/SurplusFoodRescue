@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+   SAME SIZE / SPACING AS BROWSE FOOD
+========================================= */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    display: block;
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background-color: #FA8145;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #C54716;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+
+    min-height: 100vh;
+
+    margin-left: 210px;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   TOP BAR
+   SAME SIZE AS BROWSE FOOD
+========================================= */
+
+.topbar {
+    height: 65px;
+
+    position: fixed;
+
+    top: 0;
+    left: 210px;
+    right: 0;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    z-index: 10;
+
+    border-bottom: 1px solid #e0dddc;
+
+}
+
+/* =========================================
+   TOP RIGHT
+========================================= */
+
+.top-icons {
+    margin-left: auto;
+
+    display: flex;
+
+    gap: 20px;
+
+    color: rgb(171, 165, 165);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 95px 30px 30px;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+h1 {
+    color: #E71C16;
+
+    margin: 0;
+
+    font-size: 23px;
+}
+
+.sub {
+    color: #78879b;
+
+    font-size: 11px;
+
+    width: 500px;
+}
+
+
+/* =========================================
+   EXPORT
+========================================= */
+
+.export {
+    position: absolute;
+
+    right: 30px;
+    top: 95px;
+
+    background: #FA8145;
+
+    border: 1px solid #FA8145;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    color: #ce4c18;
+}
+
+.card {
+    flex: 1;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 10px;
+
+    padding: 15px;
+}
+
+.card h2 {
+    margin: 8px 0;
+}
+
+.card span {
+    float: right;
+
+    font-size: 9px;
+}
+
+.orangeText {
+    color: #ce4c18;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.filter {
+    border: 1px solid #e2e7ed;
+
+    padding: 10px;
+
+    margin: 14px 0;
+
+    border-radius: 10px;
+}
+
+.filter button {
+    background: #FA8145;
+
+    color: white;
+
+    border: 1px solid #FA8145;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    margin-right: 5px;
+
+    cursor: pointer;
+}
+
+.filter small {
+    float: right;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table {
+    border: 1px solid #e2e7ed;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.row {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr .6fr 1.5fr .8fr .8fr .3fr;
+
+    padding: 14px;
+
+    border-top: 1px solid #edf0f3;
+
+    font-size: 10px;
+
+    align-items: center;
+}
+
+.heading {
+    border: 0;
+
+    color: #8291a5;
+
+    font-size: 9px;
+}
+
+.complete {
+    color: #12a775;
+
+    background: #e5faf2;
+
+    border: 1px solid #b8ecd8;
+
+    border-radius: 10px;
+
+    padding: 4px 8px;
+
+    width: max-content;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pages {
+    padding: 13px;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+.pages b {
+    background: #FA8145;
+
+    color: white;
+
+    padding: 8px;
+
+    border-radius: 7px;
+}
+
+.pages strong {
+    float: right;
+
+    color: #C54716;
+}
