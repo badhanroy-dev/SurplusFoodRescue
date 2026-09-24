@@ -269,6 +269,8 @@ form {
 }
 
 
+
+
 /* =========================================
    INPUT BOX
 ========================================= */
@@ -327,6 +329,12 @@ form {
 
 .input-box select {
     cursor: pointer;
+}
+
+.input-box input[type="file"] {
+    font-size: 9px;
+    cursor: pointer;
+    
 }
 
 
