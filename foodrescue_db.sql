@@ -276,7 +276,7 @@ CREATE TABLE campaigns (
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS food_safety_guidelines (
   guideline_id INT AUTO_INCREMENT PRIMARY KEY,
-  admin_id INT NOT NULL DEFAULT 1,
+  admin_id INT NOT NULL,
   category ENUM('Safety Status', 'Handling Guideline', 'Compliance & Policy', 'Footer Notice') NOT NULL DEFAULT 'Handling Guideline',
   title VARCHAR(200) NOT NULL,
   description TEXT NOT NULL,
