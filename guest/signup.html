@@ -93,7 +93,7 @@
 
                 <!-- SIGNUP FORM -->
 
-                <form>
+                <form action="signup_process.php" method="POST" enctype="multipart/form-data" id="signupForm" onsubmit="return validateSignupForm();">
 
 
                     <!-- ACCOUNT TYPE -->
@@ -106,15 +106,15 @@
 
                             <i class="fa-solid fa-users"></i>
 
-                            <select>
+                            <select name="role" id="role" required>
 
-                                <option>Select account type</option>
+                                <option value="">Select account type</option>
 
-                                <option>Food Donor</option>
+                                <option value="Food Donor">Food Donor</option>
 
-                                <option>Charity Organization</option>
+                                <option value="Charity Organization">Charity Organization</option>
 
-                                <option>Volunteer Rider</option>
+                                <option value="Volunteer Rider">Volunteer Rider</option>
 
                             </select>
 
@@ -137,7 +137,7 @@
 
                                 <i class="fa-solid fa-user"></i>
 
-                                <input type="text" placeholder="Enter name">
+                                <input type="text" name="full_name" id="full_name" placeholder="Enter name" required>
 
                             </div>
 
@@ -152,7 +152,7 @@
 
                                 <i class="fa-solid fa-id-card"></i>
 
-                                <input type="text" placeholder="Enter number">
+                                <input type="text" name="reg_nid_number" id="reg_nid_number" placeholder="Enter number">
 
                             </div>
 
@@ -168,7 +168,7 @@
 
                                 
 
-                                <input type="file" accept="image/*">
+                                <input type="file" name="nid_image" id="nid_image" accept="image/*">
 
                             </div>
 
@@ -189,7 +189,7 @@
 
                             <i class="fa-solid fa-envelope"></i>
 
-                            <input type="email" placeholder="Enter email address">
+                            <input type="email" name="email" id="email" placeholder="Enter email address" required>
 
                         </div>
 
@@ -207,7 +207,7 @@
 
                             <i class="fa-solid fa-phone"></i>
 
-                            <input type="tel" placeholder="+880 1XXXXXXXXX">
+                            <input type="tel" name="phone" id="phone" placeholder="+880 1XXXXXXXXX" required>
 
                         </div>
 
@@ -225,7 +225,7 @@
 
                             <i class="fa-solid fa-location-dot"></i>
 
-                            <input type="text" placeholder="Enter your location">
+                            <input type="text" name="address" id="address" placeholder="Enter your location" required>
 
                         </div>
 
@@ -246,7 +246,7 @@
 
                                 <i class="fa-solid fa-lock"></i>
 
-                                <input type="password" placeholder="Create password">
+                                <input type="password" name="password" id="password" placeholder="Create password" required>
 
                             </div>
 
@@ -261,7 +261,7 @@
 
                                 <i class="fa-solid fa-lock"></i>
 
-                                <input type="password" placeholder="Confirm password">
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" required>
 
                             </div>
 
@@ -276,7 +276,7 @@
 
                     <div class="terms">
 
-                        <input type="checkbox">
+                        <input type="checkbox" name="terms" id="terms" required>
 
                         <p>
                             I agree to the FoodRescue
@@ -337,6 +337,8 @@
     </div>
 
 
+    <!-- CLIENT-SIDE VALIDATION SCRIPT -->
+    <script src="signup.js"></script>
 </body>
 
 </html>
