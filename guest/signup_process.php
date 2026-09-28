@@ -37,13 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("<script>alert('Invalid email format. Please enter a valid email.'); window.history.back();</script>");
     }
 
+    if (!preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/", $password)) {
+        die("<script>alert('Password must be at least 8 characters and contain an uppercase letter, lowercase letter, and number.'); window.history.back();</script>");
+    }
+
     if ($password !== $confirm_password) {
         die("<script>alert('Passwords do not match. Please try again.'); window.history.back();</script>");
     }
 
-    if (strlen($password) < 6) {
-        die("<script>alert('Password must be at least 6 characters long.'); window.history.back();</script>");
-    }
+    
 
     // 2. Check if email already exists using prepared statement
     $check_sql = "SELECT user_id FROM users WHERE email = ?";
