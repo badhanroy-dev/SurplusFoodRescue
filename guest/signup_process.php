@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $check_sql = "SELECT user_id FROM users WHERE email = ?";
     $stmt = mysqli_prepare($conn, $check_sql);
     if (!$stmt) {
-        die("<script>alert('Database Error on email check: " . addslashes(mysqli_error($conn)) . "'); window.history.back();</script>");
+       die("<script>alert('Database error'); window.history.back();</script>");
     }
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     mysqli_stmt_close($stmt);
 
-    // 3. Handle NID Image Upload (Optional)
+    // 3. Handle NID Image Upload
     $nid_image_path = null;
     if (isset($_FILES['nid_image']) && $_FILES['nid_image']['error'] === UPLOAD_ERR_OK) {
         $file_tmp   = $_FILES['nid_image']['tmp_name'];
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $stmt = mysqli_prepare($conn, $insert_sql);
     if (!$stmt) {
-        die("<script>alert('Database Error on user insert: " . addslashes(mysqli_error($conn)) . "'); window.history.back();</script>");
+        die("<script>alert('Database error on user insert'); window.history.back();</script>");
     }
 
     mysqli_stmt_bind_param($stmt, "ssssssssss", $full_name, $email, $password_hash, $phone, $role, $organization_type, $reg_nid_number, $nid_image_path, $address, $account_status);
@@ -105,17 +105,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
 
-        // Success popup and redirect to login page
+        // Success popup and redirect to home page
         echo "<script>
-            alert('Registration Successful! Your account has been created. Redirecting to login page...');
-            window.location.href = 'login.html';
+            alert('Registration Successful! Please wait for the Admin pannel to review your account. Redirecting to home page...');
+            window.location.href = 'home.html';
         </script>";
         exit();
     } else {
-        $error_msg = mysqli_error($conn);
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
-        die("<script>alert('Error registering user: " . addslashes($error_msg) . "'); window.history.back();</script>");
+        die("<script>alert('Error registering user'); window.history.back();</script>");
     }
 
 } else {
