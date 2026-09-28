@@ -1,0 +1,837 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+
+    color: #333;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================== */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 210px;
+
+    height: 100vh;
+
+    background-color: #A33215;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================== */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MENU
+========================================== */
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    
+
+    font-size: 13px;
+}
+
+
+
+
+
+/* =========================================
+   ACTIVE MENU
+========================================== */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* =========================================
+   HOVER
+========================================== */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================== */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    
+}
+
+
+/* =========================================
+   MAIN
+========================================== */
+
+.main {
+    flex: 1;
+
+    min-height: 100vh;
+
+    margin-left: 210px;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================== */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: right;
+
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+
+
+/* =========================================
+   TOP ICONS
+========================================== */
+
+.top-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: #A33215;
+
+    font-size: 15px;
+}
+
+
+.top-icons span {
+    width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================== */
+
+.content {
+    padding: 95px 30px 30px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================== */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.page-title h1 {
+    color: #C54716;
+
+    font-size: 26px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-title p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================== */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.stat-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 17px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   STAT TOP
+========================================== */
+
+.stat-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    margin-bottom: 11px;
+}
+
+
+/* =========================================
+   STAT ICON
+========================================== */
+
+.stat-icon {
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    background-color: #fff3ed;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #E75C16;
+
+    font-size: 16px;
+
+    line-height: 1;
+}
+
+
+.stat-icon i {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   IN TRANSIT ICON
+========================================== */
+
+.stat-icon.transit-icon {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* =========================================
+   ORANGE ICON
+========================================== */
+
+.stat-icon.orange {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* =========================================
+   READY TO LOG ICON
+========================================== */
+
+.stat-icon.ready-icon {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* =========================================
+   STAT TEXT
+========================================== */
+
+.stat-card > p {
+    color: #888;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card h2 {
+    color: #C54716;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+
+.stat-description {
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   CLAIMED FOOD SECTION
+========================================== */
+
+.claimed-section {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.section-header h2 {
+    color: #C54716;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-header p {
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SECTION ACTIONS
+========================================== */
+
+.section-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.section-actions button {
+    width: 32px;
+
+    height: 32px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.section-actions button:hover {
+    color: #E75C16;
+
+    border-color: #E75C16;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================== */
+
+.table-header {
+    display: grid;
+
+    grid-template-columns:
+        2.4fr
+        1.15fr
+        1.05fr
+        1fr
+        1.15fr
+        0.55fr
+        0.2fr;
+
+    align-items: center;
+
+    padding: 14px 15px;
+
+    background-color: #fff3ed;
+
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TABLE ROW
+========================================== */
+
+.table-row {
+    display: grid;
+
+    grid-template-columns:
+        2.4fr
+        1.15fr
+        1.05fr
+        1fr
+        1.15fr
+        0.55fr
+        0.2fr;
+
+    align-items: center;
+
+    min-height: 86px;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 11px;
+}
+
+
+.table-row:last-of-type {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   ITEM DETAIL
+========================================== */
+
+
+
+/* =========================================
+   FOOD ICON
+========================================== */
+
+.food-icon {
+    width: 46px;
+
+    height: 46px;
+
+    min-width: 46px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+.food-icon i {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+/* =========================================
+   ITEM INFORMATION
+========================================== */
+
+.item-detail-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   FOOD NAME
+========================================== */
+
+.item-detail-info h3 {
+    color: #333;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin: 0 0 5px 0;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   CLAIMED DATE
+========================================== */
+
+.item-detail-info p {
+    color: #888;
+
+    font-size: 9px;
+
+    margin: 0;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   DONOR
+========================================== */
+
+.donor {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+
+
+
+.donor div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+/* =========================================
+   DONOR NAME
+========================================== */
+
+.donor strong {
+    color: #333;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   QUANTITY
+========================================== */
+
+.quantity strong {
+    color: #333;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   EXPIRY
+========================================== */
+
+.expiry {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.expiry strong {
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.expiry strong i {
+    color: #888;
+
+    margin-right: 3px;
+}
+
+
+.expiry span {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+.expiry.urgent strong,
+.expiry.urgent strong i {
+    color: #A33215;
+}
+
+
+/* =========================================
+   STATUS
+========================================== */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    border-radius: 12px;
+
+    padding: 5px 9px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.status i {
+    font-size: 8px;
+}
+
+
+/* =========================================
+   IN TRANSIT
+========================================== */
+
+.status.transit {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* =========================================
+   AWAITING PICKUP
+========================================== */
+
+.status.awaiting {
+    background-color: #fff3ed;
+
+    color: #E75C16;
+}
+
+
+/* =========================================
+   CLAIMED
+========================================== */
+
+.status.claimed {
+    background-color: #eaf7e8;
+
+    color: #388e3c;
+}
+
+
+/* =========================================
+   OTP
+========================================== */
+
+.otp {
+    color: #888;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+

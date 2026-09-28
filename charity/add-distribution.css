@@ -1,0 +1,637 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+
+    color: #333;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 210px;
+
+    background-color: #A33215;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px 15px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+
+
+
+/* =========================================
+   ACTIVE MENU
+========================================= */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+
+    min-width: 0;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    height: 65px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: right;
+
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+
+
+/* =========================================
+   TOP ICONS
+========================================= */
+
+.top-icons {
+    display: flex;
+
+    gap: 20px;
+
+    color: #A33215;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 30px;
+}
+
+
+/* =========================================
+   DISTRIBUTION CONTAINER
+========================================= */
+
+.distribution-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: calc(100vh - 125px);
+}
+
+
+/* =========================================
+   DISTRIBUTION CARD
+========================================= */
+
+.distribution-card {
+    width: 570px;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 22px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    margin-bottom: 18px;
+}
+
+
+.card-header h1 {
+    color: #C54716;
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+}
+
+
+.card-header p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   HEADER ICON
+========================================= */
+
+.header-icon {
+    width: 36px;
+
+    height: 36px;
+
+    background-color: #FFF3ED;
+
+    color: #E75C16;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    width: 100%;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-group label {
+    display: block;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   SELECT BOX
+========================================= */
+
+.select-box {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.select-box select {
+    width: 100%;
+
+    height: 40px;
+
+    appearance: none;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 0 35px 0 11px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.select-box select:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+.select-box i {
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #999;
+
+    font-size: 11px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TWO COLUMN FORM
+========================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input {
+    width: 100%;
+
+    height: 40px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 0 11px;
+
+    color: #333;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.form-group input:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   QUANTITY INPUT
+========================================= */
+
+.input-with-text {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+}
+
+
+.input-with-text input {
+    flex: 1;
+
+    padding-right: 10px;
+
+    border-radius: 5px 0 0 5px;
+}
+
+
+/* =========================================
+   QUANTITY UNIT SELECT
+========================================= */
+
+.input-with-text select {
+    width: 75px;
+
+    height: 40px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-left: none;
+
+    border-radius: 0 5px 5px 0;
+
+    padding: 0 6px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.input-with-text select:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+/* =========================================
+   QUALITY FIELD
+========================================= */
+
+#quality {
+    padding-right: 10px;
+}
+
+
+/* =========================================
+   REMARKS TEXTAREA
+========================================= */
+
+.form-group textarea {
+    width: 100%;
+
+    height: 80px;
+
+    resize: none;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 11px;
+
+    color: #333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.form-group textarea:focus {
+    border-color: #FA8145;
+
+    outline: none;
+}
+
+
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.form-divider {
+    height: 1px;
+
+    background-color: #eeeeee;
+
+    margin: 6px 0 15px;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-btn {
+    background-color: white;
+
+    color: #777;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 9px 15px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.cancel-btn:hover {
+    background-color: #f8f8f8;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-btn {
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 9px 15px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.save-btn i {
+    margin-right: 5px;
+
+    color: white;
+}
+
+
+.save-btn:hover {
+    background-color: #69200F;
+}

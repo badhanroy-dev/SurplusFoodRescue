@@ -1,0 +1,655 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    width: 210px;
+    background-color: #A33215;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+
+    padding: 11px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+
+
+
+/* ACTIVE */
+
+.menu .active {
+    background-color: #E75C16;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #69200F;
+}
+
+
+/* ================================
+   BOTTOM MENU
+================================ */
+
+.bottom-menu {
+    margin-top: auto;
+
+    border-top: 1px solid #c76b50;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.main {
+    flex: 1;
+    background-color: white;
+}
+
+
+/* ================================
+   TOP BAR
+================================ */
+
+.topbar {
+    height: 65px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+
+
+
+/* TOP ICONS */
+
+.top-icons {
+    display: flex;
+    gap: 20px;
+
+    color: #A33215;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.content {
+    padding: 25px 30px;
+}
+
+
+/* ================================
+   PAGE HEADING
+================================ */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    color: #999;
+    font-size: 9px;
+
+    margin-bottom: 6px;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #ccc;
+}
+
+
+/* TITLE */
+
+.page-heading h1 {
+    color: #C54716;
+    font-size: 22px;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-btn {
+    background-color: white;
+
+    color: #E75C16;
+
+    border: 1px solid #f3d3c4;
+
+    border-radius: 5px;
+
+    padding: 8px 13px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.back-btn i {
+    margin-right: 5px;
+}
+
+.back-btn:hover {
+    background-color: #FFF3ED;
+}
+
+
+/* ================================
+   DETAILS LAYOUT
+================================ */
+
+.details-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 250px;
+
+    gap: 15px;
+}
+
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.left-content {
+    min-width: 0;
+}
+
+
+/* ================================
+   MAIN FOOD CARD
+================================ */
+
+.food-main-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* ================================
+   FOOD IMAGE
+================================ */
+
+.food-image-container {
+    height: 285px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.food-image-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================================
+   BADGES
+================================ */
+
+.food-badges {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    display: flex;
+    gap: 7px;
+}
+
+
+.available-badge,
+.expire-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 12px;
+
+    font-size: 7px;
+
+    font-weight: bold;
+}
+
+
+.available-badge {
+    background-color: #FFF3ED;
+    color: #E75C16;
+}
+
+.available-badge i {
+    font-size: 6px;
+}
+
+
+.expire-badge {
+    background-color: #FFF3ED;
+    color: #E75C16;
+}
+
+
+/* ================================
+   FOOD TITLE
+================================ */
+
+.food-title {
+    padding: 16px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.food-title h2 {
+    color: #C54716;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.food-title p {
+    color: #888;
+
+    font-size: 9px;
+}
+
+
+.food-category {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #777;
+
+    font-size: 9px;
+}
+
+
+.food-category i {
+    color: #E75C16;
+}
+
+
+/* ================================
+   INFORMATION GRID
+================================ */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* ================================
+   INFORMATION CARD
+================================ */
+
+.info-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 17px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* INFO HEADER */
+
+.info-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+
+/* INFO ICON */
+
+.info-icon {
+    width: 25px;
+    height: 25px;
+
+    background-color: #FFF3ED;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #E75C16;
+
+    font-size: 11px;
+}
+
+
+/* INFO TITLE */
+
+.info-card h3 {
+    color: #A33215;
+
+    font-size: 11px;
+}
+
+
+/* INFO TEXT */
+
+.info-card p {
+    color: #777;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   RIGHT RESCUE CARD
+================================ */
+
+.rescue-card {
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 18px;
+
+    box-shadow: 0 2px 6px #eeeeee;
+}
+
+
+/* ================================
+   RESCUE HEADER
+================================ */
+
+.rescue-heading {
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    margin-bottom: 5px;
+}
+
+
+.rescue-heading span {
+    color: #E75C16;
+
+    font-size: 7px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.4px;
+}
+
+
+.rescue-heading h2 {
+    color: #333;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+}
+
+
+/* ================================
+   RESCUE ITEMS
+================================ */
+
+.rescue-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ICON */
+
+.rescue-icon {
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    background-color: #FFF3ED;
+
+    color: #E75C16;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+
+/* TEXT */
+
+.rescue-text p {
+    color: #999;
+
+    font-size: 7px;
+
+    margin-bottom: 4px;
+}
+
+
+.rescue-text h3 {
+    color: #333;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   CLAIM FOOD BUTTON
+================================ */
+
+.claim-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #E75C16;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON ICON */
+
+.claim-btn i {
+    margin-right: 5px;
+
+    color: white;
+}
+
+
+/* BUTTON HOVER */
+
+.claim-btn:hover {
+    background-color: #69200F;
+}
+
+
+/* ================================
+   CLAIM NOTE
+================================ */
+
+.claim-note {
+    color: #999;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+
+    margin-top: 10px;
+}
