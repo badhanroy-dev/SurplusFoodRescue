@@ -46,10 +46,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mysqli_stmt_close($stmt);
             mysqli_close($conn);
 
-            // Redirect on successful login
+            // Role-based dashboard redirection (Donor/Restaurant, Charity, Volunteer, Admin)
+            $redirect_url = '../charity/dashboard.html'; // Default fallback
+
+            if ($user['role'] === 'Charity') {
+                $redirect_url = '../charity/dashboard.html';
+            } elseif ($user['role'] === 'Donor') {
+                // Food Donor / Restaurant
+                $redirect_url = file_exists(__DIR__ . '/../donor/dashboard.html') ? '../donor/dashboard.html' : '../charity/dashboard.html';
+            } elseif ($user['role'] === 'Volunteer') {
+                // Volunteer Rider
+                $redirect_url = file_exists(__DIR__ . '/../volunteer/dashboard.html') ? '../volunteer/dashboard.html' : '../charity/dashboard.html';
+            } elseif ($user['role'] === 'Admin') {
+                // System Admin
+                $redirect_url = file_exists(__DIR__ . '/../admin/dashboard.html') ? '../admin/dashboard.html' : '../charity/dashboard.html';
+            }
+
+            // Redirect user to their role-specific dashboard
             echo "<script>
                 alert('Login Successful! Welcome back, " . addslashes($user['full_name']) . "!');
-                window.location.href = '../charity/dashboard.html';
+                window.location.href = '" . $redirect_url . "';
             </script>";
             exit();
 
