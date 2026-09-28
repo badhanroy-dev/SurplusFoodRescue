@@ -1,13 +1,14 @@
 // Client-Side Signup Form Validation
 function validateSignupForm() {
-    var role = document.getElementById('role').value;
-    var name = document.getElementById('full_name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var phone = document.getElementById('phone').value.trim();
-    var address = document.getElementById('address').value.trim();
-    var password = document.getElementById('password').value;
-    var confirmPassword = document.getElementById('confirm_password').value;
-    var terms = document.getElementById('terms').checked;
+    const role = document.getElementById('role').value;
+    const name = document.getElementById('full_name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+    const nid_number = document.getElementById('reg_nid_number').value.trim();
+    const terms = document.getElementById('terms').checked;
 
     if (role === "") {
         alert("Please select an Account Type.");
@@ -50,5 +51,10 @@ function validateSignupForm() {
         alert("You must agree to the Terms of Service and Privacy Policy.");
         return false;
     }
+    if (nid_number === "") {
+        alert("Please enter NID/Registration number.");
+        return false;
+    }
+    alert("Registration Successful! Please wait for admin approval.");
     return true;
 }

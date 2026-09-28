@@ -20,18 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Map account type selection to MySQL database role ENUM ('Donor', 'Charity', 'Volunteer')
     $role = '';
-    if ($role_input === 'Food Donor' || $role_input === 'Donor') {
+    if ($role_input === 'Food Donor') {
         $role = 'Donor';
-    } elseif ($role_input === 'Charity Organization' || $role_input === 'Charity') {
+    } elseif ($role_input === 'Charity Organization') {
         $role = 'Charity';
-    } elseif ($role_input === 'Volunteer Rider' || $role_input === 'Volunteer') {
+    } elseif ($role_input === 'Volunteer Rider') {
         $role = 'Volunteer';
-    } else {
-        $role = 'Donor'; // Default fallback
     }
 
     // 1. Backend Validation
-    if (empty($role_input) || empty($full_name) || empty($email) || empty($phone) || empty($address) || empty($password)) {
+    if (empty($role_input) || empty($full_name) || empty($email) || empty($phone) || empty($address) || empty($password) || empty($reg_nid_number)) {
         die("<script>alert('Please fill in all required fields.'); window.history.back();</script>");
     }
 
