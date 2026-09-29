@@ -28,32 +28,26 @@
             <nav class="menu">
 
                 <a href="dashboard.html" class="active">
-                    
                     Dashboard
                 </a>
 
                 <a href="browse-food.html">
-                    
                     Browse Food
                 </a>
 
                 <a href="claimed-food.html">
-                    
                     Claimed Food
                 </a>
 
                 <a href="distribution-log.html">
-                    
                     Distribution
                 </a>
 
                 <a href="report-issue.html">
-                    
                     Report Issue
                 </a>
 
                 <a href="charity-chat.html">
-                    
                     Chat
                 </a>
 
@@ -62,12 +56,10 @@
             <div class="bottom-menu">
 
                 <a href="#">
-                    
                     Settings
                 </a>
 
-                <a href="#">
-                    
+                <a href="../guest/logout.php">
                     Logout
                 </a>
 
@@ -82,12 +74,9 @@
             <!-- TOP BAR -->
             <header class="topbar">
 
-                
-
                 <div class="top-icons">
                     <span><i class="fa-solid fa-bell"></i></span>
                     <span><i class="fa-solid fa-circle-user"></i></span>
-                    
                 </div>
 
             </header>
@@ -97,7 +86,7 @@
             <section class="content">
 
                 <div class="welcome">
-                    <h1>Good Morning, Global Relief</h1>
+                    <h1 id="welcome-title">Welcome, Global Relief</h1>
                     <p>
                         Here is what's happening with your food rescue activities.
                     </p>
@@ -112,7 +101,7 @@
                             <i class="fa-solid fa-box-open"></i>
                         </div>
                         <p>AVAILABLE POSTS</p>
-                        <h2>24</h2>
+                        <h2 id="stat-available">0</h2>
                     </div>
 
                     <div class="stat-card">
@@ -120,7 +109,7 @@
                             <i class="fa-solid fa-hand-holding-heart"></i>
                         </div>
                         <p>ACTIVE CLAIMS</p>
-                        <h2>5</h2>
+                        <h2 id="stat-active">0</h2>
                     </div>
 
                     <div class="stat-card">
@@ -128,7 +117,7 @@
                             <i class="fa-solid fa-truck"></i>
                         </div>
                         <p>TODAY'S PICKUPS</p>
-                        <h2>3</h2>
+                        <h2 id="stat-pickups">0</h2>
                     </div>
 
                     <div class="stat-card">
@@ -136,7 +125,7 @@
                             <i class="fa-solid fa-users"></i>
                         </div>
                         <p>PEOPLE SERVED</p>
-                        <h2>1,240</h2>
+                        <h2 id="stat-served">0</h2>
                     </div>
 
                 </div>
@@ -147,7 +136,7 @@
 
                     <div class="section-header">
                         <h2>Recent Claimed Food</h2>
-                        <a href="#">View All History</a>
+                        <a href="claimed-food.html">View All History</a>
                     </div>
 
 
@@ -161,113 +150,23 @@
                             <span>STATUS</span>
                         </div>
 
-
-                        <!-- ROW 1 -->
-                        <div class="food-row">
-
-                            <div class="food-details">
-
-                                
-
-                                <div>
-                                    <h3>Assorted Bakery Goods</h3>
-                                    <p>20 kg </p>
-                                </div>
-
-                            </div>
-
-                            <div>
-                                Green Bakery
-                            </div>
-
-                            <div>
-                                Today<br>
-                                6:30 PM
-                            </div>
-
-                            <div>
-                                <span class="status claimed">
-                                    CLAIMED
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <!-- ROW 2 -->
-                        <div class="food-row">
-
-                            <div class="food-details">
-
-                               
-                                <div>
-                                    <h3>Organic Fresh Fruits</h3>
-                                    <p>15 kg</p>
-                                </div>
-
-                            </div>
-
-                            <div>
-                                Whole Foods
-                            </div>
-
-                            <div>
-                                Yesterday<br>
-                                4:30 PM
-                            </div>
-
-                            <div>
-                                <span class="status claimed">
-                                    CLAIMED
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <!-- ROW 3 -->
-                        <div class="food-row">
-
-                            <div class="food-details">
-
-                                
-
-                                <div>
-                                    <h3>Dry Pantry Supplies</h3>
-                                    <p>10 kg </p>
-                                </div>
-
-                            </div>
-
-                            <div>
-                                City Supplies
-                            </div>
-
-                            <div>
-                                Yesterday<br>
-                                10:25 AM
-                            </div>
-
-                            <div>
-                                <span class="status completed">
-                                    COMPLETED
-                                </span>
-                            </div>
-
+                        <!-- DYNAMIC FOOD ROWS CONTAINER -->
+                        <div id="recent-food-rows">
+                            <!-- Populated dynamically from php/dashboard_process.php via js/dashboard.js -->
                         </div>
 
                     </div>
 
                 </div>
 
-
-                
-
             </section>
 
         </main>
 
     </div>
+
+    <!-- EXTERNAL JAVASCRIPT CONNECTING HTML TO PHP BACKEND -->
+    <script src="js/dashboard.js"></script>
 
 </body>
 
