@@ -237,22 +237,22 @@
 
                                 <div class="food-details">
 
-                                    <h3>
-                                        Mixed Produce Box
+                                    <h3 id="pickup-food-title">
+                                        
                                     </h3>
 
-                                    <p>
-                                        Fresh vegetables and fruits
+                                    <p id="pickup-food-desc">
+                                        
                                     </p>
 
                                     <div class="food-info">
 
-                                        <span>
-                                            <strong>120</strong> Units
+                                        <span id="pickup-quantity">
+                                            
                                         </span>
 
-                                        <span>
-                                            <strong>FD-1001</strong>
+                                        <span id="pickup-food-id">
+                                            
                                         </span>
 
                                     </div>
@@ -260,7 +260,7 @@
                                 </div>
 
 
-                                <span class="status">
+                                <span class="status" id="pickup-status">
                                     Pending Pickup
                                 </span>
 
@@ -308,8 +308,8 @@
                                             Donor's Availability
                                         </span>
 
-                                        <strong>
-                                            9:00 AM - 5:00 PM
+                                        <strong id="donor-availability">
+                                            --
                                         </strong>
 
                                     </div>
@@ -331,8 +331,8 @@
                                             Food Expiry Window
                                         </span>
 
-                                        <strong>
-                                            24 hours remaining
+                                        <strong id="expiry-window">
+                                            --
                                         </strong>
 
                                     </div>
@@ -355,9 +355,6 @@
                                     id="pickup-time"
                                     name="pickup-time"
                                 >
-
-
-                                
 
                             </div>
 
@@ -382,6 +379,7 @@
                             <button
                                 type="button"
                                 class="cancel-btn"
+                                onclick="window.location.href='claimed-food.html'"
                             >
 
                                 Cancel
@@ -392,6 +390,7 @@
                             <button
                                 type="button"
                                 class="confirm-btn"
+                                onclick="confirmSchedule()"
                             >
 
                                 <i class="fa-solid fa-calendar-check"></i>
@@ -418,6 +417,8 @@
 
     </div>
 
+
+    <script src="js/schedule-pickup.js"></script>
 
 </body>
 
