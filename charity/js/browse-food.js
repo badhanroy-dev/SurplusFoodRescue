@@ -30,10 +30,12 @@ async function loadBrowseFood(area = '', type = '', date = '') {
             let cardsHtml = '';
 
             for (let item of data.donations) {
+                let imgSrc = item.image_path;
+
                 cardsHtml += `
                     <div class="food-card">
                         <div class="food-image">
-                            <img src="${item.image_path}" alt="${item.food_name}" onerror="this.src='images/vegetables.jpg'">
+                            <img src="${imgSrc}" alt="${item.food_name}" onerror="this.onerror=null; ">
                             <span class="expiry-tag">${item.expiry_tag}</span>
                         </div>
 
