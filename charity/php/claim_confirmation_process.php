@@ -20,8 +20,8 @@ $donation_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 if ($donation_id <= 0) {
     echo json_encode(['success' => false, 'message' => 'Invalid food donation ID.']);
-    exit();
-}
+        exit();
+    }
 
 // 1. ACTION: Submit Claim (action=confirm)
 if ($action === 'confirm') {
