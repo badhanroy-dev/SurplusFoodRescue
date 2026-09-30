@@ -114,8 +114,8 @@
                     <!-- FOOD IMAGE -->
                     <div class="food-banner">
 
-                        <img src="images/vegetables.jpg"
-                            alt="Organic Seasonal Vegetable Box">
+                        <img id="claim-food-img"
+                            alt="Food Image" onerror="this.onerror=null;">
 
                     </div>
 
@@ -139,17 +139,11 @@
                                     SELECTED FOOD
                                 </p>
 
-                                <h2>
-                                    Organic Seasonal Vegetable Box
-                                </h2>
+                                <h2 id="claim-food-name"></h2>
 
-                                <p class="donor">
-                                    Donor: Whole Foods Market Central
-                                </p>
+                                <p class="donor" id="claim-donor-name"></p>
 
-                                <h3>
-                                    12 boxes
-                                </h3>
+                                <h3 id="claim-quantity"></h3>
 
                             </div>
 
@@ -167,9 +161,7 @@
                                         ESTIMATED IMPACT
                                     </p>
 
-                                    <h2>
-                                        ~ 40 People
-                                    </h2>
+                                    <h2 id="claim-impact-people"></h2>
 
                                     <p>
                                         Will be served by this donation.
@@ -194,17 +186,17 @@
 
                                 <div>
                                     <p>DATE</p>
-                                    <h3>Oct 24, 2023</h3>
+                                    <h3 id="claim-pickup-date"></h3>
                                 </div>
 
                                 <div>
                                     <p>TIME WINDOW</p>
-                                    <h3>09:00 AM - 11:30 AM</h3>
+                                    <h3 id="claim-pickup-time"></h3>
                                 </div>
 
                                 <div>
                                     <p>LOCATION</p>
-                                    <h3>Warehouse Dock B</h3>
+                                    <h3 id="claim-pickup-location"></h3>
                                 </div>
 
                             </div>
@@ -215,7 +207,7 @@
                         <!-- COMPLIANCE -->
                         <div class="compliance">
 
-                            <input type="checkbox">
+                            <input type="checkbox" id="compliance-checkbox">
 
                             <div>
 
@@ -239,12 +231,10 @@
                         <!-- ACTIONS -->
                         <div class="actions">
 
-                            <a href="schedule-pickup.html">
-                                <button class="schedule">
-                                    Schedule Pickup
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </a>
+                            <button type="button" class="schedule" id="confirm-claim-btn" onclick="confirmClaim()">
+                                Schedule Pickup
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
 
                             <a href="browse-food.html">
                                 <button class="cancel">
@@ -266,6 +256,9 @@
         </main>
 
     </div>
+
+    <!-- EXTERNAL JAVASCRIPT CONNECTING HTML TO PHP BACKEND -->
+    <script src="js/claim-confirmation.js"></script>
 
 </body>
 
