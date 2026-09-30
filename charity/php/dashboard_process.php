@@ -86,7 +86,7 @@ if ($res_recent) {
     while ($row = mysqli_fetch_assoc($res_recent)) {
         $recent_rows[] = array(
             'food_name'            => $row['food_name'],
-            'quantity_claimed'     => rtrim(rtrim($row['quantity_claimed'], '0'), '.'),
+            'quantity_claimed'     => $row['quantity_claimed'],
             'quantity_unit'        => $row['quantity_unit'],
             'donor_name'           => $row['donor_name'],
             'claim_date_formatted' => date('M d, Y', strtotime($row['claim_date'])),
