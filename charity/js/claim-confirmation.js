@@ -6,15 +6,8 @@ async function loadClaimDetails() {
     let urlParams = new URLSearchParams(window.location.search);
     let donationId = urlParams.get('id');
 
-    if (!donationId) {
-        console.log('No food donation ID provided in URL');
-        return;
-    }
-
-    currentDonationId = donationId;
-
     // 2. Fetch data from PHP backend inside php/ folder
-    let url = `php/claim_confirmation_process.php?id=${donationId}`;
+    let url = donationId ? `php/claim_confirmation_process.php?id=${donationId}` : `php/claim_confirmation_process.php`;
     let response = await fetch(url);
     let data = await response.json();
 
@@ -27,6 +20,7 @@ async function loadClaimDetails() {
     // 4. Populate Claim Details on page
     if (data.success && data.donation) {
         let item = data.donation;
+        currentDonationId = item.donation_id;
 
         // Image
         let imgElem = document.getElementById('claim-food-img');
@@ -62,7 +56,7 @@ async function loadClaimDetails() {
 }
 
 // Function to handle "Schedule Pickup / Confirm Claim" button click
-async function confirmClaim() {
+function confirmClaim() {
     let checkbox = document.getElementById('compliance-checkbox');
     if (checkbox && !checkbox.checked) {
         alert('Please check the compliance checkbox to confirm food safety guidelines.');
@@ -74,21 +68,8 @@ async function confirmClaim() {
         return;
     }
 
-    // Send request to backend process to record claim in database
-    let response = await fetch(`php/claim_confirmation_process.php?action=confirm&id=${currentDonationId}`);
-    let data = await response.json();
-
-    if (data.error === 'unauthorized') {
-        window.location.href = data.redirect;
-        return;
-    }
-
-    if (data.success) {
-        alert(data.message);
-        window.location.href = data.redirect || 'claimed-food.html';
-    } else {
-        alert(data.message || 'Failed to claim food donation.');
-    }
+    // Proceed to Schedule Pickup page to select time within donor's constraints
+    window.location.href = `schedule-pickup.html?id=${currentDonationId}`;
 }
 
 // Run when page loads
