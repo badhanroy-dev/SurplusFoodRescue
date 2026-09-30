@@ -121,15 +121,15 @@
                         <p class="breadcrumb">
                             Browse Food
                             <span>/</span>
-                            Food Details
+                            <span id="food-breadcrumb-name">Food Details</span>
                         </p>
 
-                        <h1>Dairy Essentials</h1>
+                        <h1 id="food-heading-title"></h1>
 
                     </div>
 
 
-                    <button class="back-btn">
+                    <button class="back-btn" onclick="window.location.href='browse-food.html'">
 
                         <i class="fa-solid fa-arrow-left"></i>
 
@@ -159,8 +159,10 @@
                             <div class="food-image-container">
 
                                 <img
-                                    src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1200&q=80"
-                                    alt="Dairy Products"
+                                    id="food-detail-img"
+                                    src="images/vegetables.jpg"
+                                    alt="Food Image"
+                                    onerror="this.onerror=null; this.src='images/vegetables.jpg';"
                                 >
 
 
@@ -168,22 +170,9 @@
 
                                 <div class="food-badges">
 
-                                    <span class="available-badge">
+                                    <span class="available-badge" id="food-status-badge"></span>
 
-                                        <i class="fa-solid fa-circle"></i>
-
-                                        AVAILABLE NOW
-
-                                    </span>
-
-
-                                    <span class="expire-badge">
-
-                                        <i class="fa-regular fa-clock"></i>
-
-                                        EXPIRES IN 45M
-
-                                    </span>
+                                    <span class="expire-badge" id="food-expiry-badge"></span>
 
                                 </div>
 
@@ -197,14 +186,7 @@
 
                                 
 
-
-                                <div class="food-category">
-
-                                    <i class="fa-solid fa-box"></i>
-
-                                    Dairy Products
-
-                                </div>
+                                <div class="food-category" id="food-category-badge"></div>
 
                             </div>
 
@@ -234,13 +216,7 @@
                                 </div>
 
 
-                                <p>
-                                    Refrigerated transport required.
-                                    This donation contains temperature-sensitive
-                                    dairy products that must maintain a cold
-                                    chain under 5°C (41°F) during transit to
-                                    ensure food safety and quality standards.
-                                </p>
+                                <p id="food-safety-text"></p>
 
                             </div>
 
@@ -263,13 +239,7 @@
                                 </div>
 
 
-                                <p>
-                                    This batch is a surplus from a local
-                                    grocery distribution. Includes yogurt
-                                    and butter in various sizes. All packaging
-                                    is intact and originally sealed. Please
-                                    bring your own insulated crates if possible.
-                                </p>
+                                <p id="food-description-text"></p>
 
                             </div>
 
@@ -292,9 +262,7 @@
                                 RESCUE OPPORTUNITY
                             </span>
 
-                            <h2>
-                                Dairy Essentials
-                            </h2>
+                            <h2 id="rescue-food-name"></h2>
 
                         </div>
 
@@ -317,10 +285,7 @@
                                     Donor
                                 </p>
 
-                                <h3>
-                                    Central Hub<br>
-                                    Distribution
-                                </h3>
+                                <h3 id="rescue-donor-name"></h3>
 
                             </div>
 
@@ -345,9 +310,7 @@
                                     Food Type
                                 </p>
 
-                                <h3>
-                                    Dairy Products
-                                </h3>
+                                <h3 id="rescue-food-type"></h3>
 
                             </div>
 
@@ -372,9 +335,7 @@
                                     Quantity
                                 </p>
 
-                                <h3>
-                                    22 kg
-                                </h3>
+                                <h3 id="rescue-quantity"></h3>
 
                             </div>
 
@@ -399,10 +360,7 @@
                                     Pickup Area
                                 </p>
 
-                                <h3>
-                                    Westside Logistics<br>
-                                    Park
-                                </h3>
+                                <h3 id="rescue-pickup-area"></h3>
 
                             </div>
 
@@ -427,9 +385,7 @@
                                     Pickup Time
                                 </p>
 
-                                <h3>
-                                    5:00 PM Today
-                                </h3>
+                                <h3 id="rescue-pickup-time"></h3>
 
                             </div>
 
@@ -439,7 +395,7 @@
 
                         <!-- CLAIM BUTTON -->
 
-                        <a href="claimConfirmation.html">
+                        <a href="claimConfirmation.html" id="claim-button-link">
                             <button class="claim-btn">
 
                             <i class="fa-solid fa-check"></i>
@@ -451,15 +407,9 @@
 
 
 
-                        <!-- NOTE -->
+                        
 
-                        <p class="claim-note">
-
-                            By claiming, you agree to the safety
-                            guidelines and guarantee transport within
-                            60 mins.
-
-                        </p>
+                        
 
                     </aside>
 
@@ -470,6 +420,9 @@
         </main>
 
     </div>
+
+    <!-- EXTERNAL JAVASCRIPT CONNECTING HTML TO PHP BACKEND -->
+    <script src="js/food-details.js"></script>
 
 </body>
 
