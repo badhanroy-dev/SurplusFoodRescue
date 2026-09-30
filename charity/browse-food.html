@@ -2,1324 +2,180 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>FoodRescue - Browse Food</title>
 
     <link rel="stylesheet" href="browse-food.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
-
 
 <body>
 
-
     <!-- =========================================
-         DASHBOARD
+         DASHBOARD CONTAINER
     ========================================== -->
-
     <div class="dashboard">
-
 
         <!-- =========================================
              SIDEBAR
         ========================================== -->
-
         <aside class="sidebar">
 
-
             <!-- LOGO -->
-
             <div class="logo">
-
                 <h2>FoodRescue</h2>
-
                 <p>Charity Portal</p>
-
             </div>
-
 
             <!-- MENU -->
-
             <nav class="menu">
-
-
                 <a href="dashboard.html">
-
-                    
-
                     Dashboard
-
                 </a>
-
 
                 <a href="browse-food.html" class="active">
-
-                    
-
                     Browse Food
-
                 </a>
-
 
                 <a href="claimed-food.html">
-
-                    
-
                     Claimed Food
-
                 </a>
-
 
                 <a href="distribution-log.html">
-
-                    
-
                     Distribution Log
-
                 </a>
-
 
                 <a href="report-issue.html">
-
-                    
-
                     Report Issue
-
                 </a>
-
 
                 <a href="charity-chat.html">
-
-                    
                     Chat
-
                 </a>
-
-
             </nav>
 
-
             <!-- BOTTOM MENU -->
-
             <div class="bottom-menu">
-
-
                 <a href="#">
-
-                    
                     Settings
-
                 </a>
 
-
-                <a href="#">
-
-                    
-
+                <a href="../guest/logout.php">
                     Logout
-
                 </a>
-
-
             </div>
-
 
         </aside>
 
 
         <!-- =========================================
-             MAIN
+             MAIN CONTENT
         ========================================== -->
-
         <main class="main">
 
-
-            <!-- =========================================
-                 TOP BAR
-            ========================================== -->
-
+            <!-- TOP BAR -->
             <header class="topbar">
-
-
-                
-
-
                 <div class="top-icons">
-
-                    <span>
-                        <i class="fa-solid fa-bell"></i>
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-circle-user"></i>
-                        
-                    </span>
-                    
-
+                    <span><i class="fa-solid fa-bell"></i></span>
+                    <span><i class="fa-solid fa-circle-user"></i></span>
                 </div>
-
-
             </header>
 
 
-            <!-- =========================================
-                 CONTENT
-            ========================================== -->
-
+            <!-- CONTENT -->
             <section class="content">
 
-
-                <!-- =========================================
-                     PAGE HEADER
-                ========================================== -->
-
+                <!-- PAGE HEADER -->
                 <div class="page-header">
-
                     <div class="page-title">
-
-                        <h1>
-                            Available Food Rescue Ops
-                        </h1>
-
-                        <p>
-                            Browse available food donations and claim what your community needs.
-                        </p>
-
+                        <h1>Available Food Rescue Ops</h1>
+                        <p>Browse available food donations and claim what your community needs.</p>
                     </div>
-
                 </div>
 
 
-                <!-- =========================================
-                     SEARCH / FILTER AREA
-                ========================================== -->
-
+                <!-- SEARCH / FILTER AREA -->
                 <div class="filter-box">
 
-
-                    
-
-
                     <!-- AREA -->
-
                     <div class="filter-group">
-
-                        <label>
-                            Search by Area
-                        </label>
-
+                        <label>Search by Area</label>
                         <div class="select-input">
-
                             <i class="fa-solid fa-location-dot"></i>
-
-                            <select>
-
-                                <option>All Areas</option>
-
-                                <option>Dhaka</option>
-
-                                <option>Banani</option>
-
-                                <option>Gulshan</option>
-
-                                <option>Dhanmondi</option>
-
-                                <option>Uttara</option>
-
+                            <select id="filter-area">
+                                <option value="">All Areas</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Banani">Banani</option>
+                                <option value="Gulshan">Gulshan</option>
+                                <option value="Dhanmondi">Dhanmondi</option>
+                                <option value="Uttara">Uttara</option>
                             </select>
-
                         </div>
-
                     </div>
-
 
                     <!-- FOOD TYPE -->
-
                     <div class="filter-group">
-
-                        <label>
-                            Food Type
-                        </label>
-
+                        <label>Food Type</label>
                         <div class="select-input">
-
                             <i class="fa-solid fa-utensils"></i>
-
-                            <select>
-
-                                <option>All Types</option>
-
-                                <option>Fresh Produce</option>
-
-                                <option>Bakery</option>
-
-                                <option>Dairy</option>
-
-                                <option>Dry Goods</option>
-
-                                <option>Prepared Meals</option>
-
+                            <select id="filter-type">
+                                <option value="">All Types</option>
+                                <option value="Fresh Produce">Fresh Produce</option>
+                                <option value="Bakery">Bakery</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Prepared Meals">Prepared Meals</option>
                             </select>
-
                         </div>
-
                     </div>
-
 
                     <!-- EXPIRY DATE -->
-
                     <div class="filter-group">
-
-                        <label>
-                            Expiry Date
-                        </label>
-
+                        <label>Expiry Date</label>
                         <div class="date-input">
-
                             <i class="fa-regular fa-calendar"></i>
-
-                            <input type="date">
-
+                            <input type="date" id="filter-date">
                         </div>
-
                     </div>
-
 
                     <!-- SEARCH BUTTON -->
-
-                    <button class="filter-button">
-
+                    <button type="button" class="filter-button" id="filter-btn" onclick="searchFood()">
                         <i class="fa-solid fa-filter"></i>
-
                         Search
-
                     </button>
-
 
                 </div>
 
 
-                <!-- =========================================
-                     RESULTS HEADER
-                ========================================== -->
-
+                <!-- RESULTS HEADER -->
                 <div class="results-header">
-
                     <div>
-
-                        <h2>
-                            Available Donations
-                        </h2>
-
-                        <p>
-                            12 food rescue opportunities available
-                        </p>
-
+                        <h2>Available Donations</h2>
+                        <p id="results-count">0 food rescue opportunities available</p>
                     </div>
 
-
-                    <button class="sort-button">
-
+                    <button type="button" class="sort-button" id="sort-btn" onclick="sortFood()">
                         <i class="fa-solid fa-arrow-down-wide-short"></i>
-
                         Sort by Expiry
-
                     </button>
-
                 </div>
 
 
-                <!-- =========================================
-                     FOOD CARDS
-                ========================================== -->
-
-                <div class="food-grid">
-
-
-                    <!-- =====================================
-                         FOOD CARD 1
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="vegetables.jpg" alt="Mixed Produce Box">
-
-                            <span class="expiry-tag">
-                                Expires in 5 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Mixed Produce Box
-                                    </h2>
-
-                                    
-
-                                </div>
-
-                                <span class="food-type">
-                                    Fresh Produce
-                                </span>
-
-                            </div>
-
-
-                            <!-- FOOD INFORMATION -->
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1001
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        45 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        12 Boxes
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <!-- DONOR -->
-
-                            <div class="donor-info">
-
-                                
-
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Whole Foods Market Central
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- LOCATION / PICKUP -->
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Banani
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        2h 15m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <!-- ACTION -->
-                            <div class="x">
-                                <a href="fooddetails.html">
-                                    <button class="claim-button">
-                                        Details
-                                    </button>
-
-                                </a>
-                                <a href="claimConfirmation.html">
-                                    <button class="claim-button">
-
-                                        Claim Food
-
-                                        <i class="fa-solid fa-arrow-right"></i>
-
-                                    </button>
-
-                                </a>
-
-
-                            </div>
-
-                            <!-- <button class="claim-button">
-
-                                Claim Food
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </button> -->
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         FOOD CARD 2
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="images/bakery.jpg" alt="Artisan Bakery Surplus">
-
-                            <span class="expiry-tag">
-                               Expires in 5 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Artisan Bakery Surplus
-                                    </h2>
-
-                                    
-
-                                </div>
-
-                                <span class="food-type">
-                                    Bakery
-                                </span>
-
-                            </div>
-
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1002
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        28 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        80 Units
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="donor-info">
-
-                                
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Artisan Bakery
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Gulshan
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        4h 30m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="x">
-                                <button class="claim-button">
-                                    Details
-                                </button>
-                                <button class="claim-button">
-
-                                    Claim Food
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </button>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         FOOD CARD 3
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="images/dairy.jpg" alt="Dairy Essentials">
-
-                            <span class="expiry-tag">
-                                Expires in 5 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Dairy Essentials
-                                    </h2>
-
-                                    
-
-                                </div>
-
-                                <span class="food-type">
-                                    Dairy
-                                </span>
-
-                            </div>
-
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1003
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        35 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        60 boxes
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="donor-info">
-
-                                
-
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Fresh Mart Supermarket
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Dhanmondi
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        1h 45m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="x">
-                                <button class="claim-button">
-                                    Details
-                                </button>
-                                <button class="claim-button">
-
-                                    Claim Food
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </button>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         FOOD CARD 4
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="images/dry-goods.jpg" alt="Dry Goods Mix">
-
-                            <span class="expiry-tag">
-                                Expires in 7 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Dry Goods Mix
-                                    </h2>
-
-                                    
-
-                                </div>
-
-                                <span class="food-type">
-                                    Dry Goods
-                                </span>
-
-                            </div>
-
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1004
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        75 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        120 Units
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="donor-info">
-
-                               
-
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Community Food Bank
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Uttara
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        6h 20m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="x">
-
-                                <button class="claim-button">
-                                    Details
-                                </button>
-                                <button class="claim-button">
-
-                                    Claim Food
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </button>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         FOOD CARD 5
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="images/meals.jpg" alt="Prepared Meals">
-
-                            <span class="expiry-tag">
-                                Expires in 5 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Prepared Meals
-                                    </h2>
-
-                                   
-
-                                </div>
-
-                                <span class="food-type">
-                                    Prepared Meals
-                                </span>
-
-                            </div>
-
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1005
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        22 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        45 Boxes
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="donor-info">
-
-                                
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Community Kitchen
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Banani
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        3h 10m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="x">
-                                <button class="claim-button">
-                                    Details
-                                </button>
-                                <button class="claim-button">
-
-                                    Claim Food
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </button>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         FOOD CARD 6
-                    ====================================== -->
-
-                    <div class="food-card">
-
-
-                        <div class="food-image">
-
-                            <img src="images/fruits.jpg" alt="Tropical Fruit Mix">
-
-                            <span class="expiry-tag">
-                                Expires in 8 hours
-                            </span>
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-
-                            <div class="food-card-title">
-
-                                <div>
-
-                                    <h2>
-                                        Tropical Fruit Mix
-                                    </h2>
-
-                                    
-
-                                </div>
-
-                                <span class="food-type">
-                                    Fresh Produce
-                                </span>
-
-                            </div>
-
-
-                            <div class="food-info">
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD ID
-                                    </span>
-
-                                    <strong>
-                                        FD-1006
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        FOOD WEIGHT
-                                    </span>
-
-                                    <strong>
-                                        40 kg
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        AVAILABLE
-                                    </span>
-
-                                    <strong>
-                                        90 Units
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="donor-info">
-
-                                
-                                <div>
-
-                                    <span>
-                                        DONOR
-                                    </span>
-
-                                    <strong>
-                                        Green Valley Market
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="pickup-info">
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        AREA
-                                    </span>
-
-                                    <strong>
-                                        Gulshan
-                                    </strong>
-
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        <i class="fa-regular fa-clock"></i>
-                                        PICKUP
-                                    </span>
-
-                                    <strong class="pickup-time">
-                                        5h 05m
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="x">
-                                <button class="claim-button">
-                                    Details
-                                </button>
-                                <button class="claim-button">
-
-                                    Claim Food
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </button>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
+                <!-- DYNAMIC FOOD GRID CONTAINER -->
+                <div class="food-grid" id="food-grid-container">
+                    <!-- Populated dynamically from php/browse_food_process.php via js/browse-food.js -->
                 </div>
-
-
-                
-
 
             </section>
 
-
         </main>
-
 
     </div>
 
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="js/browse-food.js"></script>
 
 </body>
 
