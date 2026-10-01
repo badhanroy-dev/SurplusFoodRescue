@@ -106,7 +106,9 @@
 
                 <input
                     type="search"
-                    placeholder="Search conversations..."
+                    id="search Users"
+                    placeholder="Search users..."
+                    oninput="loadChat()"
                 >
 
 
@@ -149,19 +151,19 @@
 
                             <div class="chat-tabs">
 
-                                <button class="active-tab">
+                                <button class="active-tab" onclick="filterTab('All', this)">
                                     All
                                 </button>
 
-                                <button>
+                                <button onclick="filterTab('Volunteer', this)">
                                     Volunteers
                                 </button>
 
-                                <button>
+                                <button onclick="filterTab('Donor', this)">
                                     Donors
                                 </button>
 
-                                <button>
+                                <button onclick="filterTab('Admin', this)">
                                     Admin
                                 </button>
 
@@ -171,123 +173,9 @@
 
 
 
-                        <!-- CONVERSATION 1 -->
+                        <!-- CONVERSATIONS LIST CONTAINER -->
 
-                        <div class="conversation selected">
-
-                            <div class="conversation-avatar">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-
-
-                            <div class="conversation-info">
-
-                                <div class="conversation-top">
-
-                                    <h3>Volunteer John</h3>
-
-                                    <span>10:15 AM</span>
-
-                                </div>
-
-
-                                <p>
-                                    Hi, I've just picked up the supplies...
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- CONVERSATION 2 -->
-
-                        <div class="conversation">
-
-                            <div class="conversation-avatar">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-
-
-                            <div class="conversation-info">
-
-                                <div class="conversation-top">
-
-                                    <h3>Fresh Mart Support</h3>
-
-                                    <span>Yesterday</span>
-
-                                </div>
-
-
-                                <p>
-                                    Thank you for confirming the pickup.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- CONVERSATION 3 -->
-
-                        <div class="conversation">
-
-                            <div class="conversation-avatar">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-
-
-                            <div class="conversation-info">
-
-                                <div class="conversation-top">
-
-                                    <h3>Emma Wilson</h3>
-
-                                    <span>Yesterday</span>
-
-                                </div>
-
-
-                                <p>
-                                    Is the distribution center open?
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- CONVERSATION 4 -->
-
-                        <div class="conversation">
-
-                            <div class="conversation-avatar">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-
-
-                            <div class="conversation-info">
-
-                                <div class="conversation-top">
-
-                                    <h3>City Food Bank</h3>
-
-                                    <span>Mon</span>
-
-                                </div>
-
-
-                                <p>
-                                    We received the food donation.
-                                </p>
-
-                            </div>
-
-                        </div>
+                        <div id="conversations-list"></div>
 
 
                     </div>
@@ -314,12 +202,9 @@
 
                                 <div>
 
-                                    <h3>Volunteer John</h3>
+                                    <h3 id="active-user-name">Select a conversation</h3>
 
-                                    <p>
-                                        <span class="online-dot"></span>
-                                        Online
-                                    </p>
+                                    <p id="active-user-role" style="font-size:12px; color:#666;"></p>
 
                                 </div>
 
@@ -331,124 +216,7 @@
 
                         <!-- MESSAGES -->
 
-                        <div class="messages">
-
-
-                            <!-- RECEIVED MESSAGE -->
-
-                            <div class="message received">
-
-                                <div class="message-avatar">
-
-                                    <i class="fa-solid fa-user"></i>
-
-                                </div>
-
-
-                                <div>
-
-                                    <div class="message-bubble">
-
-                                        Hi Sarah, I've just picked up the
-                                        supplies from Green Bakery.
-
-                                    </div>
-
-
-                                    <span class="message-time">
-                                        10:05 AM
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- SENT MESSAGE -->
-
-                            <div class="message sent">
-
-                                <div>
-
-                                    <div class="message-bubble">
-
-                                        That's great, John! Are you heading
-                                        directly to the Downtown Distribution
-                                        Center?
-
-                                    </div>
-
-
-                                    <span class="message-time">
-                                        10:07 AM
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- RECEIVED MESSAGE -->
-
-                            <div class="message received">
-
-                                <div class="message-avatar">
-
-                                    <i class="fa-solid fa-user"></i>
-
-                                </div>
-
-
-                                <div>
-
-                                    <div class="message-bubble">
-
-                                        Yes, I'll be there in about 20 minutes.
-                                        The supplies are packed safely.
-
-                                    </div>
-
-
-                                    <span class="message-time">
-                                        10:10 AM
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- SENT MESSAGE -->
-
-                            <div class="message sent">
-
-                                <div>
-
-                                    <div class="message-bubble">
-
-                                        Perfect. Let me know once you arrive
-                                        at the center.
-
-                                    </div>
-
-
-                                    <span class="message-time">
-                                        10:12 AM
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-
-                           
-
-
-                        </div>
+                        <div class="messages" id="messages-container"></div>
 
 
 
@@ -458,11 +226,13 @@
 
                             <input
                                 type="text"
+                                id="message-text"
                                 placeholder="Type a message..."
+                                onkeypress="handleKeyPress(event)"
                             >
 
 
-                            <button>
+                            <button onclick="sendMessage()">
 
                                 <i class="fa-solid fa-paper-plane"></i>
 
@@ -483,6 +253,8 @@
 
     </div>
 
+
+    <script src="js/charity-chat.js"></script>
 
 </body>
 
