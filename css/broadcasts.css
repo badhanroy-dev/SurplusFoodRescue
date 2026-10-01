@@ -262,17 +262,6 @@ main{
     border-color: #E71C16;
 }
 
-
-.broadcast-card.awareness{
-    background: #fff7ed;
-    border-color: #FA8145;
-}
-
-
-.broadcast-card.warning{
-    background: #fff9e8;
-    border-color: #f2ad00;
-}
 .broadcast-info h3{
     font-size: 14px;
     color: #222;

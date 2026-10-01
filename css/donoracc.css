@@ -167,3 +167,15 @@ td{
     font-size:14px;
     font-weight:500;
 }
+.status-disabled{
+
+    display:inline-block;
+    border-radius:20px;
+    padding:6px 12px;
+    margin:5px;
+    background-color:#ddd;
+    color:#555;
+    font-size:14px;
+    font-weight:500;
+
+}
