@@ -40,7 +40,7 @@
 
                 <a href="dashboard.html">
 
-                  
+
                     Dashboard
 
                 </a>
@@ -56,7 +56,7 @@
 
                 <a href="claimed-food.html">
 
-                   
+
 
                     Claimed Food
 
@@ -65,7 +65,7 @@
 
                 <a href="distribution-log.html">
 
-                  
+
                     Distribution
 
                 </a>
@@ -75,7 +75,7 @@
 
                 <a href="report-issue.html" class="active">
 
-                    
+
 
                     Report Issue
 
@@ -84,7 +84,7 @@
 
                 <a href="charity-chat.html">
 
-                   
+
                     Chat
 
                 </a>
@@ -107,7 +107,7 @@
 
                 <a href="#">
 
-                    
+
 
                     Logout
 
@@ -132,7 +132,7 @@
 
             <header class="topbar">
 
-               
+
 
 
                 <div class="top-icons">
@@ -143,9 +143,9 @@
 
                     <span>
                         <i class="fa-solid fa-circle-user"></i>
-                        
+
                     </span>
-                    
+
 
                 </div>
 
@@ -217,136 +217,133 @@
 
                     <!-- FORM -->
 
-                    <div class="form-grid">
+                    <form id="report-issue-form">
+
+                        <div class="form-grid">
 
 
-                        <!-- REPORT TYPE -->
+                            <!-- REPORT TYPE -->
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label>Report Type</label>
+                                <label>Report Type</label>
 
-                            <div class="input-box">
+                                <div class="input-box">
 
-                                <i class="fa-solid fa-circle-exclamation"></i>
+                                    <i class="fa-solid fa-circle-exclamation"></i>
 
-                                <select>
+                                    <select id="report-type" required>
 
-                                    <option>Select report type</option>
+                                        <option value="">Select report type</option>
 
-                                    <option>Food Quality Issue</option>
+                                        <option value="Food Quality Issue">Food Quality Issue</option>
 
-                                    <option>Pickup Issue</option>
+                                        <option value="Pickup Issue">Pickup Issue</option>
 
-                                    <option>Delivery Issue</option>
+                                        <option value="Delivery Issue">Delivery Issue</option>
 
-                                    <option>Food Safety Concern</option>
+                                        <option value="Food Safety Concern">Food Safety Concern</option>
 
-                                    <option>Other</option>
+                                        <option value="Other">Other</option>
 
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- RELATED FOOD -->
-
-                        <div class="form-group">
-
-                            <label>Related Food</label>
-
-                            <div class="input-box">
-
-                                <i class="fa-solid fa-box"></i>
-
-                                <select>
-
-                                    <option>Select food listing</option>
-
-                                    <option>Dairy Essentials - FD - 1001</option>
-
-                                    <option>Fresh Bakery Items - FD - 1002</option>
-
-                                    <option>Vegetable Surplus - FD - 1003</option>
-
-                                    <option>Prepared Meals - FD - 1004</option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- DESCRIPTION -->
-
-                        <div class="form-group full-width">
-
-                            <label>Describe the Issue</label>
-
-                            <textarea placeholder="Please describe the issue in detail..."></textarea>
-
-                        </div>
-
-
-
-                        <!-- EVIDENCE -->
-
-                        <div class="form-group full-width">
-
-                            <label>Supporting Evidence</label>
-
-                            <div class="upload-box">
-
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                                <div>
-
-                                    <strong>Upload evidence</strong>
-
-                                    <p>
-                                        Add photos or documents related
-                                        to this report.
-                                    </p>
+                                    </select>
 
                                 </div>
 
-                                <input type="file" accept="image/*,.pdf,.doc,.docx">
+                            </div>
+
+
+
+                            <!-- RELATED FOOD -->
+
+                            <div class="form-group">
+
+                                <label>Related Food</label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-box"></i>
+
+                                    <select id="related-food" required>
+
+                                        <option value="">Select food listing</option>
+
+                                    </select>
+
+                                </div>
 
                             </div>
+
+
+
+                            <!-- DESCRIPTION -->
+
+                            <div class="form-group full-width">
+
+                                <label>Describe the Issue</label>
+
+                                <textarea id="description" placeholder="Please describe the issue in detail..."
+                                    required></textarea>
+
+                            </div>
+
+
+
+                            <!-- EVIDENCE -->
+
+                            <div class="form-group full-width">
+
+                                <label>Supporting Evidence</label>
+
+                                <div class="upload-box">
+
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                    <div>
+
+                                        <strong>Upload evidence</strong>
+
+                                        <p>
+                                            Add photos or documents related
+                                            to this report.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="file" id="evidence-file" accept="image/*,.pdf,.doc,.docx" required>
+
+                                </div>
+
+                            </div>
+
 
                         </div>
 
 
-                    </div>
+
+                        <!-- SUBMIT -->
+
+                        <div class="form-footer">
+
+                            <p>
+                                <i class="fa-solid fa-circle-info"></i>
+
+                                Reports are reviewed by the FoodRescue support team.
+
+                            </p>
 
 
+                            <button type="submit" class="submit-button" onclick="submitReport()">
 
-                    <!-- SUBMIT -->
+                                Submit Report
 
-                    <div class="form-footer">
+                                <i class="fa-solid fa-paper-plane"></i>
 
-                        <p>
-                            <i class="fa-solid fa-circle-info"></i>
+                            </button>
 
-                            Reports are reviewed by the FoodRescue support team.
+                        </div>
 
-                        </p>
-
-
-                        <button class="submit-button">
-
-                            Submit Report
-
-                            <i class="fa-solid fa-paper-plane"></i>
-
-                        </button>
-
-                    </div>
+                    </form>
 
 
                 </div>
@@ -375,13 +372,7 @@
                         </div>
 
 
-                        <button class="view-all-button">
 
-                            <i class="fa-solid fa-list"></i>
-
-                            All Reports
-
-                        </button>
 
                     </div>
 
@@ -407,230 +398,8 @@
 
 
 
-                        <!-- REPORT 1 -->
-
-                        <div class="report-row">
-
-                            <div class="report-id">
-                                #RPT-1024
-                            </div>
-
-
-                            <div class="issue-info">
-
-
-                                <div>
-
-                                    <strong>
-                                        Damaged Food Packaging
-                                    </strong>
-
-                                    <p>
-                                        Dairy Essentials
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="report-date">
-                                Sep 2, 2026
-                            </div>
-
-
-                            <div>
-
-                                <span class="status resolved">
-
-                                    <i class="fa-solid fa-circle-check"></i>
-
-                                    Resolved
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="resolution">
-
-                                Packaging issue reported and
-                                replacement arranged.
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- REPORT 2 -->
-
-                        <div class="report-row">
-
-                            <div class="report-id">
-                                #RPT-1023
-                            </div>
-
-
-                            <div class="issue-info">
-
-                                
-
-                                <div>
-
-                                    <strong>
-                                        Pickup Delay
-                                    </strong>
-
-                                    <p>
-                                        Fresh Bakery Items
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="report-date">
-                                Sep 1, 2026
-                            </div>
-
-
-                            <div>
-
-                                <span class="status reviewing">
-
-                                    <i class="fa-solid fa-clock"></i>
-
-                                    Under Review
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="resolution pending">
-
-                                Support team is reviewing
-                                the reported issue.
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- REPORT 3 -->
-
-                        <div class="report-row">
-
-                            <div class="report-id">
-                                #RPT-1022
-                            </div>
-
-
-                            <div class="issue-info">
-
-                                
-
-                                <div>
-
-                                    <strong>
-                                        Food Safety Concern
-                                    </strong>
-
-                                    <p>
-                                        Prepared Meals
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="report-date">
-                                Aug 30, 2026
-                            </div>
-
-
-                            <div>
-
-                                <span class="status resolved">
-
-                                    <i class="fa-solid fa-circle-check"></i>
-
-                                    Resolved
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="resolution">
-
-                                Food listing removed and donor
-                                notified.
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- REPORT 4 -->
-
-                        <div class="report-row">
-
-                            <div class="report-id">
-                                #RPT-1021
-                            </div>
-
-
-                            <div class="issue-info">
-
-                                
-
-                                <div>
-
-                                    <strong>
-                                        Distribution Problem
-                                    </strong>
-
-                                    <p>
-                                        Vegetable Surplus
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="report-date">
-                                Aug 28, 2026
-                            </div>
-
-
-                            <div>
-
-                                <span class="status closed">
-
-                                    <i class="fa-solid fa-circle-xmark"></i>
-
-                                    Closed
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="resolution">
-
-                                Issue could not be verified.
-                                Report closed.
-
-                            </div>
-
-                        </div>
+                        <!-- Dynamic Reports Container -->
+                        <div id="reports-list"></div>
 
 
                     </div>
@@ -643,6 +412,9 @@
         </main>
 
     </div>
+
+    <!-- JS Script -->
+    <script src="js/report-issue.js"></script>
 
 </body>
 
