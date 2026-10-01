@@ -299,7 +299,7 @@
                              FORM
                         ========================================== -->
 
-                        <form>
+                        <form id="distribution-form">
 
 
 
@@ -321,22 +321,6 @@
 
                                         <option value="">
                                             Select an available item...
-                                        </option>
-
-                                        <option value="bakery">
-                                            Assorted Bakery Goods
-                                        </option>
-
-                                        <option value="fruits">
-                                            Organic Fresh Fruits
-                                        </option>
-
-                                        <option value="dairy">
-                                            Dairy Essentials
-                                        </option>
-
-                                        <option value="pantry">
-                                            Dry Pantry Supplies
                                         </option>
 
                                     </select>
@@ -498,7 +482,7 @@
 
                                 <!-- SAVE -->
 
-                                <button type="submit" class="save-btn">
+                                <button type="button" onclick="saveDistribution()" class="save-btn">
 
                                     <i class="fa-solid fa-floppy-disk"></i>
 
@@ -535,6 +519,8 @@
     </div>
 
 
+    <!-- JS Script -->
+    <script src="js/add-distribution.js"></script>
 
 </body>
 
