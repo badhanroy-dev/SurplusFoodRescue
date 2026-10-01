@@ -9,17 +9,9 @@ header('Content-Type: application/json');
 require_once __DIR__ . '/../../db.php';
 
 // Check if user is logged in and has 'Charity' role
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Charity') {
-    // Local dev fallback: Auto-detect existing Charity user from database
-    $fallback_res = mysqli_query($conn, "SELECT user_id, full_name FROM users WHERE role = 'Charity' LIMIT 1");
-    if ($fallback_res && $fallback_row = mysqli_fetch_assoc($fallback_res)) {
-        $_SESSION['user_id']   = $fallback_row['user_id'];
-        $_SESSION['full_name'] = $fallback_row['full_name'];
-        $_SESSION['role']      = 'Charity';
-    } else {
-        echo json_encode(['error' => 'unauthorized', 'redirect' => '../guest/login.html']);
-        exit();
-    }
+if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'Charity') {
+    echo json_encode(['error' => 'unauthorized', 'redirect' => '../guest/login.html']);
+    exit();
 }
 
 // Get current logged-in charity user ID and name
