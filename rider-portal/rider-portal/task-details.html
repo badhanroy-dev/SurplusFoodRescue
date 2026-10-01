@@ -1,102 +1,246 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Rider Portal - Task Details</title>
+
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <link rel="stylesheet" href="task-details.css">
 </head>
+
 <body>
 
 <div class="container">
 
   <!-- Sidebar -->
+
   <div class="sidebar">
-    <div class="sidebar-title">
-      <h1>Rider Portal</h1>
-      <p>Mission-Driven Service</p>
-    </div>
+<div class="sidebar-title">
+  <h1>Rider Portal</h1>
+  <p>Mission-Driven Service</p>
+</div>
 
-    <ul class="menu">
-      <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
-      <li class="menu-item active"><a href="available-tasks.html">Available Tasks</a></li>
-      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
-      <li class="menu-item"><a href="otp-verification.html">OTP Verification</a></li>
-      <li class="menu-item"><a href="update-delivery-status.html">Update Delivery Status</a></li>
-      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
-      <li class="menu-item"><a href="volunteer-chat.html">Chat</a></li>
-    </ul>
+<ul class="menu">
+  <li class="menu-item">
+    <a href="dashboard.html">Dashboard</a>
+  </li>
 
-    <ul class="menu bottom-menu">
-      <li class="menu-item"><a href="#">Settings</a></li>
-      <li class="menu-item"><a href="#">Logout</a></li>
-    </ul>
+  <li class="menu-item active">
+    <a href="available-tasks.html">Available Tasks</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="assigned-tasks.html">Assigned Tasks</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="otp-verification.html">OTP Verification</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="update-delivery-status.html">Update Delivery Status</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="report-delay.html">Report Delay</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="volunteer-chat.html">Chat</a>
+  </li>
+</ul>
+
+<ul class="menu bottom-menu">
+  <li class="menu-item">
+    <a href="#">Settings</a>
+  </li>
+
+  <li class="menu-item">
+    <a href="#">Logout</a>
+  </li>
+</ul>
+
   </div>
 
   <!-- Main Content -->
+
   <div class="main">
 
-    <div class="page-header">
-      <div>
-        <a href="available-tasks.html" class="back-link">Back to Task Details: #FT-8829</a>
-        <h2 class="page-heading">12x Assorted Pizzas &amp; Sides</h2>
-        <p class="page-subtitle">Downtown Arts District • 12 mins away</p>
-      </div>
-      <div class="profile-section">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
-      </div>
+<!-- Page Header -->
+<div class="page-header">
+
+  <div>
+    <a href="available-tasks.html" class="back-link">
+  
+    </a>
+
+    <h2 class="page-heading">
+      12x Assorted Pizzas &amp; Sides
+    </h2>
+
+    <p class="page-subtitle">
+      Downtown Arts District • 12 mins away
+    </p>
+  </div>
+
+  <div class="profile-section">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+    <img src="https://i.pravatar.cc/50"
+         class="profile-img"
+         alt="profile">
+  </div>
+
+</div>
+
+
+<!-- Content Box -->
+<div class="content-box">
+
+  <!-- Banner -->
+  <div class="banner-row">
+
+    <span class="badge badge-warning">
+      PERISHABLE GOODS
+    </span>
+
+    <div class="expiry-box">
+      <p class="expiry-label">EXPIRING IN</p>
+      <p class="expiry-time">14:51</p>
     </div>
 
-    <div class="content-box">
+  </div>
 
-      <div class="banner-row">
-        <span class="badge badge-warning">PERISHABLE GOODS</span>
-        <div class="expiry-box">
-          <p class="expiry-label">EXPIRING IN</p>
-          <p class="expiry-time">14:51</p>
-        </div>
-      </div>
 
-      <h3 class="section-title">Order Details</h3>
-      <div class="detail-list">
-        <div class="detail-item">
-          <span>Total Quantity</span>
-          <span>~15.5 kg</span>
-        </div>
-        </div>
-      </div>
+  <!-- Order Details -->
+  <h3 class="section-title">
+    Order Details
+  </h3>
 
-      <div class="two-col-cards">
-        <div class="mini-card">
-          <p class="mini-label">DONOR / RESTAURANT</p>
-          <p class="mini-value">Pizza Hut</p>
-          <p class="mini-sub">Uttara</p>
-        </div>
-        <div class="mini-card">
-          <p class="mini-label">RECIPIENT CHARITY</p>
-          <p class="mini-value">City Hope Shelter</p>
-          <p class="mini-sub">Gulshan</p>
-        </div>
-      </div>
+  <div class="detail-list">
 
-      <h3 class="section-title">Route Overview</h3>
-      <div class="route-list">
-        <p>Pickup: Pizza Hut — Ready now for immediate collection</p>
-        <p>Drop-off: City Hope — Recipient notified of incoming delivery</p>
-      </div>
+    <div class="detail-item">
+      <span>Total Quantity</span>
+      <span>~15.5 kg</span>
+    </div>
 
-      <h3 class="section-title">Rider Instructions</h3>
-      <div class="instructions-box">
-        Please enter through the service bay at the back of the restaurant. Ask for Sarah.
-        The pizza boxes are heavy; suggest using a cargo rack or car. No contact delivery
-        preferred at the shelter—leave at the lobby desk.
-      </div>
+  </div>
 
-      <a href="assigned-tasks.html" class="btn btn-primary btn-full">Accept Task</a>
+
+  <!-- Donor and Charity -->
+  <div class="two-col-cards">
+
+    <div class="mini-card">
+
+      <p class="mini-label">
+        DONOR / RESTAURANT
+      </p>
+
+      <p class="mini-value">
+        Pizza Hut
+      </p>
+
+      <p class="mini-sub">
+        Uttara
+      </p>
 
     </div>
+
+
+    <div class="mini-card">
+
+      <p class="mini-label">
+        RECIPIENT CHARITY
+      </p>
+
+      <p class="mini-value">
+        City Hope Shelter
+      </p>
+
+      <p class="mini-sub">
+        Gulshan
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Route Overview -->
+  <h3 class="section-title">
+    Route Overview
+  </h3>
+
+  <div class="route-list">
+
+    <p>
+      Pickup: Pizza Hut — Ready now for immediate collection
+    </p>
+
+    <p>
+      Drop-off: City Hope — Recipient notified of incoming delivery
+    </p>
+
+  </div>
+
+
+  <!-- Rider Instructions -->
+  <h3 class="section-title">
+    Rider Instructions
+  </h3>
+
+  <div class="instructions-box">
+
+    Please enter through the service bay at the back of the restaurant.
+    Ask for Sarah. The pizza boxes are heavy; suggest using a cargo rack
+    or car. No contact delivery preferred at the shelter—leave at the
+    lobby desk.
+
+  </div>
+
+
+  <!-- Pickup Photo -->
+  <h3 class="section-title">
+    Pickup Photo
+  </h3>
+
+  <div class="photo-box">
+
+    <div class="photo-icon">
+      <i class="fa-solid fa-camera"></i>
+    </div>
+
+    <p class="photo-title">
+      Take a photo of the collected food
+    </p>
+
+    <p class="photo-text">
+      Please take a clear photo after picking up the food as proof of collection.
+    </p>
+
+    <label for="pickup-photo" class="photo-button">
+      <i class="fa-solid fa-camera"></i>
+      Take / Upload Photo
+    </label>
+
+    <input type="file"
+           id="pickup-photo"
+           accept="image/*"
+           capture="environment">
+
+  </div>
+
+
+  <!-- Accept Task Button -->
+  <a href="assigned-tasks.html"
+     class="btn btn-primary btn-full">
+    Accept Task
+  </a>
+
+</div>
 
   </div>
 
