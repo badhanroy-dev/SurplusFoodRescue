@@ -75,7 +75,26 @@ async function loadChat(userId = 0) {
             msgContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #888;">No messages yet. Start the conversation!</div>';
         }
     }
+
+    // Populate Notifications
+    if (data.notifications && data.notifications.length > 0) {
+        let html = '';
+        for (let n of data.notifications) {
+            html += '<div class="notif-item"><h4>' + n.title + '</h4><p>' + n.message + '</p></div>';
+        }
+        let notifList = document.getElementById('notif-list');
+        if (notifList) notifList.innerHTML = html;
+    }
 }
+
+// Toggle notification dropdown
+function toggleNotif() {
+    let box = document.getElementById('notif-dropdown');
+    if (box) {
+        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
+}
+
 
 // Send message
 async function sendMessage() {

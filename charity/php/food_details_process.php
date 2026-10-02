@@ -45,7 +45,9 @@ $sql = "SELECT
         INNER JOIN food_categories c ON d.category_id = c.category_id
         WHERE d.donation_id = $donation_id";
 
-$result = mysqli_query($conn, $sql);
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
 
 if ($result && $row = mysqli_fetch_assoc($result)) {
     // Calculate remaining time until expiry
@@ -85,13 +87,16 @@ if ($result && $row = mysqli_fetch_assoc($result)) {
     );
 
     echo json_encode([
-        'success'  => true,
-        'donation' => $donation_details
+        'success'       => true,
+        'donation'      => $donation_details,
+        'notifications' => $notifications
     ]);
 } else {
     echo json_encode([
-        'success' => false,
-        'message' => 'Food donation details not found.'
+        'success'       => false,
+        'message'       => 'Food donation details not found.',
+        'notifications' => $notifications
     ]);
 }
+
 ?>

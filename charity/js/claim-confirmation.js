@@ -53,6 +53,24 @@ async function loadClaimDetails() {
         let pickupLocation = document.getElementById('claim-pickup-location');
         if (pickupLocation) pickupLocation.textContent = item.pickup_address;
     }
+
+    // Populate Notifications
+    if (data.notifications && data.notifications.length > 0) {
+        let html = '';
+        for (let n of data.notifications) {
+            html += '<div class="notif-item"><h4>' + n.title + '</h4><p>' + n.message + '</p></div>';
+        }
+        let notifList = document.getElementById('notif-list');
+        if (notifList) notifList.innerHTML = html;
+    }
+}
+
+// Toggle notification dropdown
+function toggleNotif() {
+    let box = document.getElementById('notif-dropdown');
+    if (box) {
+        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
 }
 
 // Function to handle "Schedule Pickup / Confirm Claim" button click
@@ -74,3 +92,4 @@ function confirmClaim() {
 
 // Run when page loads
 loadClaimDetails();
+

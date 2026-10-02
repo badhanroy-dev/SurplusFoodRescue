@@ -98,6 +98,10 @@ $sql = "SELECT
 
 $result = mysqli_query($conn, $sql);
 
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
+
 if ($result && $row = mysqli_fetch_assoc($result)) {
     // Calculate remaining time until expiry
     $expiry_timestamp = strtotime($row['expiry_date']);
@@ -127,9 +131,11 @@ if ($result && $row = mysqli_fetch_assoc($result)) {
             'preferred_time' => $row['preferred_time'],
             'expiry_window'  => $expiry_window,
             'status'         => $row['status']
-        ]
+        ],
+        'notifications' => $notifications
     ]);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Food donation not found.']);
+    echo json_encode(['success' => false, 'message' => 'Food donation not found.', 'notifications' => $notifications]);
 }
+
 ?>

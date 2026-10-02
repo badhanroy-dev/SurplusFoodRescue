@@ -117,10 +117,16 @@ if ($res_reports) {
     }
 }
 
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
+
 // Return JSON response to frontend
 echo json_encode([
     'success'       => true,
     'food_listings' => $food_listings,
-    'reports'       => $reports_list
+    'reports'       => $reports_list,
+    'notifications' => $notifications
 ]);
+
 ?>

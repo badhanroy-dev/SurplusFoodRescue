@@ -151,16 +151,17 @@
 
 
                 <div class="top-icons">
-
-                    <span>
-                        <i class="fa-solid fa-bell"></i>
-                    </span>
-
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
                     <span>
                         <i class="fa-solid fa-circle-user"></i>
                     </span>
-
                 </div>
+
 
 
             </header>

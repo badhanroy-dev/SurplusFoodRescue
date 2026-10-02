@@ -67,6 +67,24 @@ async function loadReportIssueData() {
                 `;
             }
         }
+
+        // Populate Notifications
+        if (data.notifications && data.notifications.length > 0) {
+            let html = '';
+            for (let n of data.notifications) {
+                html += '<div class="notif-item"><h4>' + n.title + '</h4><p>' + n.message + '</p></div>';
+            }
+            let notifList = document.getElementById('notif-list');
+            if (notifList) notifList.innerHTML = html;
+        }
+    }
+}
+
+// Toggle notification dropdown
+function toggleNotif() {
+    let box = document.getElementById('notif-dropdown');
+    if (box) {
+        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
     }
 }
 
@@ -76,8 +94,6 @@ async function submitReport() {
     let relatedFood = document.getElementById('related-food').value;
     let description = document.getElementById('description').value;
     let fileInput   = document.getElementById('evidence-file');
-
-    
 
     let formData = new FormData();
     formData.append('report_type', reportType);
@@ -114,3 +130,4 @@ async function submitReport() {
 
 // Run function when page loads
 loadReportIssueData();
+

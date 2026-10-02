@@ -64,11 +64,17 @@ if ($receiver_id > 0) {
     }
 }
 
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
+
 echo json_encode([
-    'success'     => true,
-    'users'       => $users,
-    'receiver_id' => $receiver_id,
-    'active_user' => $active_user,
-    'messages'    => $messages
+    'success'       => true,
+    'users'         => $users,
+    'receiver_id'   => $receiver_id,
+    'active_user'   => $active_user,
+    'messages'      => $messages,
+    'notifications' => $notifications
 ]);
+
 ?>

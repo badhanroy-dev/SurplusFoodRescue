@@ -635,3 +635,10 @@ form {
 .save-btn:hover {
     background-color: #69200F;
 }
+
+/* NOTIFICATION DROPDOWN */
+.notif-container { position: relative; cursor: pointer; }
+.notif-dropdown { display: none; position: absolute; right: 0; top: 30px; width: 250px; background: white; border: 1px solid #eee; padding: 12px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.notif-item { padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
+.notif-item h4 { color: #C54716; font-size: 11px; margin-bottom: 2px; }
+.notif-item p { color: #555; font-size: 10px; }

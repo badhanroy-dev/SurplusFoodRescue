@@ -70,6 +70,10 @@ $sql = "SELECT
 
 $result = mysqli_query($conn, $sql);
 
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
+
 if ($result && $row = mysqli_fetch_assoc($result)) {
     $qty_num = (float)$row['quantity'];
     $estimated_people = max(1, (int)round($qty_num * 3)); //let for every 1kg/unit it can feed 3 people
@@ -87,9 +91,11 @@ if ($result && $row = mysqli_fetch_assoc($result)) {
             'preferred_time'   => $row['preferred_time'],
             'image_path'       => $row['image_path'],
             'estimated_impact' => "~ {$estimated_people} People"
-        ]
+        ],
+        'notifications' => $notifications
     ]);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Food donation details not found.']);
+    echo json_encode(['success' => false, 'message' => 'Food donation details not found.', 'notifications' => $notifications]);
 }
+
 ?>

@@ -149,6 +149,10 @@ if ($res_claimed_list) {
     }
 }
 
+// Fetch Broadcast Notifications
+$res_notif = mysqli_query($conn, "SELECT title, message FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Charities Only') ORDER BY created_at DESC LIMIT 5");
+$notifications = $res_notif ? mysqli_fetch_all($res_notif, MYSQLI_ASSOC) : [];
+
 // Return JSON response
 echo json_encode([
     'success'        => true,
@@ -156,6 +160,8 @@ echo json_encode([
     'transit_count'  => number_format($transit_count),
     'awaiting_count' => number_format($awaiting_count),
     'ready_count'    => number_format($ready_count),
-    'claimed_items'  => $claimed_items
+    'claimed_items'  => $claimed_items,
+    'notifications'  => $notifications
 ]);
+
 ?>

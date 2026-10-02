@@ -53,8 +53,28 @@ async function loadDashboard() {
                 </div>
             `;
         }
+        // 5. Populate Notifications
+        if (data.notifications && data.notifications.length > 0) {
+            let html = '';
+            for (let n of data.notifications) {
+                html += '<div class="notif-item"><h4>' + n.title + '</h4><p>' + n.message + '</p></div>';
+            }
+            document.getElementById('notif-list').innerHTML = html;
+        }
     }
 }
 
+// Toggle notification dropdown
+function toggleNotif() {
+    let box = document.getElementById('notif-dropdown');
+    if (box) {
+        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
+}
+
+
 // Run function when page loads
 loadDashboard();
+
+
+
