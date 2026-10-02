@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+include "admin_auth.php";
 
 $volunteer_sql = "SELECT COUNT(*) AS total_v
         FROM users

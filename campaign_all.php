@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+include "admin_auth.php";
 
 $all_sql = "SELECT title, campaign_type, message, target_audience, start_date, end_date, call_to_action, status, created_at
             FROM campaigns

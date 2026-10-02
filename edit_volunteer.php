@@ -1,6 +1,8 @@
 <?php
  $user_id=$_GET['id'];
  include "db.php";
+include "admin_auth.php";
+
  if(isset($_POST['action']) && $_POST['action']=="update")
     {
         $full_name = $_POST['full_name'];

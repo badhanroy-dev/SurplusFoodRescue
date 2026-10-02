@@ -1,5 +1,7 @@
 <?php
 include "db.php";
+include "admin_auth.php";
+
 
 $sql = "SELECT ir.issue_id, u.full_name, u.role, ir.report_type, ir.description,
 ir.related_donation_id, ir.related_delivery_id, ir.status,ir.resolution_details,

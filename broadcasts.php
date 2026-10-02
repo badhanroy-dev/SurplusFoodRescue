@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+include "admin_auth.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 

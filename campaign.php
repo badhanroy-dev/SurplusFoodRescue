@@ -1,8 +1,7 @@
 <?php
 include "db.php";
-
-$admin_id = 1;
-
+include "admin_auth.php";
+$admin_id = $_SESSION['admin_user_id'];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $title = $_POST['title'];

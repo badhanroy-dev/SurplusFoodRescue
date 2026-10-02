@@ -1,7 +1,8 @@
 <?php
 
 include "db.php";
-$admin_id = 1;
+include "admin_auth.php";
+$admin_id = $_SESSION['admin_user_id'];
 
 if (isset($_POST['add_guideline'])) {
 

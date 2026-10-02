@@ -1,6 +1,8 @@
 
 <?php
+
 include "db.php";
+include "admin_auth.php";
 $total_sql="SELECT COUNT(*) AS total_donations
 FROM food_donations;";
 

@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+include "admin_auth.php";
 
 /* Get all broadcasts */
 $all_sql = "SELECT title, message, audience, status, scheduled_at, created_at

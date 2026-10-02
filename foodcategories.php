@@ -1,6 +1,8 @@
 <?php
 
 include "db.php";
+include "admin_auth.php";
+
 $food_sql = "SELECT food_donations.donation_id, food_donations.food_name, food_donations.quantity,
  food_donations.quantity_unit, food_donations.expiry_date, food_donations.food_safety_info,
  food_donations.image_path,food_categories.category_name,

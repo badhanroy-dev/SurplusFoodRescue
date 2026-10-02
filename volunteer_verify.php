@@ -1,6 +1,8 @@
 <?php
 
 include "db.php";
+include "admin_auth.php";
+
 if(isset($_POST['action']))
     {
         $user_id=$_POST['user_id'];
