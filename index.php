@@ -138,15 +138,15 @@ $recent_broadcast = mysqli_fetch_assoc($recent_broadcast_result);
             <li><a href="volunteer_verify.php">Volunteer Verification</a></li>
             <li><a href="foodcategories.php">Food Categories</a></li>
             <li><a href="analytics.php">Analytics</a></li>
-            <li><a href="broadcasts.html">Broadcasts</a></li>
-            <li><a href="chat.html">Chat</a></li>
+            <li><a href="broadcasts.php">Broadcasts</a></li>
+            <li><a href="chat.php">Chat</a></li>
         </ul>
     </div>
 
     <div class="sidebar-bottom">
         <ul>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="logout.html">Logout</a></li>
+            <li><a href="settings.php">Settings</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 </aside>

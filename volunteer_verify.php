@@ -86,14 +86,14 @@ $total = mysqli_fetch_assoc($total_result);
             <li><a href="foodcategories.php">Food Categories</a></li>
             <li><a href="analytics.php">Analytics</a></li>
             <li><a href="broadcasts.php">Broadcasts</a></li>
-            <li><a href="chat.html">Chat</a></li>
+            <li><a href="chat.php">Chat</a></li>
         </ul>
     </div>
 
     <div class="sidebar-bottom">
         <ul>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="logout.html">Logout</a></li>
+           <li><a href="settings.php">Settings</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 </aside>
@@ -202,19 +202,21 @@ $total = mysqli_fetch_assoc($total_result);
                    value="<?php echo $volunteer['user_id']; ?>">
 
             <button type="submit"
-                    name="action"
-                    value="verify"
-                    class="verify-button">
-                Verify
-            </button>
+        name="action"
+        value="verify"
+        class="verify-button"
+        onclick="return confirmAction('verify')">
+    Verify
+</button>
             <br>
 
             <button type="submit"
-                    name="action"
-                    value="reject"
-                    class="reject-button">
-                Reject
-            </button>
+        name="action"
+        value="reject"
+        class="reject-button"
+        onclick="return confirmAction('reject')">
+    Reject
+</button>
 
         </form>
 
@@ -227,11 +229,12 @@ $total = mysqli_fetch_assoc($total_result);
                    value="<?php echo $volunteer['user_id']; ?>">
 
             <button type="submit"
-                    name="action"
-                    value="delete"
-                    class="delete-button">
-                Delete
-            </button>
+        name="action"
+        value="delete"
+        class="delete-button"
+        onclick="return confirmAction('delete')">
+    Delete
+</button>
 
         </form>
 
@@ -266,5 +269,6 @@ $total = mysqli_fetch_assoc($total_result);
     
     </main>
     </div>
+    <script src="js/volunteer_verify.js"></script>
 </body>
 </html>

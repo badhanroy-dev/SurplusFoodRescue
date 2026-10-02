@@ -34,14 +34,14 @@ $all_result = mysqli_query($conn, $all_sql);
                 <li><a href="foodcategories.php">Food Categories</a></li>
                 <li><a href="analytics.php">Analytics</a></li>
                 <li class="active"><a href="broadcasts.php">Broadcasts</a></li>
-                <li><a href="chat.html">Chat</a></li>
+                <li><a href="chat.php">Chat</a></li>
             </ul>
         </div>
 
         <div class="sidebar-bottom">
             <ul>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="settings.php">Settings</a></li>
+            <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </aside>
@@ -78,7 +78,7 @@ $all_result = mysqli_query($conn, $all_sql);
                 Awareness Campaign
             </a>
 
-            <a href="reports.html" class="tab">
+            <a href="reports.php" class="tab">
                 Reports
             </a>
 
