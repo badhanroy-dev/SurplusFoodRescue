@@ -84,7 +84,6 @@ CREATE TABLE food_claims (
   claim_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   status ENUM('Claimed', 'Scheduled', 'In Transit', 'Completed', 'Cancelled') NOT NULL DEFAULT 'Claimed',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   CONSTRAINT chk_claim_quantity CHECK (quantity_claimed > 0),
   CONSTRAINT fk_claims_donation FOREIGN KEY (donation_id) REFERENCES food_donations (donation_id) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_claims_charity FOREIGN KEY (charity_id) REFERENCES users (user_id) ON DELETE RESTRICT ON UPDATE CASCADE,
