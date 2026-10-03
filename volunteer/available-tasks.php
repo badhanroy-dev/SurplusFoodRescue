@@ -34,6 +34,10 @@ $tasks_sql = "
 ";
 $tasks = mysqli_query($conn, $tasks_sql);
 $task_count = $tasks ? mysqli_num_rows($tasks) : 0;
+
+// Fetch Broadcast Notifications for Volunteers
+$vol_notif_res = mysqli_query($conn, "SELECT title, message, created_at FROM broadcasts WHERE status = 'Sent' AND audience IN ('All Users', 'Volunteers Only') ORDER BY created_at DESC LIMIT 5");
+$volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYSQLI_ASSOC) : [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,11 +74,46 @@ $task_count = $tasks ? mysqli_num_rows($tasks) : 0;
                 <h2 class="page-heading">Available Tasks</h2>
                 <p class="page-subtitle">Browse and accept new food rescue missions.</p>
             </div>
-            <div class="profile-section">
-                <i class="fa-solid fa-bell"></i>
-                <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+            <div class="profile-section" style="position: relative;">
+                <div class="notif-container" style="position: relative; cursor: pointer; display: inline-block;" onclick="toggleVolNotif(event)">
+                    <i class="fa-solid fa-bell" style="font-size: 18px; color: #A33215;"></i>
+                    <?php if (count($volunteer_notifications) > 0) { ?>
+                        <span style="position: absolute; top: -8px; right: -8px; background: #e71c16; color: white; border-radius: 50%; padding: 2px 6px; font-size: 10px; font-weight: bold; line-height: 1;"><?php echo count($volunteer_notifications); ?></span>
+                    <?php } ?>
+                    <div id="vol-notif-dropdown" class="notif-dropdown" style="display: none; position: absolute; right: 0; top: 30px; width: 260px; background: white; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; padding: 12px; text-align: left;">
+                        <h4 style="margin: 0 0 8px 0; color: #A33215; font-size: 13px; border-bottom: 1px solid #eee; padding-bottom: 6px;">Broadcast Notifications</h4>
+                        <?php if (count($volunteer_notifications) > 0) { 
+                            foreach ($volunteer_notifications as $notif) { ?>
+                                <div class="notif-item" style="padding: 8px 0; border-bottom: 1px solid #f5f5f5;">
+                                    <strong style="font-size: 12px; color: #C54716; display: block;"><?php echo htmlspecialchars($notif['title']); ?></strong>
+                                    <p style="font-size: 11px; color: #555; margin: 3px 0 0 0; line-height: 1.4;"><?php echo htmlspecialchars($notif['message']); ?></p>
+                                </div>
+                        <?php } } else { ?>
+                            <p style="font-size: 12px; color: #888; margin: 0;">No new notifications</p>
+                        <?php } ?>
+                    </div>
+                </div>
+                <i class="fa-solid fa-circle-user" style="font-size: 18px; color: #A33215;"></i>
             </div>
         </div>
+        <script>
+        function toggleVolNotif(e) {
+            if (e) e.stopPropagation();
+            var box = document.getElementById('vol-notif-dropdown');
+            if (box) {
+                box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+            }
+        }
+        document.addEventListener('click', function(e) {
+            var box = document.getElementById('vol-notif-dropdown');
+            if (box && box.style.display === 'block') {
+                var notifContainer = e.target.closest('.notif-container');
+                if (!notifContainer) {
+                    box.style.display = 'none';
+                }
+            }
+        });
+        </script>
         <?php if ($message !== "") { ?>
             <p style="padding: 10px 15px; background: #d4edda; color: #155724; border-radius: 6px; margin-bottom: 15px;"><?= htmlspecialchars($message) ?></p>
         <?php } ?>
