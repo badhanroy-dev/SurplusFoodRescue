@@ -8,16 +8,29 @@ require "db.php";
 $user_id = (int)$_SESSION["user_id"];
 $delivery_id = isset($_GET["delivery_id"]) ? (int)$_GET["delivery_id"] : (isset($_GET["task_id"]) ? (int)$_GET["task_id"] : (isset($_POST["delivery_id"]) ? (int)$_POST["delivery_id"] : (isset($_POST["task_id"]) ? (int)$_POST["task_id"] : 0)));
 $message = "";
+$message_type = "info";
+
+// Check if volunteer currently has an active task assigned or in progress
+$active_check = mysqli_query($conn, "SELECT COUNT(*) AS total FROM pickup_deliveries WHERE volunteer_id=$user_id AND delivery_status IN ('Assigned', 'Accepted', 'Picked Up', 'In Transit')");
+$active_assoc = $active_check ? mysqli_fetch_assoc($active_check) : ['total' => 0];
+$has_active_task = ((int)$active_assoc['total'] > 0);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["accept_task"])) {
     $delivery_id = isset($_POST["delivery_id"]) ? (int)$_POST["delivery_id"] : (isset($_POST["task_id"]) ? (int)$_POST["task_id"] : 0);
-    $update = mysqli_prepare($conn, "UPDATE pickup_deliveries SET volunteer_id=?, delivery_status='Accepted', assigned_at=NOW() WHERE delivery_id=? AND delivery_status='Available'");
-    mysqli_stmt_bind_param($update, "ii", $user_id, $delivery_id);
-    if (mysqli_stmt_execute($update) && mysqli_stmt_affected_rows($update) > 0) {
-        header("Location: task-details.php?delivery_id=" . $delivery_id . "&accepted=1");
-        exit();
+    
+    if ($has_active_task) {
+        $message = "You already have an active task in progress. You cannot take more than one task at a time.";
+        $message_type = "error";
     } else {
-        $message = "This task is no longer available or was already accepted.";
+        $update = mysqli_prepare($conn, "UPDATE pickup_deliveries SET volunteer_id=?, delivery_status='Accepted', assigned_at=NOW() WHERE delivery_id=? AND delivery_status='Available'");
+        mysqli_stmt_bind_param($update, "ii", $user_id, $delivery_id);
+        if (mysqli_stmt_execute($update) && mysqli_stmt_affected_rows($update) > 0) {
+            header("Location: task-details.php?delivery_id=" . $delivery_id . "&accepted=1");
+            exit();
+        } else {
+            $message = "This task is no longer available or was already accepted.";
+            $message_type = "error";
+        }
     }
 }
 
@@ -214,10 +227,16 @@ $volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYS
                     </div>
                 <?php } ?>
             <?php } else { ?>
-                <form method="post" style="margin-top: 20px;">
-                    <input type="hidden" name="delivery_id" value="<?= $delivery_id ?>">
-                    <button type="submit" name="accept_task" value="1" class="btn btn-primary btn-full">Accept Task</button>
-                </form>
+                <?php if ($has_active_task) { ?>
+                    <div style="margin-top: 20px; padding: 14px; background: #fff3cd; color: #856404; border: 1px solid #ffeeba; border-radius: 8px; text-align: center; font-weight: 500; font-size: 14px;">
+                        <i class="fa-solid fa-triangle-exclamation" style="margin-right: 6px;"></i> You already have an active task in progress. You cannot take more than one task at a time.
+                    </div>
+                <?php } else { ?>
+                    <form method="post" style="margin-top: 20px;">
+                        <input type="hidden" name="delivery_id" value="<?= $delivery_id ?>">
+                        <button type="submit" name="accept_task" value="1" class="btn btn-primary btn-full">Accept Task</button>
+                    </form>
+                <?php } ?>
             <?php } ?>
         </div>
     </div>

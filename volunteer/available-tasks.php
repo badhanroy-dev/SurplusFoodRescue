@@ -7,16 +7,30 @@ if (!isset($_SESSION["user_id"])) {
 require "db.php";
 $user_id = (int)$_SESSION["user_id"];
 $message = "";
+$message_type = "info";
+
+// Check if volunteer currently has an active task assigned or in progress
+$active_check = mysqli_query($conn, "SELECT COUNT(*) AS total FROM pickup_deliveries WHERE volunteer_id=$user_id AND delivery_status IN ('Assigned', 'Accepted', 'Picked Up', 'In Transit')");
+$active_assoc = $active_check ? mysqli_fetch_assoc($active_check) : ['total' => 0];
+$has_active_task = ((int)$active_assoc['total'] > 0);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["delivery_id"])) {
     $delivery_id = (int)$_POST["delivery_id"];
     
-    $update = mysqli_prepare($conn, "UPDATE pickup_deliveries SET volunteer_id=?, delivery_status='Accepted', assigned_at=NOW() WHERE delivery_id=? AND delivery_status='Available'");
-    mysqli_stmt_bind_param($update, "ii", $user_id, $delivery_id);
-    if (mysqli_stmt_execute($update) && mysqli_stmt_affected_rows($update) === 1) {
-        $message = "Task accepted successfully!";
+    if ($has_active_task) {
+        $message = "You already have an active task in progress. Volunteers cannot take more than one task at a time.";
+        $message_type = "error";
     } else {
-        $message = "This task is no longer available or was already accepted.";
+        $update = mysqli_prepare($conn, "UPDATE pickup_deliveries SET volunteer_id=?, delivery_status='Accepted', assigned_at=NOW() WHERE delivery_id=? AND delivery_status='Available'");
+        mysqli_stmt_bind_param($update, "ii", $user_id, $delivery_id);
+        if (mysqli_stmt_execute($update) && mysqli_stmt_affected_rows($update) === 1) {
+            $message = "Task accepted successfully!";
+            $message_type = "success";
+            $has_active_task = true; // Update flag after accepting
+        } else {
+            $message = "This task is no longer available or was already accepted.";
+            $message_type = "error";
+        }
     }
 }
 
@@ -115,7 +129,16 @@ $volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYS
         });
         </script>
         <?php if ($message !== "") { ?>
-            <p style="padding: 10px 15px; background: #d4edda; color: #155724; border-radius: 6px; margin-bottom: 15px;"><?= htmlspecialchars($message) ?></p>
+            <p style="padding: 12px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: 500; <?= $message_type === 'success' ? 'background: #d4edda; color: #155724;' : 'background: #f8d7da; color: #721c24;' ?>"><?= htmlspecialchars($message) ?></p>
+        <?php } ?>
+        <?php if ($has_active_task) { ?>
+            <div style="padding: 14px 18px; background: #fff3cd; color: #856404; border: 1px solid #ffeeba; border-radius: 8px; margin-bottom: 20px; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px; font-size: 16px; color: #856404;"></i>
+                    <strong>Active Task Limit:</strong> You currently have an active task in progress. Please complete your current delivery before taking another task.
+                </div>
+                <a href="assigned-tasks.php" style="color: #856404; text-decoration: underline; font-weight: bold; font-size: 13px;">View Active Task &rarr;</a>
+            </div>
         <?php } ?>
         <div class="filter-bar">
             <input type="text" class="search-input" placeholder="Search tasks..." id="task-search">
@@ -156,10 +179,14 @@ $volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYS
                         </div>
                         <div class="card-buttons">
                             <a href="task-details.php?delivery_id=<?= (int)$task["delivery_id"] ?>" class="btn btn-outline" style="text-decoration: none; padding: 8px 16px; border: 1px solid #FA8145; color: #FA8145; border-radius: 6px; font-weight: 600;">View Details</a>
-                            <form method="post" style="display: inline-block;">
-                                <input type="hidden" name="delivery_id" value="<?= (int)$task["delivery_id"] ?>">
-                                <button type="submit" class="btn btn-primary">Accept Task</button>
-                            </form>
+                            <?php if ($has_active_task) { ?>
+                                <button type="button" class="btn btn-primary" style="opacity: 0.5; cursor: not-allowed;" title="You already have an active task in progress" onclick="alert('You already have an active task in progress. You cannot take more than one task at a time.')">Accept Task</button>
+                            <?php } else { ?>
+                                <form method="post" style="display: inline-block;">
+                                    <input type="hidden" name="delivery_id" value="<?= (int)$task["delivery_id"] ?>">
+                                    <button type="submit" class="btn btn-primary">Accept Task</button>
+                                </form>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php } ?>
