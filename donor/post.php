@@ -352,6 +352,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         href="post.css"
     >
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -415,7 +418,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="bottom-menu">
 
-            <a href="#">
+            <a href="profile.php">
                 Settings
             </a>
 
@@ -441,7 +444,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="top-icons">
 
                 <span>
-                    🔔 &nbsp; 👤
+                    <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
                 </span>
 
             </div>

@@ -386,21 +386,101 @@ if (!$row) {
 
     <body>
 
-        <div class="error-page">
+        <div class="dashboard">
 
-            <div class="error-box">
+            <aside class="sidebar">
 
-                <h2>Tracking Not Found</h2>
+                <div class="logo">
 
-                <p>
-                    The requested delivery could not be found.
-                </p>
+                    <h2>FoodRescue</h2>
 
-                <a href="multracking.php">
-                    Back to Tracking
-                </a>
+                    <p>Donor Portal</p>
 
-            </div>
+                </div>
+
+
+                <nav class="menu">
+
+                    <a href="dashboard.php">
+                        Dashboard
+                    </a>
+
+                    <a href="post.php">
+                        Post Food
+                    </a>
+
+                    <a href="impact_summary.php">
+                        Impact Summary
+                    </a>
+
+                    <a href="mulreceipt.php">
+                        Receipts
+                    </a>
+
+                    <a href="message.php">
+                        Messages
+                    </a>
+
+                    <a href="history.php">
+                        Donation History
+                    </a>
+
+                    <a href="multracking.php" class="active">
+                        Pickup Status
+                    </a>
+
+                </nav>
+
+
+                <div class="bottom-menu">
+
+                    <a href="profile.php">
+                        Settings
+                    </a>
+
+                    <a href="logout.php">
+                        Logout
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+            <main class="main">
+
+                <header class="topbar">
+
+                    <div class="top-icons">
+                        <span>🔔 &nbsp; 👤</span>
+                    </div>
+
+                </header>
+
+
+                <div class="tracking-page">
+
+                    <div class="error-page">
+
+                        <div class="error-box">
+
+                            <h2>Tracking Not Found</h2>
+
+                            <p>
+                                The requested delivery could not be found.
+                            </p>
+
+                            <a href="multracking.php" class="back-link">
+                                ← Back to Pickup Status
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
 
         </div>
 
@@ -547,122 +627,145 @@ $delivered_time = $row['delivered_at'];
 
     <link rel="stylesheet" href="tracking.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
 <body>
 
 
-<!-- ====================================================
-     SIDEBAR
-===================================================== -->
-
-<div class="sidebar">
-
-    <div class="logo-section">
-
-        <div class="logo-icon">
-            F
-        </div>
-
-        <div class="logo-text">
-
-            <h2>FoodRescue</h2>
-
-            <p>Food Donation Network</p>
-
-        </div>
-
-    </div>
+<div class="dashboard">
 
 
-    <div class="menu">
+    <!-- SIDEBAR -->
 
-        <a href="dashboard.php">
-            Dashboard
-        </a>
-
-        <a href="post.php">
-            Post Food
-        </a>
-
-        <a href="impact_summary.php">
-            Impact Summary
-        </a>
-
-        <a href="mulreceipt.php">
-            Receipts
-        </a>
-
-        <a href="message.php">
-            Messages
-        </a>
-
-        <a href="history.php">
-            Donation History
-        </a>
-
-        <a href="multracking.php" class="active">
-            Track Donations
-        </a>
-
-    </div>
+    <aside class="sidebar">
 
 
-    <div class="sidebar-bottom">
+        <div class="logo">
 
-        <div class="profile-circle">
+            <h2>
+                FoodRescue
+            </h2>
 
-            <?php
-            echo strtoupper(
-                substr($full_name, 0, 1)
-            );
-            ?>
+            <p>
+                Donor Portal
+            </p>
 
         </div>
 
-        <div class="profile-name">
 
-            <?php
-            echo htmlspecialchars($full_name);
-            ?>
+
+        <nav class="menu">
+
+
+            <a href="dashboard.php">
+                Dashboard
+            </a>
+
+
+            <a href="post.php">
+                Post Food
+            </a>
+
+
+            <a href="impact_summary.php">
+                Impact Summary
+            </a>
+
+
+            <a href="mulreceipt.php">
+                Receipts
+            </a>
+
+
+            <a href="message.php">
+                Messages
+            </a>
+
+
+            <a href="history.php">
+                Donation History
+            </a>
+
+
+            <a
+                href="multracking.php"
+                class="active"
+            >
+                Pickup Status
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="bottom-menu">
+
+
+            <a href="profile.php">
+                Settings
+            </a>
+
+
+            <a href="logout.php">
+                Logout
+            </a>
+
 
         </div>
 
-        <a href="logout.php" class="logout">
-            Logout
-        </a>
 
-    </div>
-
-</div>
+    </aside>
 
 
 
-<!-- ====================================================
-     MAIN CONTENT
-===================================================== -->
+    <!-- MAIN -->
 
-<div class="main-content">
+    <main class="main">
 
 
-    <!-- HEADER -->
+        <!-- TOP BAR -->
 
-    <div class="top-header">
+        <header class="topbar">
 
-        <a href="multracking.php" class="back-link">
-            Pickup Requests
-        </a>
 
-        <h1>
-            Delivery Progress
-        </h1>
+            <div class="top-icons">
 
-        <p>
-            Track the progress of your food donation
-        </p>
+                <span>
+                    <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
+                </span>
 
-    </div>
+            </div>
+
+
+        </header>
+
+
+
+        <!-- TRACKING PAGE CONTENT -->
+
+        <div class="tracking-page">
+
+
+            <div class="top-header">
+
+                <a href="multracking.php" class="back-link">
+                    ← Back to Pickup Status
+                </a>
+
+                <h1>
+                    Delivery Progress
+                </h1>
+
+                <p class="sub">
+                    Track the progress of your food donation
+                </p>
+
+            </div>
 
 
 
@@ -807,7 +910,7 @@ $delivered_time = $row['delivered_at'];
 
                     <?php if ($step1 === 2): ?>
 
-                        ✓
+                        <i class="fa-solid fa-check"></i>
 
                     <?php else: ?>
 
@@ -881,7 +984,7 @@ $delivered_time = $row['delivered_at'];
 
                     <?php if ($step2 === 2): ?>
 
-                        ✓
+                        <i class="fa-solid fa-check"></i>
 
                     <?php else: ?>
 
@@ -956,7 +1059,7 @@ $delivered_time = $row['delivered_at'];
 
                     <?php if ($step3 === 2): ?>
 
-                        ✓
+                        <i class="fa-solid fa-check"></i>
 
                     <?php else: ?>
 
@@ -1031,7 +1134,7 @@ $delivered_time = $row['delivered_at'];
 
                     <?php if ($step4 === 2): ?>
 
-                        ✓
+                        <i class="fa-solid fa-check"></i>
 
                     <?php else: ?>
 
@@ -1234,13 +1337,17 @@ $delivered_time = $row['delivered_at'];
     <div class="back-container">
 
         <a href="multracking.php">
-            ← Back to All Tracking
+            <i class="fa-solid fa-arrow-left"></i> Back to Pickup Status
         </a>
 
     </div>
 
 
-</div>
+        </div> <!-- /.tracking-page -->
+
+    </main>
+
+</div> <!-- /.dashboard -->
 
 
 </body>

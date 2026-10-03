@@ -148,6 +148,9 @@ if (!empty($receipt['quantity_unit'])) {
         href="receipt.css"
     >
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
@@ -244,7 +247,7 @@ if (!empty($receipt['quantity_unit'])) {
             <div class="top-icons">
 
                 <span>
-                    🔔 &nbsp; 👤
+                    <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
                 </span>
 
             </div>

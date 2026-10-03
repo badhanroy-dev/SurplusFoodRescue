@@ -750,6 +750,9 @@ $month_names = [
         href="impact_summary.css"
     >
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
@@ -826,12 +829,12 @@ $month_names = [
         <div class="bottom-menu">
 
 
-            <a href="#">
+            <a href="profile.php">
                 Settings
             </a>
 
 
-            <a href="#">
+            <a href="logout.php">
                 Logout
             </a>
 
@@ -856,7 +859,7 @@ $month_names = [
             <div class="top-icons">
 
                 <span>
-                    🔔 &nbsp; 👤
+                    <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
                 </span>
 
             </div>

@@ -348,6 +348,9 @@ function getPickupDateText($pickup_date)
         href="dashboard.css"
     >
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
@@ -410,7 +413,7 @@ function getPickupDateText($pickup_date)
             type="text"
             name="search"
             value="<?php echo htmlspecialchars($search); ?>"
-            placeholder="⌕ Search..."
+            placeholder="Search..."
         >
 
     </form>
@@ -420,7 +423,7 @@ function getPickupDateText($pickup_date)
 
         <div style="position: relative; display: inline-block; margin-right: 10px;">
             <span id="donor-notif-bell" style="cursor: pointer; position: relative;" onclick="toggleDonorNotif()">
-                🔔
+                <i class="fa-solid fa-bell"></i>
                 <?php if (count($donor_notifications) > 0) { ?>
                     <span style="position: absolute; top: -6px; right: -8px; background: #e71c16; color: white; border-radius: 50%; padding: 2px 5px; font-size: 10px; font-weight: bold;"><?php echo count($donor_notifications); ?></span>
                 <?php } ?>
@@ -440,7 +443,7 @@ function getPickupDateText($pickup_date)
             </div>
         </div>
 
-        👤
+        <i class="fa-solid fa-circle-user"></i>
 
         <?php
         echo htmlspecialchars($user['full_name']);

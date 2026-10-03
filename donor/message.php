@@ -40,7 +40,7 @@ $user_id = (int)$_SESSION['user_id'];
             </nav>
 
             <div class="bottom-menu">
-                <a href="#">Settings</a>
+                <a href="profile.php">Settings</a>
                 <a href="logout.php">Logout</a>
             </div>
         </aside>
@@ -53,14 +53,8 @@ $user_id = (int)$_SESSION['user_id'];
                 <input type="search" id="search-users" placeholder="Search users..." oninput="loadChat()">
 
                 <div class="top-icons">
-                    <div class="notif-container" style="position: relative;">
-                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()" style="cursor: pointer;"></i>
-                        <div id="notif-dropdown" class="notif-dropdown" style="display: none; position: absolute; right: 0; top: 30px; width: 260px; background: white; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; padding: 12px;">
-                            <div id="notif-list">No new notifications</div>
-                        </div>
-                    </div>
                     <span>
-                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
                     </span>
                 </div>
             </header>

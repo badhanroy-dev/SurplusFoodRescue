@@ -88,6 +88,9 @@ $result = mysqli_stmt_get_result($stmt);
         href="multracking.css"
     >
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
@@ -194,7 +197,7 @@ $result = mysqli_stmt_get_result($stmt);
             <div class="top-icons">
 
                 <span>
-                    🔔 &nbsp; 👤
+                    <i class="fa-solid fa-bell"></i> &nbsp; <i class="fa-solid fa-circle-user"></i>
                 </span>
 
             </div>
