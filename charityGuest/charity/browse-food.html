@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRescue - Browse Food</title>
+
+    <link rel="stylesheet" href="browse-food.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         DASHBOARD CONTAINER
+    ========================================== -->
+    <div class="dashboard">
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <h2>FoodRescue</h2>
+                <p>Charity Portal</p>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="browse-food.html" class="active">
+                    Browse Food
+                </a>
+
+                <a href="claimed-food.html">
+                    Claimed Food
+                </a>
+
+                <a href="distribution-log.html">
+                    Distribution Log
+                </a>
+
+                <a href="report-issue.html">
+                    Report Issue
+                </a>
+
+                <a href="charity-chat.html">
+                    Chat
+                </a>
+            </nav>
+
+            <!-- BOTTOM MENU -->
+            <div class="bottom-menu">
+                <a href="../guest/settings.html">
+                    Settings
+                </a>
+
+                <a href="../guest/logout.php">
+                    Logout
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN CONTENT
+        ========================================== -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span><i class="fa-solid fa-circle-user"></i></span>
+                </div>
+            </header>
+
+
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <!-- PAGE HEADER -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Available Food Rescue Ops</h1>
+                        <p>Browse available food donations and claim what your community needs.</p>
+                    </div>
+                </div>
+
+
+                <!-- SEARCH / FILTER AREA -->
+                <div class="filter-box">
+
+                    <!-- AREA -->
+                    <div class="filter-group">
+                        <label>Search by Area</label>
+                        <div class="select-input">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <select id="filter-area">
+                                <option value="">All Areas</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Banani">Banani</option>
+                                <option value="Gulshan">Gulshan</option>
+                                <option value="Dhanmondi">Dhanmondi</option>
+                                <option value="Uttara">Uttara</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- FOOD TYPE -->
+                    <div class="filter-group">
+                        <label>Food Type</label>
+                        <div class="select-input">
+                            <i class="fa-solid fa-utensils"></i>
+                            <select id="filter-type">
+                                <option value="">All Types</option>
+                                <option value="Fresh Produce">Fresh Produce</option>
+                                <option value="Bakery">Bakery</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Prepared Meals">Prepared Meals</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- EXPIRY DATE -->
+                    <div class="filter-group">
+                        <label>Expiry Date</label>
+                        <div class="date-input">
+                            <i class="fa-regular fa-calendar"></i>
+                            <input type="date" id="filter-date">
+                        </div>
+                    </div>
+
+                    <!-- SEARCH BUTTON -->
+                    <button type="button" class="filter-button" id="filter-btn" onclick="searchFood()">
+                        <i class="fa-solid fa-filter"></i>
+                        Search
+                    </button>
+
+                </div>
+
+
+                <!-- RESULTS HEADER -->
+                <div class="results-header">
+                    <div>
+                        <h2>Available Donations</h2>
+                        <p id="results-count">0 food rescue opportunities available</p>
+                    </div>
+
+                    <button type="button" class="sort-button" id="sort-btn" onclick="sortFood()">
+                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                        Sort by Expiry
+                    </button>
+                </div>
+
+
+                <!-- DYNAMIC FOOD GRID CONTAINER -->
+                <div class="food-grid" id="food-grid-container">
+                    <!-- Populated dynamically from php/browse_food_process.php via js/browse-food.js -->
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="js/browse-food.js"></script>
+
+</body>
+
+</html>

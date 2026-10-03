@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Claimed Food</title>
+
+    <link rel="stylesheet" href="claimed-food.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+
+                <p>Charity Portal</p>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="browse-food.html">
+
+                    
+
+                    Browse Food
+
+                </a>
+
+
+                <a href="claimed-food.html" class="active">
+
+                    
+
+                    Claimed Food
+
+                </a>
+
+
+                <a href="distribution-log.html">
+
+                   
+
+                    Distribution Log
+
+                </a>
+
+
+                <a href="report-issue.html">
+
+                    
+
+                    Report Issue
+
+                </a>
+
+
+                <a href="charity-chat.html">
+
+                   
+                    Chat
+
+                </a>
+
+            </nav>
+
+
+            <!-- BOTTOM MENU -->
+
+            <div class="bottom-menu">
+
+                <a href="../guest/settings.html">
+
+                    Settings
+
+                </a>
+
+
+                <a href="../guest/logout.php">
+
+                    
+
+                    Logout
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main">
+
+
+            <!-- =========================================
+                 TOP BAR
+            ========================================== -->
+
+            <header class="topbar">
+
+                
+
+
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+                </div>
+
+
+            </header>
+
+
+            <!-- =========================================
+                 CONTENT
+            ========================================== -->
+
+            <section class="content">
+
+
+                <!-- =========================================
+                     PAGE HEADER
+                ========================================== -->
+
+                <div class="page-header">
+
+                    <div class="page-title">
+
+                        <h1>
+                            Claimed Food Items
+                        </h1>
+
+                        <p>
+                            Track and manage food items that have been claimed for pickup.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     STAT CARDS
+                ========================================== -->
+
+                <div class="stats">
+
+
+                    <!-- TOTAL ITEMS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>TOTAL ITEMS</p>
+
+                        <h2 id="stat-total">0</h2>
+
+                        <span class="stat-description">
+                            Currently claimed
+                        </span>
+
+                    </div>
+
+
+                    <!-- IN TRANSIT -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon transit-icon">
+
+                                <i class="fa-solid fa-truck"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>IN TRANSIT</p>
+
+                        <h2 id="stat-transit">0</h2>
+
+                        <span class="stat-description">
+                            On the way
+                        </span>
+
+                    </div>
+
+
+                    <!-- AWAITING PICKUP -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon orange">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>AWAITING PICKUP</p>
+
+                        <h2 id="stat-awaiting">0</h2>
+
+                        <span class="stat-description">
+                            Pickup pending
+                        </span>
+
+                    </div>
+
+
+                    <!-- READY TO LOG -->
+
+                    <div class="stat-card ready-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon ready-icon">
+
+                                <i class="fa-solid fa-clipboard-check"></i>
+
+                            </div>
+
+                        </div>
+
+                        <p>READY TO LOG</p>
+
+                        <h2 id="stat-ready">0</h2>
+
+                        <span class="stat-description">
+                            Ready for distribution
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================================
+                     CLAIMED FOOD TABLE
+                ========================================== -->
+
+                <div class="claimed-section">
+
+
+                    <!-- SECTION HEADER -->
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Claimed Food Items
+                            </h2>
+
+                            <p>
+                                Manage your claimed food and pickup status
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         TABLE HEADER
+                    ========================================== -->
+
+                    <div class="table-header">
+
+                        <span>ITEM DETAILS</span>
+
+                        <span>DONOR</span>
+
+                        <span>QUANTITY / WEIGHT</span>
+
+                        <span>EXPIRY WINDOW</span>
+
+                        <span>STATUS</span>
+
+                        <span>OTP</span>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- Dynamic Rows Container -->
+
+                    <div id="claimed-food-rows"></div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- JS Script -->
+    <script src="js/claimed-food.js"></script>
+
+</body>
+
+</html>

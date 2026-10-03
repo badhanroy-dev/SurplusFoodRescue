@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* ==============================
+   DASHBOARD
+============================== */
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #A33215;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 11px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: block;
+}
+
+
+.menu a.active {
+    background-color: #FA8145;
+}
+
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #C54716;
+}
+
+
+/* ==============================
+   BOTTOM MENU
+============================== */
+
+.bottom-menu {
+    margin-top: auto;
+    border-top: 1px solid #c76b50;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.main {
+    flex: 1;
+    height: 100vh;
+    margin-left: 210px;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   TOP BAR
+============================== */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 10;
+    border-bottom: 1px solid #e0dddc;
+}
+
+
+/* USER */
+
+.top-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    color: rgb(171, 165, 165);
+    font-size: 13px;
+}
+
+
+/* ==============================
+   RECEIPT PAGE
+============================== */
+
+.receipt-page {
+    width: 100%;
+    height: calc(100vh - 65px);
+    margin-top: 65px;
+    padding: 30px 42px;
+    overflow-y: auto;
+    background-color: #fafaf9;
+}
+
+
+/* TITLE */
+
+.receipt-page h1 {
+    color: #E71C16;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+
+.sub {
+    color: #78879B;
+    font-size: 11px;
+}
+
+
+/* ==============================
+   RECEIPT LIST
+============================== */
+
+.receipt-list {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* ==============================
+   RECEIPT CARD
+============================== */
+
+.receipt-card {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #e2e7ed;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   RECEIPT INFORMATION
+============================== */
+
+.receipt-info b {
+    display: inline-block;
+    font-size: 13px;
+    color: #333;
+    margin-right: 25px;
+}
+
+
+.receipt-info span {
+    display: inline-block;
+    font-size: 11px;
+    color: #748096;
+}
+
+
+.receipt-info small {
+    display: block;
+    font-size: 10px;
+    color: #8995a5;
+    margin-top: 7px;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.receipt-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.receipt-buttons a {
+    border: none;
+    background-color: #FA8145;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.receipt-buttons .view {
+    background-color: #A33215;
+}
+
+
+.receipt-buttons a:hover {
+    background-color: #C54716;
+}
+
+
+/* VIEW BUTTON */
+
+.view {
+    text-decoration: none;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 15px;
+    align-items: center;
+    border-radius: 12%;
+}
+
+
+/* DOWNLOAD BUTTON */
+
+.download {
+    background-color: #FA8145;
+}
+
+
+/* ==============================
+   EMPTY RECEIPT MESSAGE
+============================== */
+
+.empty-receipts {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #e2e7ed;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.empty-receipts h3 {
+    color: #A33215;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+.empty-receipts p {
+    color: #78879B;
+    font-size: 11px;
+}

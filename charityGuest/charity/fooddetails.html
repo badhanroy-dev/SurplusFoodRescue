@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Food Details</title>
+
+    <link rel="stylesheet" href="fooddetails.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>FoodRescue</h2>
+                <p>Charity Portal</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+                   
+                    Dashboard
+                </a>
+
+                <a href="browse-food.html">
+                    
+                    Browse Food
+                </a>
+
+                <a href="claimed-food.html">
+                    
+                    Claimed Food
+                </a>
+
+                <a href="distribution-log.html">
+                    
+                    Distribution Log
+                </a>
+
+                <a href="report-issue.html">
+                    
+                    Report Issue
+                </a>
+
+                <a href="charity-chat.html">
+                   
+                    Chat
+                </a>
+
+            </nav>
+
+
+            <!-- BOTTOM MENU -->
+
+            <div class="bottom-menu">
+
+                <a href="../guest/settings.html">
+                    
+                    Settings
+                </a>
+
+                <a href="../guest/logout.php">
+                    
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main">
+
+
+            <!-- ================= TOP BAR ================= -->
+
+            <header class="topbar">
+
+                
+
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+                </div>
+
+
+            </header>
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <section class="content">
+
+
+                <!-- PAGE HEADER -->
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <p class="breadcrumb">
+                            Browse Food
+                            <span>/</span>
+                            <span id="food-breadcrumb-name">Food Details</span>
+                        </p>
+
+                        <h1 id="food-heading-title"></h1>
+
+                    </div>
+
+
+                    <button class="back-btn" onclick="window.location.href='browse-food.html'">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Browse
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= DETAILS LAYOUT ================= -->
+
+                <div class="details-layout">
+
+
+                    <!-- ================= LEFT SIDE ================= -->
+
+                    <div class="left-content">
+
+
+                        <!-- FOOD IMAGE CARD -->
+
+                        <div class="food-main-card">
+
+
+                            <div class="food-image-container">
+
+                                <img
+                                    id="food-detail-img"
+                                    src="images/vegetables.jpg"
+                                    alt="Food Image"
+                                    onerror="this.onerror=null; this.src='images/vegetables.jpg';"
+                                >
+
+
+                                <!-- BADGES -->
+
+                                <div class="food-badges">
+
+                                    <span class="available-badge" id="food-status-badge"></span>
+
+                                    <span class="expire-badge" id="food-expiry-badge"></span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FOOD TITLE -->
+
+                            <div class="food-title">
+
+                                
+
+                                <div class="food-category" id="food-category-badge"></div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= INFORMATION CARDS ================= -->
+
+                        <div class="info-grid">
+
+
+                            <!-- FOOD SAFETY -->
+
+                            <div class="info-card">
+
+                                <div class="info-card-header">
+
+                                    <div class="info-icon">
+
+                                        <i class="fa-solid fa-shield-heart"></i>
+
+                                    </div>
+
+                                    <h3>Food Safety Info</h3>
+
+                                </div>
+
+
+                                <p id="food-safety-text"></p>
+
+                            </div>
+
+
+
+                            <!-- ADDITIONAL NOTES -->
+
+                            <div class="info-card">
+
+                                <div class="info-card-header">
+
+                                    <div class="info-icon">
+
+                                        <i class="fa-solid fa-note-sticky"></i>
+
+                                    </div>
+
+                                    <h3>Description</h3>
+
+                                </div>
+
+
+                                <p id="food-description-text"></p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= RIGHT SIDE ================= -->
+
+                    <aside class="rescue-card">
+
+
+                        <!-- HEADER -->
+
+                        <div class="rescue-heading">
+
+                            <span>
+                                RESCUE OPPORTUNITY
+                            </span>
+
+                            <h2 id="rescue-food-name"></h2>
+
+                        </div>
+
+
+
+                        <!-- DONOR -->
+
+                        <div class="rescue-item">
+
+                            <div class="rescue-icon">
+
+                                <i class="fa-solid fa-building"></i>
+
+                            </div>
+
+
+                            <div class="rescue-text">
+
+                                <p>
+                                    Donor
+                                </p>
+
+                                <h3 id="rescue-donor-name"></h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FOOD TYPE -->
+
+                        <div class="rescue-item">
+
+                            <div class="rescue-icon">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+
+                            <div class="rescue-text">
+
+                                <p>
+                                    Food Type
+                                </p>
+
+                                <h3 id="rescue-food-type"></h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="rescue-item">
+
+                            <div class="rescue-icon">
+
+                                <i class="fa-solid fa-weight-hanging"></i>
+
+                            </div>
+
+
+                            <div class="rescue-text">
+
+                                <p>
+                                    Quantity
+                                </p>
+
+                                <h3 id="rescue-quantity"></h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PICKUP AREA -->
+
+                        <div class="rescue-item">
+
+                            <div class="rescue-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+
+                            <div class="rescue-text">
+
+                                <p>
+                                    Pickup Area
+                                </p>
+
+                                <h3 id="rescue-pickup-area"></h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PICKUP TIME -->
+
+                        <div class="rescue-item">
+
+                            <div class="rescue-icon">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+
+                            <div class="rescue-text">
+
+                                <p>
+                                    Pickup Time
+                                </p>
+
+                                <h3 id="rescue-pickup-time"></h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CLAIM BUTTON -->
+
+                        <a href="claimConfirmation.html" id="claim-button-link">
+                            <button class="claim-btn">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Claim Food
+
+                        </button>
+                        </a>
+
+
+
+                        
+
+                        
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- EXTERNAL JAVASCRIPT CONNECTING HTML TO PHP BACKEND -->
+    <script src="js/food-details.js"></script>
+
+</body>
+
+</html>

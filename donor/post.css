@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+
+/* ==============================
+   DASHBOARD
+============================== */
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #A33215;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    padding: 0 10px 30px;
+}
+
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #f5c2ad;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.menu a,
+.bottom-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 11px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: block;
+}
+
+
+/* ACTIVE */
+
+.menu a.active {
+    background-color: #FA8145;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.bottom-menu a:hover {
+    background-color: #C54716;
+}
+
+
+/* ==============================
+   BOTTOM MENU
+============================== */
+
+.bottom-menu {
+    margin-top: auto;
+    border-top: 1px solid #c76b50;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.main {
+    flex: 1;
+    height: 100vh;
+    margin-left: 210px;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   TOP BAR
+============================== */
+
+.topbar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 210px;
+    right: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 10;
+    border-bottom: 1px solid #e0dddc;
+}
+
+
+/* USER */
+
+.top-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    color: rgb(171, 165, 165);
+    font-size: 13px;
+}
+
+
+/* ==============================
+   POST FOOD PAGE
+============================== */
+
+.post-page {
+    width: 100%;
+    height: calc(100vh - 65px);
+    margin-top: 65px;
+    background-color: #fafaf9;
+    padding: 25px 42px;
+    overflow-y: auto;
+}
+
+
+/* TITLE */
+
+.post-page h1 {
+    color: #E71C16;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+
+.subtitle {
+    color: #748096;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   GRID
+============================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   CARD
+============================== */
+
+.card {
+    background-color: white;
+    border: 1px solid #e2e7ed;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+
+.card h2 {
+    font-size: 15px;
+    border-bottom: 1px solid #edf0f3;
+    padding-bottom: 14px;
+    margin-bottom: 5px;
+}
+
+
+/* ==============================
+   FIELDS
+============================== */
+
+.fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+    font-size: 9px;
+    font-weight: bold;
+    color: #53637a;
+    margin: 13px 0 7px;
+}
+
+
+/* INPUT */
+
+input,
+textarea,
+select {
+    width: 100%;
+    border: 1px solid #dce3eb;
+    border-radius: 9px;
+    padding: 10px;
+    background-color: #fbfcfd;
+    font-family: Arial, sans-serif;
+    color: #33415a;
+    font-size: 11px;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #FA8145;
+    outline: none;
+}
+
+
+select {
+    cursor: pointer;
+}
+
+
+/* ==============================
+   AVAILABLE
+============================== */
+
+.available-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.available-choice {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+}
+
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #dce3eb;
+    border-radius: 7px;
+    padding: 8px 9px;
+    margin: 0;
+    background-color: #fbfcfd;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: normal;
+    color: #53637a;
+}
+
+
+.radio-option input {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============================
+   DESCRIPTION ROW
+============================== */
+
+.description-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+.description-row textarea {
+    height: 105px;
+    resize: none;
+}
+
+
+/* ==============================
+   UPLOAD
+============================== */
+
+.upload {
+    min-height: 140px;
+    border: 1px dashed #FA8145;
+    border-radius: 12px;
+    background-color: #fffaf7;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.upload-icon {
+    color: #FA8145;
+    font-size: 20px;
+}
+
+
+.upload b {
+    display: block;
+    color: #44536a;
+    font-size: 11px;
+    margin: 7px;
+}
+
+
+.upload small {
+    display: block;
+    color: #8b95a4;
+    font-size: 9px;
+    margin: 7px;
+}
+
+
+.upload button {
+    background-color: white;
+    color: #42516a;
+    border: 1px solid #d9e0e7;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.upload button:hover {
+    background-color: #f5f5f5;
+}
+
+
+.file-name {
+    word-break: break-word;
+}
+
+
+/* ==============================
+   STATUS
+============================== */
+
+.status {
+    border: 1px solid #dfe5eb;
+    border-radius: 9px;
+    padding: 12px;
+    margin: 9px 0;
+    font-size: 11px;
+}
+
+
+.status b {
+    float: right;
+    color: #0ab279;
+}
+
+
+.status.active {
+    border-color: #FA8145;
+    background-color: #fffaf7;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.publish,
+.save {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+.publish {
+    border: none;
+    background-color: #FA8145;
+    color: white;
+}
+
+
+.publish:hover {
+    background-color: #C54716;
+}
+
+
+.save {
+    background-color: white;
+    color: #33415a;
+    border: 1px solid #dce3ea;
+}
+
+
+.save:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* ==============================
+   MESSAGES
+============================== */
+
+.message {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 7px;
+    margin-top: 15px;
+    font-size: 11px;
+}
+
+
+.success-message {
+    background-color: #eefaf5;
+    border: 1px solid #b8ead6;
+    color: #087c56;
+}
+
+
+.error-message {
+    background-color: #fff1ef;
+    border: 1px solid #f2c2bc;
+    color: #a33215;
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="auth-page">
+
+
+        <!-- =========================================
+             HEADER
+        ========================================= -->
+
+        <header class="auth-header">
+
+            <a href="home.html" class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>FoodRescue</h2>
+
+                    <p>Rescue. Share. Serve.</p>
+
+                </div>
+
+            </a>
+
+
+            <a href="home.html" class="back-button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+        </header>
+
+
+
+        <!-- =========================================
+             MAIN
+        ========================================= -->
+
+        <main class="auth-main">
+
+
+            <div class="auth-card">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="auth-card-header">
+
+                    <div class="auth-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <h1>Create Your Account</h1>
+
+                    <p>
+                        Join FoodRescue and help turn surplus
+                        food into community impact.
+                    </p>
+
+                </div>
+
+
+
+                <!-- SIGNUP FORM -->
+
+                <form action="signup_process.php" method="POST" enctype="multipart/form-data" id="signupForm">
+
+
+                    <!-- ACCOUNT TYPE -->
+
+                    <div class="form-group">
+
+                        <label>Account Type</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            <select name="role" id="role" required>
+
+                                <option value="">Select account type</option>
+
+                                <option value="Food Donor">Food Donor</option>
+
+                                <option value="Charity Organization">Charity Organization</option>
+
+                                <option value="Volunteer Rider">Volunteer Rider</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NAME -->
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label>Organization / Full Name</label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input type="text" name="full_name" id="full_name" placeholder="Enter name" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Registration / NID Number</label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-id-card"></i>
+
+                                <input type="text" name="reg_nid_number" id="reg_nid_number" placeholder="Enter number" required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- NID IMAGE -->
+
+                        <div class="form-group">
+
+                            <label>Upload NID Image</label>
+
+                            <div class="input-box">
+
+                                
+
+                                <input type="file" name="nid_image" id="nid_image" accept="image/*" required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input type="email" name="email" id="email" placeholder="Enter email address" required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input type="tel" name="phone" id="phone" placeholder="+880 1XXXXXXXXX" required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="form-group">
+
+                        <label>Address / Pickup Area</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input type="text" name="address" id="address" placeholder="Enter your location" required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD GRID -->
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label>Password</label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input type="password" name="password" id="password" placeholder="Create password" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Confirm Password</label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <input type="checkbox" name="terms" id="terms" required>
+
+                        <p>
+                            I agree to the FoodRescue
+                            <a href="#">Terms of Service</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- BUTTON -->
+
+                    <button type="submit" class="auth-button">
+
+                        Create Account
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- LOGIN -->
+
+                <div class="auth-footer">
+
+                    <p>
+                        Already have an account?
+                        <a href="login.html">Log in</a>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </main>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="auth-bottom">
+
+            <p>
+                2026 FoodRescue. All rights reserved.
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    
+</body>
+
+</html>

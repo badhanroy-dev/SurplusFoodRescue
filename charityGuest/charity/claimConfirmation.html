@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirm Food Claim</title>
+
+    <link rel="stylesheet" href="claimConfirmation.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>FoodRescue</h2>
+                <p>Charity Portal</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+                   
+                    Dashboard
+                </a>
+
+                <a href="browse-food.html">
+                   
+                    Browse Food
+                </a>
+
+                <a href="claimed-food.html">
+                    
+                    Claimed Food
+                </a>
+
+                <a href="distribution-log.html">
+                    
+                    Distribution Log
+                </a>
+
+                <a href="report-issue.html">
+                    
+                    Report Issue
+                </a>
+
+                <a href="charity-chat.html">
+                   
+                    Chat
+                </a>
+
+            </nav>
+
+            <div class="bottom-menu">
+
+                <a href="../guest/settings.html">
+                    
+                    Settings
+                </a>
+
+                <a href="../guest/logout.php">
+                    
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                
+
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span><i class="fa-solid fa-circle-user"></i></span>
+                </div>
+
+
+            </header>
+
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <!-- BREADCRUMB -->
+                <div class="breadcrumb">
+
+                    <span>Browse Food</span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <strong>Confirm Claim</strong>
+
+                </div>
+
+
+                <!-- CLAIM CARD -->
+                <div class="claim-card">
+
+                    <!-- FOOD IMAGE -->
+                    <div class="food-banner">
+
+                        <img id="claim-food-img"
+                            alt="Food Image" onerror="this.onerror=null;">
+
+                    </div>
+
+
+                    <div class="claim-content">
+
+                        <h1>Confirm Your Claim</h1>
+
+                        <p class="subtitle">
+                            Please review the food details and pickup logistics before finalizing your claim.
+                        </p>
+
+
+                        <!-- FOOD INFORMATION -->
+                        <div class="info-row">
+
+                            <!-- SELECTED FOOD -->
+                            <div class="selected-food">
+
+                                <p class="small-title">
+                                    SELECTED FOOD
+                                </p>
+
+                                <h2 id="claim-food-name"></h2>
+
+                                <p class="donor" id="claim-donor-name"></p>
+
+                                <h3 id="claim-quantity"></h3>
+
+                            </div>
+
+
+                            <!-- IMPACT -->
+                            <div class="impact">
+
+                                <div class="impact-icon">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+
+                                <div>
+
+                                    <p class="small-title">
+                                        ESTIMATED IMPACT
+                                    </p>
+
+                                    <h2 id="claim-impact-people"></h2>
+
+                                    <p>
+                                        Will be served by this donation.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PICKUP DETAILS -->
+                        <div class="pickup-box">
+
+                            <h2>
+                                <i class="fa-regular fa-clock"></i>
+                                Pickup Details
+                            </h2>
+
+                            <div class="pickup-details">
+
+                                <div>
+                                    <p>DATE</p>
+                                    <h3 id="claim-pickup-date"></h3>
+                                </div>
+
+                                <div>
+                                    <p>TIME WINDOW</p>
+                                    <h3 id="claim-pickup-time"></h3>
+                                </div>
+
+                                <div>
+                                    <p>LOCATION</p>
+                                    <h3 id="claim-pickup-location"></h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- COMPLIANCE -->
+                        <div class="compliance">
+
+                            <input type="checkbox" id="compliance-checkbox">
+
+                            <div>
+
+                                <h3>
+                                    Compliance & Commitment
+                                </h3>
+
+                                <p>
+                                    I agree to the
+                                    <a href="#">food safety guidelines</a>
+                                    for temperature-sensitive transport and
+                                    confirm that my team will arrive for pickup
+                                    by the stated time.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTIONS -->
+                        <div class="actions">
+
+                            <button type="button" class="schedule" id="confirm-claim-btn" onclick="confirmClaim()">
+                                Schedule Pickup
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <a href="browse-food.html">
+                                <button class="cancel">
+                                    Cancel
+                                </button>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+               
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- EXTERNAL JAVASCRIPT CONNECTING HTML TO PHP BACKEND -->
+    <script src="js/claim-confirmation.js"></script>
+
+</body>
+
+</html>

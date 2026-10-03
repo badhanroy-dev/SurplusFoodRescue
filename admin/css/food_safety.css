@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    background-color: #fff8f3;
+}
+
+
+.page-header {
+    background: #a33215;
+    color: #fff0e9;
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+
+.add-btn {
+    background: #fa8145;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.add-btn:hover {
+    opacity: 0.9;
+}
+
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2,
+.agreement h2 {
+    color: #a33215;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-small-btn {
+    background: #fff0e9;
+    color: #a33215;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.add-small-btn:hover {
+    background: #ffe1d5;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 23px;
+    border-radius: 10px;
+    border-top: 4px solid #fa8145;
+}
+
+.card h3 {
+    color: #a33215;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.card li {
+    color: #555;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-header h3 {
+    margin-bottom: 8px;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.edit-btn {
+    background: #fff0e9;
+    color: #a33215;
+}
+
+.delete-btn {
+    background: #f5f5f5;
+    color: #888;
+    text-decoration: none;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.75;
+}
+
+
+.guideline-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.guideline {
+    display: flex;
+    gap: 16px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.guideline > span {
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0e9;
+    color: #a33215;
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guideline-content {
+    flex: 1;
+}
+
+.guideline-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.guideline h3 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.guideline p {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.agreement {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border-top: 4px solid #fa8145;
+    margin-top: 5px;
+}
+
+.agreement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.agreement > p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.agreement-header p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer p {
+    color: #888;
+    font-size: 11px;
+}
+
+.edit-footer-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #a33215;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.edit-footer-btn:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+
+.modal-box {
+    width: 450px;
+    max-width: 90%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    color: #a33215;
+    font-size: 20px;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+
+    font-size: 25px;
+    color: #888;
+
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #a33215;
+}
+
+
+.modal-box label {
+    display: block;
+
+    color: #444;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select {
+    width: 100%;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    padding: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+
+    background: white;
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus,
+.modal-box select:focus {
+    border-color: #fa8145;
+}
+
+.modal-box textarea {
+    resize: vertical;
+}
+
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.cancel-btn,
+.save-btn {
+    border: none;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.cancel-btn {
+    background: #f2f2f2;
+    color: #666;
+}
+
+.cancel-btn:hover {
+    background: #e8e8e8;
+}
+
+.save-btn {
+    background: #a33215;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #8f2b12;
+}
+
+
+/* =========================
+   ADDED ONLY FOR DYNAMIC PAGE
+========================= */
+
+.empty-message {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+
+.modal-box select {
+    appearance: auto;
+}
+
+
+.agreement-title {
+    color: #333;
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+
+.agreement ul {
+    padding-left: 18px;
+}
+
+
+.agreement li {
+    color: #555;
+    font-size: 12px;
+    line-height: 1.8;
+}

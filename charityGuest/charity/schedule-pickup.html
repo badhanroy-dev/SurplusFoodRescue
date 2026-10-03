@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Schedule Pickup</title>
+
+    <link rel="stylesheet" href="schedule-pickup.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+
+                <p>Charity Portal</p>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+
+                <a href="dashboard.html">
+
+                   
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="browse-food.html">
+
+                    
+
+                    Browse Food
+
+                </a>
+
+
+                <a href="claimed-food.html">
+
+                    
+                    Claimed Food
+
+                </a>
+
+
+                <a href="distribution-log.html">
+
+                    
+
+                    Distribution Log
+
+                </a>
+
+
+                <a href="report-issue.html">
+
+                   
+
+                    Report Issue
+
+                </a>
+
+
+                <a href="charity-chat.html">
+
+                    
+
+                    Chat
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- BOTTOM MENU -->
+
+            <div class="bottom-menu">
+
+
+                <a href="../guest/settings.html">
+
+                    Settings
+
+                </a>
+
+
+                <a href="../guest/logout.php">
+
+                    
+
+                    Logout
+
+                </a>
+
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main">
+
+
+            <!-- =========================================
+                 TOP BAR
+            ========================================== -->
+
+            <header class="topbar">
+
+
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+                </div>
+
+
+
+            </header>
+
+
+            <!-- =========================================
+                 CONTENT
+            ========================================== -->
+
+            <section class="content">
+
+
+                <div class="pickup-container">
+
+
+                    <!-- =========================================
+                         SCHEDULE PICKUP CARD
+                    ========================================== -->
+
+                    <div class="pickup-card">
+
+
+                        <!-- CARD HEADER -->
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h1>
+                                    Schedule Pickup
+                                </h1>
+
+                                <p>
+                                    Select a convenient time to collect the claimed food.
+                                </p>
+
+                            </div>
+
+
+                            <div class="header-icon">
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             CLAIMED FOOD
+                        ========================================== -->
+
+                        <div class="claimed-food">
+
+
+                            <div class="section-title">
+
+                                <h2>
+                                    Claimed Food Item
+                                </h2>
+
+                            </div>
+
+
+                            <div class="food-card">
+
+
+                                <div class="food-icon">
+
+                                    <i class="fa-solid fa-carrot"></i>
+
+                                </div>
+
+
+                                <div class="food-details">
+
+                                    <h3 id="pickup-food-title">
+                                        
+                                    </h3>
+
+                                    <p id="pickup-food-desc">
+                                        
+                                    </p>
+
+                                    <div class="food-info">
+
+                                        <span id="pickup-quantity">
+                                            
+                                        </span>
+
+                                        <span id="pickup-food-id">
+                                            
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="status" id="pickup-status">
+                                    Pending Pickup
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- =========================================
+                             PICKUP CONSTRAINTS
+                        ========================================== -->
+
+                        <div class="pickup-constraints">
+
+
+                            <div class="section-title">
+
+                                <h2>
+                                    Pickup Constraints
+                                </h2>
+
+                            </div>
+
+
+
+
+                            <!-- CONSTRAINT INFORMATION -->
+
+                            <div class="constraint-info">
+
+
+                                <div class="info-item">
+
+                                    <div class="info-icon">
+
+                                        <i class="fa-solid fa-clock"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            Donor's Availability
+                                        </span>
+
+                                        <strong id="donor-availability">
+                                            --
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="info-item">
+
+                                    <div class="info-icon">
+
+                                        <i class="fa-solid fa-hourglass-end"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            Food Expiry Window
+                                        </span>
+
+                                        <strong id="expiry-window">
+                                            --
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            
+                            <!-- PICKUP TIME -->
+
+                            <div class="form-group">
+
+                                <label for="pickup-time">
+                                    Select Pickup Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="pickup-time"
+                                    name="pickup-time"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- =========================================
+                             DIVIDER
+                        ========================================== -->
+
+                        <div class="form-divider"></div>
+
+
+                        <!-- =========================================
+                             BUTTONS
+                        ========================================== -->
+
+                        <div class="form-buttons">
+
+
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                                onclick="window.location.href='claimed-food.html'"
+                            >
+
+                                Cancel
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="confirm-btn"
+                                onclick="confirmSchedule()"
+                            >
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                                Confirm Schedule
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="js/schedule-pickup.js"></script>
+
+</body>
+
+</html>

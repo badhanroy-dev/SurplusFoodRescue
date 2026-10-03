@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRescue - Report Issue</title>
+
+    <link rel="stylesheet" href="report-issue.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>FoodRescue</h2>
+
+                <p>Charity Portal</p>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="browse-food.html">
+
+
+                    Browse Food
+
+                </a>
+
+
+                <a href="claimed-food.html">
+
+
+
+                    Claimed Food
+
+                </a>
+
+
+                <a href="distribution-log.html">
+
+
+                    Distribution Log
+
+                </a>
+
+
+                <!-- ACTIVE -->
+
+                <a href="report-issue.html" class="active">
+
+
+
+                    Report Issue
+
+                </a>
+
+
+                <a href="charity-chat.html">
+
+
+                    Chat
+
+                </a>
+
+            </nav>
+
+
+            <!-- =========================================
+                 BOTTOM MENU
+            ========================================= -->
+
+            <div class="bottom-menu">
+
+                <a href="../guest/settings.html">
+
+                    Settings
+
+                </a>
+
+
+                <a href="../guest/logout.php">
+
+
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =========================================
+             MAIN
+        ========================================= -->
+
+        <main class="main">
+
+
+            <!-- =========================================
+                 TOP BAR
+            ========================================= -->
+
+            <header class="topbar">
+
+
+
+
+                <div class="top-icons">
+                    <div class="notif-container">
+                        <i id="notif-bell" class="fa-solid fa-bell" onclick="toggleNotif()"></i>
+                        <div id="notif-dropdown" class="notif-dropdown" style="display: none;">
+                            <div id="notif-list">No new notifications</div>
+                        </div>
+                    </div>
+                    <span>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =========================================
+                 CONTENT
+            ========================================= -->
+
+            <section class="content">
+
+
+                <!-- =========================================
+                     PAGE HEADER
+                ========================================= -->
+
+                <div class="page-header">
+
+                    <div class="page-title">
+
+                        <h1>Report Issue</h1>
+
+                        <p>
+                            Report problems related to food donations,
+                            pickups, or distributions.
+                        </p>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     REPORT FORM
+                ========================================= -->
+
+                <div class="report-form-card">
+
+
+                    <div class="form-header">
+
+                        <div>
+
+                            <h2>Submit a Report</h2>
+
+                            <p>
+                                Tell us about an issue and our team will
+                                review it as soon as possible.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-header-icon">
+
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FORM -->
+
+                    <form action="php/report_issue_process.php" method="POST" enctype="multipart/form-data">
+
+                        <div class="form-grid">
+
+
+                            <!-- REPORT TYPE -->
+
+                            <div class="form-group">
+
+                                <label>Report Type</label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                                    <select name="report_type" id="report-type" required>
+
+                                        <option value="">Select report type</option>
+
+                                        <option value="Food Quality Issue">Food Quality Issue</option>
+
+                                        <option value="Pickup Issue">Pickup Issue</option>
+
+                                        <option value="Delivery Issue">Delivery Issue</option>
+
+                                        <option value="Food Safety Concern">Food Safety Concern</option>
+
+                                        <option value="Other">Other</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- RELATED FOOD -->
+
+                            <div class="form-group">
+
+                                <label>Related Food</label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-box"></i>
+
+                                    <select name="related_donation_id" id="related-food" required>
+
+                                        <option value="">Select food listing</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- DESCRIPTION -->
+
+                            <div class="form-group full-width">
+
+                                <label>Describe the Issue</label>
+
+                                <textarea name="description" id="description" placeholder="Please describe the issue in detail..."
+                                    required></textarea>
+
+                            </div>
+
+
+
+                            <!-- EVIDENCE -->
+
+                            <div class="form-group full-width">
+
+                                <label>Supporting Evidence</label>
+
+                                <div class="upload-box">
+
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                    <div>
+
+                                        <strong>Upload evidence</strong>
+
+                                        <p>
+                                            Add photos or documents related
+                                            to this report.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="file" name="evidence_file" id="evidence-file" accept="image/*,.pdf,.doc,.docx" required>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <div class="form-footer">
+
+                            <p>
+                                <i class="fa-solid fa-circle-info"></i>
+
+                                Reports are reviewed by the FoodRescue support team.
+
+                            </p>
+
+
+                            <button type="submit" class="submit-button">
+
+                                Submit Report
+
+                                <i class="fa-solid fa-paper-plane"></i>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     REPORTS SECTION
+                ========================================= -->
+
+                <div class="reports-section">
+
+
+                    <!-- HEADER -->
+
+                    <div class="results-header">
+
+                        <div>
+
+                            <h2>Recent Reports</h2>
+
+                            <p>
+                                Track the status and resolution of your reports.
+                            </p>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                    <!-- REPORT TABLE -->
+
+                    <div class="reports-card">
+
+                        <div class="report-table-header">
+
+                            <span>REPORT ID</span>
+
+                            <span>ISSUE</span>
+
+                            <span>DATE</span>
+
+                            <span>STATUS</span>
+
+                            <span>RESOLUTION</span>
+
+                        </div>
+
+
+
+                        <!-- Dynamic Reports Container -->
+                        <div id="reports-list"></div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JS Script -->
+    <script src="js/report-issue.js"></script>
+
+</body>
+
+</html>

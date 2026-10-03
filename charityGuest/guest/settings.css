@@ -1,0 +1,457 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #fffaf8;
+
+    color: #333;
+}
+
+
+/* =========================================
+   SETTINGS PAGE
+========================================= */
+
+.settings-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+    height: 70px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+}
+
+
+.logo-icon {
+    width: 37px;
+
+    height: 37px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+.logo h2 {
+    color: #A33215;
+
+    font-size: 20px;
+}
+
+
+.logo p {
+    color: #999;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+    text-decoration: none;
+
+    color: #A33215;
+
+    font-size: 11px;
+}
+
+
+.back-button i {
+    color: #E75C16;
+
+    margin-right: 6px;
+}
+
+
+.back-button:hover {
+    color: #E75C16;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.settings-main {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+    width: 650px;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px #eeeeee;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.settings-card-header {
+    text-align: center;
+
+    margin-bottom: 23px;
+}
+
+
+.settings-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    background-color: #fff3ed;
+
+    color: #E75C16;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.settings-card-header h1 {
+    color: #A33215;
+
+    font-size: 23px;
+
+    margin-bottom: 6px;
+}
+
+
+.settings-card-header p {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SETTINGS SECTION
+========================================= */
+
+.settings-section {
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 17px;
+
+    margin-top: 17px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.section-title i {
+    color: #E75C16;
+
+    font-size: 13px;
+}
+
+
+.section-title h2 {
+    color: #A33215;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.form-group label {
+    color: #A33215;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    height: 40px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10px;
+
+    gap: 8px;
+}
+
+
+.input-box:focus-within {
+    border-color: #FA8145;
+}
+
+
+.input-box i {
+    color: #E75C16;
+
+    font-size: 12px;
+}
+
+
+.input-box input,
+.input-box select {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+
+.input-box select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   SETTINGS BUTTON
+========================================= */
+
+.settings-button {
+    width: 100%;
+
+    height: 42px;
+
+    background-color: #E75C16;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+}
+
+
+.settings-button i {
+    margin-left: 7px;
+}
+
+
+.settings-button:hover {
+    background-color: #69200F;
+}
+
+
+/* =========================================
+   SETTINGS FOOTER
+========================================= */
+
+.settings-footer {
+    text-align: center;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 20px;
+
+    padding-top: 16px;
+}
+
+
+.settings-footer p {
+    color: #888;
+
+    font-size: 9px;
+}
+
+
+.settings-footer a {
+    color: #E75C16;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.settings-footer a:hover {
+    color: #A33215;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.settings-bottom {
+    text-align: center;
+
+    padding: 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    background-color: white;
+}
+
+
+.settings-bottom p {
+    color: #999;
+
+    font-size: 8px;
+}
