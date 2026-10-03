@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rider Portal - OTP Verification</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="otp-verification.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Rider Portal</h1>
+      <p>Mission-Driven Service</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="menu-item"><a href="available-tasks.html">Available Tasks</a></li>
+      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
+      <li class="menu-item active"><a href="otp-verification.html">OTP Verification</a></li>
+      <li class="menu-item"><a href="update-delivery-status.html">Update Delivery Status</a></li>
+      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
+      <li class="menu-item"><a href="volunteer-chat.html">Chat</a></li>
+    </ul>
+
+    <ul class="menu bottom-menu">
+      <li class="menu-item"><a href="#">Settings</a></li>
+      <li class="menu-item"><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="page-header">
+      <div>
+        <h2 class="page-heading">Confirm Handover</h2>
+        <p class="page-subtitle">Please verify the delivery with the recipient's secure OTP code to complete the mission.</p>
+      </div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+      </div>
+    </div>
+
+    <div class="otp-grid">
+
+      <!-- Task Info Card -->
+      <div class="content-box">
+        <div class="task-tag-row">
+          <span class="badge badge-active">ACTIVE TASK</span>
+          
+        </div>
+
+        <div class="info-item">
+          <p class="info-label">CONTENT</p>
+          <p class="info-value">24x Gourmet Lunch Packs</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">RESTAURANT</p>
+          <p class="info-value">PizzaHut</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">CHARITY PARTNER</p>
+          <p class="info-value">City Harvest Network</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">RECIPIENT ADDRESS</p>
+          <p class="info-value">Badda</p>
+        </div>
+      </div>
+
+      <!-- OTP Card -->
+      <div class="content-box otp-card">
+        <h3>Security Verification</h3>
+        <p class="otp-instruction">Enter the 6-digit handover code provided by the recipient.</p>
+
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" class="otp-box">
+          <input type="text" maxlength="1" class="otp-box">
+          <input type="text" maxlength="1" class="otp-box">
+          <input type="text" maxlength="1" class="otp-box">
+          <input type="text" maxlength="1" class="otp-box">
+          <input type="text" maxlength="1" class="otp-box">
+        </div>
+
+        <a href="update-delivery-status.html" class="btn btn-primary btn-full">Verify Handover</a>
+        <button class="btn btn-outline btn-full">Resend Code to Recipient</button>
+
+        <p class="help-text">Having trouble? Ask the recipient to check their RescueLink SMS or dashboard notifications.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

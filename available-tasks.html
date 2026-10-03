@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rider Portal - Available Tasks</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="available-tasks.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Rider Portal</h1>
+      <p>Mission-Driven Service</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="menu-item active"><a href="available-tasks.html">Available Tasks</a></li>
+      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
+      <li class="menu-item"><a href="otp-verification.html">OTP Verification</a></li>
+      <li class="menu-item"><a href="update-delivery-status.html">Update Delivery Status</a></li>
+      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
+      <li class="menu-item"><a href="volunteer-chat.html">Chat</a></li>
+    </ul>
+
+    <ul class="menu bottom-menu">
+      <li class="menu-item"><a href="#">Settings</a></li>
+      <li class="menu-item"><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="page-header">
+      <div>
+        <h2 class="page-heading">Available Tasks</h2>
+        <p class="page-subtitle">Browse and accept new food rescue missions.</p>
+      </div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input type="text" class="search-input" placeholder="Search tasks...">
+
+      <select class="form-select">
+        <option>All Regions</option>
+        <option>North District</option>
+        <option>Downtown</option>
+      </select>
+
+      <select class="form-select">
+        <option>Any Time</option>
+        <option>Next 1 hour</option>
+        <option>Today</option>
+      </select>
+
+      <select class="form-select">
+        <option>All Types</option>
+        <option>Bakery</option>
+        <option>Produce</option>
+      </select>
+
+      <button class="btn btn-primary">Apply Filters</button>
+
+      <div class="active-count">
+        <span class="count-number">24</span>
+        Active Tasks Nearby
+      </div>
+    </div>
+
+    <!-- Tasks Grid -->
+    <div class="tasks-grid">
+
+      <div class="task-card">
+        <div class="card-image bakery"></div>
+        <h4>Assorted Bakery Surplus</h4>
+        <p class="card-sub">Fresh Crust Bakery • North District</p>
+        <div class="card-details">
+          <div class="detail-col"><span class="label">RECIPIENT CHARITY</span><span class="value">Second Chance Shelter</span></div>
+          <div class="detail-col"><span class="label">QUANTITY</span><span class="value">~15 kg (4 Large Bags)</span></div>
+          <div class="detail-col"><span class="label">PICKUP TIME</span><span class="value">14:30 Today</span></div>
+          <div class="detail-col"><span class="label">EXPIRY COUNTDOWN</span><span class="value expiry-urgent">Expires in 42m</span></div>
+        </div>
+        <div class="card-buttons">
+          <a href="task-details.html" class="btn btn-outline">View Details</a>
+          <a href="task-details.html" class="btn btn-primary">Accept Task</a>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="card-image catering"></div>
+        <h4>Gourmet Catering Box</h4>
+        <p class="card-sub">Skyline Events • Downtown</p>
+        <div class="card-details">
+          <div class="detail-col"><span class="label">RECIPIENT CHARITY</span><span class="value">Unity Youth Center</span></div>
+          <div class="detail-col"><span class="label">QUANTITY</span><span class="value">45 Prepared Meals</span></div>
+          <div class="detail-col"><span class="label">PICKUP TIME</span><span class="value">16:00 Today</span></div>
+          <div class="detail-col"><span class="label">EXPIRY COUNTDOWN</span><span class="value expiry-safe">Expires in 3h 15m</span></div>
+        </div>
+        <div class="card-buttons">
+          <a href="task-details.html" class="btn btn-outline">View Details</a>
+          <a href="task-details.html" class="btn btn-primary">Accept Task</a>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="card-image produce"></div>
+        <h4>Organic Produce Excess</h4>
+        <p class="card-sub">Green Market • West Side</p>
+        <div class="card-details">
+          <div class="detail-col"><span class="label">RECIPIENT CHARITY</span><span class="value">Heritage Community Hub</span></div>
+          <div class="detail-col"><span class="label">QUANTITY</span><span class="value">120kg Bulk Produce</span></div>
+          <div class="detail-col"><span class="label">PICKUP TIME</span><span class="value">Tomorrow 08:00</span></div>
+          <div class="detail-col"><span class="label">EXPIRY COUNTDOWN</span><span class="value expiry-safe">Expires in 18h</span></div>
+        </div>
+        <div class="card-buttons">
+          <a href="task-details.html" class="btn btn-outline">View Details</a>
+          <a href="task-details.html" class="btn btn-primary">Accept Task</a>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="card-image frozen"></div>
+        <h4>Frozen Prepared Goods</h4>
+        <p class="card-sub">Central Hospital • Mid-Town</p>
+        <div class="card-details">
+          <div class="detail-col"><span class="label">RECIPIENT CHARITY</span><span class="value">Vets Outreach Home</span></div>
+          <div class="detail-col"><span class="label">QUANTITY</span><span class="value">8 Cool Boxes</span></div>
+          <div class="detail-col"><span class="label">PICKUP TIME</span><span class="value">17:15 Today</span></div>
+          <div class="detail-col"><span class="label">EXPIRY COUNTDOWN</span><span class="value expiry-safe">Expires in 6h 30m</span></div>
+        </div>
+        <div class="card-buttons">
+          <a href="task-details.html" class="btn btn-outline">View Details</a>
+          <a href="task-details.html" class="btn btn-primary">Accept Task</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

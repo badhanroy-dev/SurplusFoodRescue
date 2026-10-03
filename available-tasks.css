@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3efef;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 250px;
+  background-color: #A33215;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar-title h1 {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.sidebar-title p {
+  color: #ffd9c7;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu-item {
+  margin: 10px 0;
+}
+
+.menu-item a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.menu-item a:hover {
+  background-color: #69200F;
+}
+
+.menu-item.active a {
+  background-color: #FA8145;
+}
+
+.bottom-menu {
+  margin-top: auto;
+}
+
+/* ===== MAIN AREA ===== */
+.main {
+  flex: 1;
+  padding: 30px;
+  margin-left: 250px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-heading {
+  color: #E71C16;
+  font-size: 32px;
+}
+
+.page-subtitle {
+  color: #69200F;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-icon {
+  font-size: 18px;
+  color: #A33215;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #E75C16;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== FILTER BAR ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #FA8145;
+}
+
+.form-select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.active-count {
+  margin-left: auto;
+  text-align: right;
+  font-size: 13px;
+  color: #69200F;
+}
+
+.count-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #E71C16;
+}
+
+/* ===== TASKS GRID ===== */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.task-card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card-image {
+  height: 140px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-image.bakery {
+  background-color: #d9a066;
+}
+
+.card-image.catering {
+  background-color: #c9704f;
+}
+
+.card-image.produce {
+  background-color: #7fa66b;
+}
+
+.card-image.frozen {
+  background-color: #6f9bb0;
+}
+
+.task-card h4 {
+  color: #333;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.card-sub {
+  color: #69200F;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.detail-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.expiry-urgent {
+  color: #C62828;
+  font-weight: 600;
+}
+
+.expiry-safe {
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.card-buttons .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 7px 15px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #FA8145;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #E9652F;
+}
+
+.btn-outline {
+  background-color: #f3efef;
+  color: #69200F;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rider Portal - Update Delivery Status</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="update-delivery-status.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Rider Portal</h1>
+      <p>Mission-Driven Service</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="menu-item"><a href="available-tasks.html">Available Tasks</a></li>
+      <li class="menu-item"><a href="assigned-tasks.html">Assigned Tasks</a></li>
+      <li class="menu-item"><a href="otp-verification.html">OTP Verification</a></li>
+      <li class="menu-item active"><a href="update-delivery-status.html">Update Delivery Status</a></li>
+      <li class="menu-item"><a href="report-delay.html">Report Delay</a></li>
+      <li class="menu-item"><a href="volunteer-chat.html">Chat</a></li>
+    </ul>
+
+    <ul class="menu bottom-menu">
+      <li class="menu-item"><a href="#">Settings</a></li>
+      <li class="menu-item"><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="page-header">
+      <div>
+        <a href="assigned-tasks.html" class="back-link">Assigned Tasks &gt; </a>
+        <h2 class="page-heading">Delivery Progress</h2>
+      </div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://i.pravatar.cc/50" class="profile-img" alt="profile">
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h3 class="section-title">Tracking Roadmap</h3>
+
+      <div class="roadmap">
+
+        <div class="roadmap-step done">
+          <div class="step-icon">1</div>
+          <div class="step-line"></div>
+          <div class="step-text">
+            <p class="step-title">Order Accepted</p>
+            <p class="step-sub">Oct 24, 09:15 AM</p>
+            <span class="badge badge-active">COMPLETED</span>
+          </div>
+        </div>
+
+        <div class="roadmap-step current">
+          <div class="step-icon">2</div>
+          <div class="step-line"></div>
+          <div class="step-text">
+            <p class="step-title">Picked Up</p>
+            <p class="step-sub">Awaiting collection at Community Hub A</p>
+            <span class="badge badge-progress">IN PROGRESS</span>
+          </div>
+        </div>
+
+        <div class="roadmap-step pending">
+          <div class="step-icon">3</div>
+          <div class="step-line"></div>
+          <div class="step-text">
+            <p class="step-title">In Transit</p>
+            <p class="step-sub">Pending previous step</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step pending">
+          <div class="step-icon">4</div>
+          <div class="step-text">
+            <p class="step-title">Delivered</p>
+            <p class="step-sub">Banani</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary action-btn">Mark Picked Up</button>
+        <button class="btn btn-outline action-btn">Mark In Transit</button>
+        <a href="otp-verification.html" class="btn btn-outline action-btn">Mark Delivered</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
