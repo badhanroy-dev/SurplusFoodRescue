@@ -1,0 +1,681 @@
+/* ====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f8f7ff;
+
+    color: #08194f;
+}
+
+
+/* ====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: white;
+
+    border-right: 1px solid #ded9f3;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo-section {
+    display: flex;
+
+    align-items: center;
+
+    padding: 22px 20px;
+
+    border-bottom: 1px solid #eeeaf9;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #8238ee;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+.logo-text h2 {
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.logo-text p {
+    font-size: 10px;
+
+    color: #777;
+}
+
+
+/* MENU */
+
+.menu {
+    padding: 18px 12px;
+
+    flex: 1;
+}
+
+.menu a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #4d5270;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.menu a:hover {
+    background: #f2edff;
+
+    color: #8238ee;
+}
+
+.menu a.active {
+    background: #8238ee;
+
+    color: white;
+}
+
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+    padding: 15px;
+
+    border-top: 1px solid #eeeaf9;
+}
+
+.profile-circle {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: #8238ee;
+
+    color: white;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.profile-name {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+
+    max-width: 120px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.logout {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.logout:hover {
+    color: #8238ee;
+}
+
+
+/* ====================================================
+   MAIN
+===================================================== */
+
+.main-content {
+    margin-left: 230px;
+
+    min-height: 100vh;
+
+    padding-bottom: 40px;
+}
+
+
+/* ====================================================
+   HEADER
+===================================================== */
+
+.top-header {
+    background: white;
+
+    border-bottom: 1px solid #eeeaf9;
+
+    padding: 25px 30px;
+}
+
+.back-link {
+    display: inline-block;
+
+    color: #8238ee;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.top-header h1 {
+    font-size: 26px;
+
+    margin-bottom: 6px;
+}
+
+.top-header p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ====================================================
+   MESSAGES
+===================================================== */
+
+.message {
+    margin: 20px 30px 0;
+
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+.success-message {
+    background: #e7f8ee;
+
+    color: #198754;
+}
+
+.error-message {
+    background: #ffe8e8;
+
+    color: #c62828;
+}
+
+
+/* ====================================================
+   DELIVERY SUMMARY
+===================================================== */
+
+.delivery-summary {
+    margin: 25px 30px 0;
+
+    background: white;
+
+    border: 1px solid #eeeaf9;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1.5fr;
+
+    gap: 20px;
+}
+
+.small-label {
+    display: block;
+
+    color: #8a86a2;
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+.delivery-summary h2 {
+    font-size: 18px;
+}
+
+.delivery-summary strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+/* ====================================================
+   PROGRESS CARD
+===================================================== */
+
+.progress-card {
+    margin: 25px 30px 0;
+
+    background: white;
+
+    border: 1px solid #eeeaf9;
+
+    border-radius: 14px;
+
+    padding: 28px;
+}
+
+.progress-card > h2 {
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ====================================================
+   ROADMAP
+===================================================== */
+
+.roadmap {
+    position: relative;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* VERTICAL LINE */
+
+.roadmap::before {
+    content: "";
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 24px;
+
+    bottom: 24px;
+
+    width: 2px;
+
+    background: #e2ddf2;
+}
+
+
+/* STEP */
+
+.roadmap-step {
+    position: relative;
+
+    display: flex;
+
+    gap: 18px;
+
+    min-height: 110px;
+
+    padding-bottom: 20px;
+}
+
+
+/* CIRCLE */
+
+.step-circle {
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #f0edff;
+
+    border: 2px solid #ded9f3;
+
+    color: #8a86a2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* CURRENT */
+
+.roadmap-step.current .step-circle {
+    background: #8238ee;
+
+    border-color: #8238ee;
+
+    color: white;
+
+    box-shadow: 0 0 0 6px #eee7ff;
+}
+
+
+/* COMPLETED */
+
+.roadmap-step.done .step-circle {
+    background: #8238ee;
+
+    border-color: #8238ee;
+
+    color: white;
+}
+
+
+/* CONTENT */
+
+.step-content {
+    padding-top: 4px;
+}
+
+.step-content h3 {
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+.step-content p {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.step-content span {
+    display: inline-block;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    color: #8a86a2;
+
+    letter-spacing: 0.5px;
+}
+
+.roadmap-step.current .step-content span {
+    color: #8238ee;
+}
+
+.roadmap-step.done .step-content span {
+    color: #198754;
+}
+
+
+/* ====================================================
+   ACTION CARD
+===================================================== */
+
+.action-card {
+    margin: 25px 30px 0;
+
+    background: white;
+
+    border: 1px solid #eeeaf9;
+
+    border-radius: 14px;
+
+    padding: 25px;
+}
+
+.action-card h2 {
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+.action-card > p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ACTION BUTTONS */
+
+.action-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+.action-btn {
+    border: 1px solid #ded9f3;
+
+    background: #f5f1ff;
+
+    color: #7132d5;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: #eee7ff;
+}
+
+.action-btn.primary {
+    background: #8238ee;
+
+    color: white;
+
+    border-color: #8238ee;
+}
+
+.action-btn.primary:hover {
+    background: #7132d5;
+}
+
+
+/* ====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-container {
+    margin: 25px 30px 0;
+}
+
+.back-container a {
+    color: #8238ee;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.back-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* ====================================================
+   ERROR PAGE
+===================================================== */
+
+.error-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8f7ff;
+}
+
+.error-box {
+    background: white;
+
+    border: 1px solid #eeeaf9;
+
+    border-radius: 14px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    width: 400px;
+
+    max-width: 90%;
+}
+
+.error-box h2 {
+    margin-bottom: 10px;
+}
+
+.error-box p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.error-box a {
+    display: inline-block;
+
+    background: #8238ee;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+
+/* ====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .delivery-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+    }
+
+    .delivery-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-card,
+    .action-card,
+    .delivery-summary {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .message {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+}
