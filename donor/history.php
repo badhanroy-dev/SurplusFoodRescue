@@ -248,49 +248,43 @@ $meals_shared = $row_meals['meals_shared'] ?? 0;
 
 $sql_history = "
     SELECT
-
         don.donation_id,
-
         don.food_name,
-
         don.quantity,
-
         don.quantity_unit,
-
+        don.created_at,
+        don.status AS donation_status,
         fc_category.category_name,
-
         charity.full_name AS charity_name,
-
         claim.claim_id,
-
         claim.claim_date,
-
         claim.status AS claim_status,
-
+        pd.delivery_id,
+        pd.delivery_status,
         receipt.receipt_id
 
     FROM food_donations don
 
-    INNER JOIN food_categories fc_category
+    LEFT JOIN food_categories fc_category
         ON don.category_id = fc_category.category_id
 
-    INNER JOIN food_claims claim
+    LEFT JOIN food_claims claim
         ON don.donation_id = claim.donation_id
 
-    INNER JOIN users charity
+    LEFT JOIN users charity
         ON claim.charity_id = charity.user_id
+
+    LEFT JOIN pickup_deliveries pd
+        ON claim.claim_id = pd.claim_id
 
     LEFT JOIN receipts receipt
         ON claim.claim_id = receipt.claim_id
 
     WHERE don.donor_id = ?
 
-    AND don.status = 'Completed'
-
-    AND claim.status = 'Completed'
-
-    ORDER BY claim.claim_date DESC
+    ORDER BY COALESCE(claim.claim_date, don.created_at) DESC, don.donation_id DESC
 ";
+
 
 
 $stmt_history = mysqli_prepare(
@@ -713,7 +707,58 @@ function format_history_date($date)
                 <?php if (mysqli_num_rows($history_result) > 0): ?>
 
 
-                    <?php while ($history = mysqli_fetch_assoc($history_result)): ?>
+                    <?php while ($history = mysqli_fetch_assoc($history_result)):
+                        // Determine status text & CSS class dynamically
+                        $del_status = $history['delivery_status'] ?? '';
+                        $c_status = $history['claim_status'] ?? '';
+                        $d_status = $history['donation_status'] ?? '';
+
+                        // 1. COMPLETED Check (highest priority)
+                        if ($d_status === 'Completed' || $c_status === 'Completed' || $del_status === 'Completed') {
+                            $status_text = 'COMPLETED';
+                            $status_class = 'completed';
+                        }
+                        // 2. CANCELLED / EXPIRED Check
+                        elseif ($d_status === 'Cancelled' || $c_status === 'Cancelled' || $del_status === 'Cancelled' || $d_status === 'Expired') {
+                            $status_text = ($d_status === 'Expired') ? 'EXPIRED' : 'CANCELLED';
+                            $status_class = ($d_status === 'Expired') ? 'expired' : 'cancelled';
+                        }
+                        // 3. IN TRANSIT / PICKED UP / DELIVERED Check
+                        elseif ($del_status === 'In Transit' || $del_status === 'Picked Up' || $del_status === 'Delivered' || $c_status === 'In Transit' || $d_status === 'Picked Up') {
+                            if ($del_status === 'Picked Up' || $d_status === 'Picked Up') {
+                                $status_text = 'PICKED UP';
+                                $status_class = 'pickup';
+                            } elseif ($del_status === 'In Transit' || $c_status === 'In Transit') {
+                                $status_text = 'IN TRANSIT';
+                                $status_class = 'transit';
+                            } else {
+                                $status_text = 'ON THE WAY';
+                                $status_class = 'way';
+                            }
+                        }
+                        // 4. RIDER ASSIGNED Check
+                        elseif ($del_status === 'Assigned' || $del_status === 'Accepted') {
+                            $status_text = 'RIDER ASSIGNED';
+                            $status_class = 'assigned';
+                        }
+                        // 5. CLAIMED / SCHEDULED Check
+                        elseif (!empty($history['claim_id']) || $c_status === 'Scheduled' || $d_status === 'Claimed' || $c_status === 'Claimed') {
+                            if ($c_status === 'Scheduled') {
+                                $status_text = 'SCHEDULED';
+                                $status_class = 'scheduled';
+                            } else {
+                                $status_text = 'CLAIMED';
+                                $status_class = 'claimed';
+                            }
+                        }
+                        // 6. DEFAULT: AVAILABLE
+                        else {
+                            $status_text = 'AVAILABLE';
+                            $status_class = 'available';
+                        }
+
+                        $display_date = !empty($history['claim_date']) ? $history['claim_date'] : ($history['created_at'] ?? '');
+                    ?>
 
 
                         <!-- HISTORY ROW -->
@@ -729,7 +774,7 @@ function format_history_date($date)
                                 <?php
 
                                 echo htmlspecialchars(
-                                    $history['food_name']
+                                    $history['food_name'] ?? ''
                                 );
 
                                 ?>
@@ -741,7 +786,7 @@ function format_history_date($date)
                                     <?php
 
                                     echo htmlspecialchars(
-                                        $history['category_name']
+                                        $history['category_name'] ?? 'General'
                                     );
 
                                     ?>
@@ -771,7 +816,7 @@ function format_history_date($date)
                                 <?php
 
                                 echo htmlspecialchars(
-                                    $history['quantity_unit']
+                                    $history['quantity_unit'] ?? ''
                                 );
 
                                 ?>
@@ -786,13 +831,11 @@ function format_history_date($date)
                             <span>
 
 
-                                <?php
-
-                                echo htmlspecialchars(
-                                    $history['charity_name']
-                                );
-
-                                ?>
+                                <?php if (!empty($history['charity_name'])): ?>
+                                    <?php echo htmlspecialchars($history['charity_name']); ?>
+                                <?php else: ?>
+                                    <span style="color: #999; font-style: italic;">Not Claimed Yet</span>
+                                <?php endif; ?>
 
 
                             </span>
@@ -807,7 +850,7 @@ function format_history_date($date)
                                 <?php
 
                                 echo format_history_date(
-                                    $history['claim_date']
+                                    $display_date
                                 );
 
                                 ?>
@@ -819,16 +862,12 @@ function format_history_date($date)
 
                             <!-- STATUS -->
 
-                            <span class="complete">
+                            <span class="complete <?php echo htmlspecialchars($status_class); ?>">
 
 
                                 <?php
 
-                                echo strtoupper(
-                                    htmlspecialchars(
-                                        $history['claim_status']
-                                    )
-                                );
+                                echo htmlspecialchars($status_text);
 
                                 ?>
 
@@ -850,6 +889,28 @@ function format_history_date($date)
                                         class="download-link"
                                     >
                                         Download
+                                    </a>
+
+
+                                <?php elseif (!empty($history['delivery_id'])): ?>
+
+
+                                    <a
+                                        href="tracking.php?delivery_id=<?php echo urlencode($history['delivery_id']); ?>"
+                                        class="download-link"
+                                    >
+                                        Track
+                                    </a>
+
+
+                                <?php elseif (!empty($history['claim_id'])): ?>
+
+
+                                    <a
+                                        href="tracking.php?claim_id=<?php echo urlencode($history['claim_id']); ?>"
+                                        class="download-link"
+                                    >
+                                        Track
                                     </a>
 
 
@@ -880,7 +941,7 @@ function format_history_date($date)
 
                     <div class="empty-history">
 
-                        No completed donations found.
+                        No donation history found.
 
                     </div>
 
