@@ -185,7 +185,7 @@ $volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYS
                         <?php if (count($assigned_deliveries) > 0) { ?>
                             <?php foreach ($assigned_deliveries as $del) { ?>
                                 <option value="<?= $del['delivery_id'] ?>" <?= $del['delivery_id'] == $delivery_id ? 'selected' : '' ?>>
-                                    #<?= $del['delivery_id'] ?>: <?= htmlspecialchars($del['food_name']) ?> (Charity: <?= htmlspecialchars($del['charity_name']) ?>)
+                                    #<?= $del['delivery_id'] ?>: <?= htmlspecialchars($del['food_name']) ?>
                                 </option>
                             <?php } ?>
                         <?php } else { ?>

@@ -115,7 +115,7 @@ $volunteer_notifications = $vol_notif_res ? mysqli_fetch_all($vol_notif_res, MYS
                     <div class="assigned-row" data-status="<?= htmlspecialchars(strtolower($task["delivery_status"])) ?>" data-pickup-time="<?= htmlspecialchars($task["scheduled_time"]) ?>">
                         <div class="assigned-info">
                             <p class="assigned-name"><?= htmlspecialchars($task["food_name"]) ?> — <?= htmlspecialchars($task["donor_name"]) ?></p>
-                            <p class="assigned-meta">Pickup: <?= htmlspecialchars($task["pickup_address"]) ?> &nbsp; | &nbsp; Dropoff: <?= htmlspecialchars($task["delivery_address"]) ?> &nbsp; | &nbsp; Charity: <?= htmlspecialchars($task["charity_name"]) ?> &nbsp; | &nbsp; Status: <strong><?= htmlspecialchars($task["delivery_status"]) ?></strong></p>
+                            <p class="assigned-meta">Pickup: <?= htmlspecialchars($task["pickup_address"]) ?> &nbsp; | &nbsp; Dropoff: <?= htmlspecialchars($task["delivery_address"]) ?> &nbsp; | &nbsp; Status: <strong><?= htmlspecialchars($task["delivery_status"]) ?></strong></p>
                         </div>
                         <div class="row-buttons">
                             <a href="task-details.php?delivery_id=<?= (int)$task["delivery_id"] ?>" class="btn btn-outline">View Details</a>
