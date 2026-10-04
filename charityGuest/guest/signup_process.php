@@ -23,7 +23,7 @@ $role_map = [
     'Charity Organization' => 'Charity',
     'Volunteer Rider'      => 'Volunteer'
 ];
-$role = $role_map[$role_input] ?? 'Volunteer';
+$role = $role_map[$role_input];
 
 // Validation
 if (!$role_input || !$full_name || !$email || !$phone || !$address || !$password || !$reg_nid_number) {

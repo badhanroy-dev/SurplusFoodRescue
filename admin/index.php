@@ -158,7 +158,7 @@ $recent_broadcast = mysqli_fetch_assoc($recent_broadcast_result);
         <h1>Dashboard</h1>
         <p>Manage food donations, volunteers and reports</p>
     </div>
-     <input type="search" placeholder="Search...">
+     
     <div class="header-right">
     <div class="admin-profile">
         <img src="images/notifications.png" class="notification-icon">
@@ -224,6 +224,12 @@ $recent_broadcast = mysqli_fetch_assoc($recent_broadcast_result);
 
             <option value="2026-05" <?php if ($selected_month == '2026-05') echo 'selected'; ?>>
                 May 2026
+            </option>
+            <option value="2026-09" <?php if ($selected_month == '2026-09') echo 'selected'; ?>>
+                September 2026
+            </option>
+            <option value="2026-10" <?php if ($selected_month == '2026-10') echo 'selected'; ?>>
+                October 2026
             </option>
 
         </select>

@@ -7,6 +7,9 @@ $admin_id = $_SESSION['admin_user_id'];
 if (isset($_POST['add_guideline'])) {
 
     $category = mysqli_real_escape_string($conn, $_POST['category']);
+    if ($category === 'Compliance & Agreement') {
+        $category = 'Compliance & Policy';
+    }
     $title = mysqli_real_escape_string($conn, $_POST['title']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $bullet_points = mysqli_real_escape_string($conn, $_POST['bullet_points']);
@@ -66,6 +69,9 @@ if (isset($_POST['update_guideline'])) {
     $guideline_id = $_POST['guideline_id'];
 
     $category = mysqli_real_escape_string($conn, $_POST['category']);
+    if ($category === 'Compliance & Agreement') {
+        $category = 'Compliance & Policy';
+    }
     $title = mysqli_real_escape_string($conn, $_POST['title']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $bullet_points = mysqli_real_escape_string($conn, $_POST['bullet_points']);
@@ -141,7 +147,7 @@ $handling_result = mysqli_query($conn, $handling_sql);
 
 $agreement_sql = "SELECT *
                   FROM food_safety_guidelines
-                  WHERE category = 'Compliance & Agreement'
+                  WHERE category IN ('Compliance & Policy', 'Compliance & Agreement')
                   AND status = 'Active'
                   ORDER BY display_order, guideline_id
                   LIMIT 1";
@@ -565,7 +571,7 @@ $agreement = mysqli_fetch_assoc($agreement_result);
 
                 <button
                     class="add-small-btn"
-                    onclick="openAddForm('Compliance & Agreement')">
+                    onclick="openAddForm('Compliance & Policy')">
 
                     + Add
 
@@ -714,7 +720,7 @@ $agreement = mysqli_fetch_assoc($agreement_result);
                     Handling Guideline
                 </option>
 
-                <option value="Compliance & Agreement">
+                <option value="Compliance & Policy">
                     Compliance & Agreement
                 </option>
 

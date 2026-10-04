@@ -25,6 +25,8 @@ if(isset($_POST['action']))
 
     elseif ($action == 'delete')
     {
+        @mysqli_query($conn, "DELETE FROM delay_reports WHERE volunteer_id = $user_id");
+        @mysqli_query($conn, "UPDATE pickup_deliveries SET volunteer_id = NULL WHERE volunteer_id = $user_id");
         $delete_sql = "DELETE FROM users WHERE user_id = $user_id AND role = 'Volunteer'";
 
         mysqli_query($conn, $delete_sql);
@@ -44,7 +46,7 @@ $pending = mysqli_fetch_assoc($pending_result);
 
 
 $verified_sql = "SELECT COUNT(*) AS total FROM users WHERE role = 'Volunteer'
-                 AND account_status = 'Verified'";
+                 AND account_status IN ('Verified', 'Active')";
 
 $verified_result = mysqli_query($conn, $verified_sql);
 $verified = mysqli_fetch_assoc($verified_result);
@@ -170,20 +172,24 @@ $total = mysqli_fetch_assoc($total_result);
     </a>
 </td>
         <td>
-            <?php if($volunteer['account_status']=='Verified') { ?>
+            <?php 
+            $status = trim($volunteer['account_status'] ?? '');
+            if ($status === 'Verified' || $status === 'Active') { ?>
                <span class="status-verified">
                 Active
                </span>
-
-               <?php } elseif ($volunteer['account_status'] == 'Pending') { ?>
-        <span class="status-pending">
-            Pending
-        </span>
-
-    <?php } elseif ($volunteer['account_status'] == 'Rejected') { ?>
-        <span class="status-rejected">
-            Rejected
-        </span>
+            <?php } elseif ($status === 'Pending') { ?>
+                <span class="status-pending">
+                    Pending
+                </span>
+            <?php } elseif ($status === 'Rejected') { ?>
+                <span class="status-rejected">
+                    Rejected
+                </span>
+            <?php } else { ?>
+                <span class="status-pending">
+                    <?php echo htmlspecialchars($status !== '' ? $status : 'Unknown'); ?>
+                </span>
             <?php } ?>
         </td>
 
@@ -195,7 +201,8 @@ $total = mysqli_fetch_assoc($total_result);
     Edit
 </a>
 
-    <?php if ($volunteer['account_status'] == 'Pending') { ?>
+    <?php 
+    if ($status === 'Pending') { ?>
 
         <form method="POST">
 
@@ -222,7 +229,7 @@ $total = mysqli_fetch_assoc($total_result);
 
         </form>
 
-    <?php } elseif ($volunteer['account_status'] == 'Verified') { ?>
+    <?php } elseif ($status === 'Verified' || $status === 'Active' || $status === '' || $status === 'Disabled') { ?>
 
         <form method="POST">
 
@@ -240,7 +247,7 @@ $total = mysqli_fetch_assoc($total_result);
 
         </form>
 
-    <?php } elseif ($volunteer['account_status'] == 'Rejected') { ?>
+    <?php } elseif ($status === 'Rejected') { ?>
 
         <form method="POST">
 

@@ -56,7 +56,7 @@ $charity_result = mysqli_query($conn, $charity_sql);
 
         <ul>
             <li><a href="index.php">Dashboard</a></li>
-            <li class="active"><a href="donoracc.php">Donor & Charity Accounts</a></li>
+            <li class="active"><a href="donoracc.php">Donor Accounts</a></li>
             <li><a href="volunteer_verify.php">Volunteer Verification</a></li>
             <li><a href="foodcategories.php">Food Categories</a></li>
             <li><a href="analytics.php">Analytics</a></li>
